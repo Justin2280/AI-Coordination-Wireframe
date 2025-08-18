@@ -1,0 +1,110 @@
+{% extends 'spaceship_coordination/base.html' %}
+
+{% block title %}Select Your Role - Spaceship Coordination{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>🚀 Join the Spaceship Coordination Experiment</h2>
+    
+    <div style="margin: 2rem 0;">
+        <h3>Choose Your Role</h3>
+        <p>Select a role and join an available crew to begin the experiment.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 2rem; text-align: center;">
+                <h4 style="color: #FFD700; margin-bottom: 1rem;">🎯 Captain</h4>
+                <p style="margin-bottom: 1rem;">Coordinates the team and makes strategic decisions</p>
+                <ul style="text-align: left; margin-bottom: 1rem;">
+                    <li>Leads team discussions</li>
+                    <li>Makes final decisions</li>
+                    <li>Coordinates with Navigator and Driller</li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 2rem; text-align: center;">
+                <h4 style="color: #4CAF50; margin-bottom: 1rem;">🧭 Navigator</h4>
+                <p style="margin-bottom: 1rem;">Controls travel between systems and asteroids</p>
+                <ul style="text-align: left; margin-bottom: 1rem;">
+                    <li>Pilots the spaceship</li>
+                    <li>Chooses travel destinations</li>
+                    <li>Manages travel costs</li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 2rem; text-align: center;">
+                <h4 style="color: #2196F3; margin-bottom: 1rem;">⛏️ Driller</h4>
+                <p style="margin-bottom: 1rem;">Mines asteroids for valuable minerals</p>
+                <ul style="text-align: left; margin-bottom: 1rem;">
+                    <li>Extracts minerals from asteroids</li>
+                    <li>Uses mining equipment</li>
+                    <li>Maximizes resource extraction</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    {% if available_crews %}
+    <div style="margin: 2rem 0;">
+        <h3>Available Crews</h3>
+        <p>Select a crew and role to join:</p>
+        
+        {% for crew in available_crews %}
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 2rem; margin: 1rem 0;">
+            <h4>Crew #{{ crew.id }}</h4>
+            <p><strong>Session:</strong> {{ crew.session.pressure|title }} Pressure, {{ crew.session.complexity|title }} Complexity</p>
+            <p><strong>Captain Type:</strong> {{ crew.session.captain_type|title }}</p>
+            
+            <div style="margin: 1rem 0;">
+                <h5>Available Roles:</h5>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    {% if not crew.captain %}
+                    <form method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="crew_id" value="{{ crew.id }}">
+                        <input type="hidden" name="role" value="captain">
+                        <button type="submit" class="btn" style="background: #FFD700; color: #000;">
+                            🎯 Join as Captain
+                        </button>
+                    </form>
+                    {% endif %}
+                    
+                    {% if not crew.navigator %}
+                    <form method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="crew_id" value="{{ crew.id }}">
+                        <input type="hidden" name="role" value="navigator">
+                        <button type="submit" class="btn" style="background: #4CAF50;">
+                            🧭 Join as Navigator
+                        </button>
+                    </form>
+                    {% endif %}
+                    
+                    {% if not crew.driller %}
+                    <form method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <input type="hidden" name="crew_id" value="{{ crew.id }}">
+                        <input type="hidden" name="role" value="driller">
+                        <button type="submit" class="btn" style="background: #2196F3;">
+                            ⛏️ Join as Driller
+                        </button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div style="background: rgba(255, 165, 0, 0.2); border: 1px solid #FFA500; border-radius: 10px; padding: 2rem; text-align: center;">
+        <h3>⏳ No Available Crews</h3>
+        <p>All crews are currently full or the experiment hasn't started yet.</p>
+        <p>Please wait for a new crew to become available or contact the experiment administrator.</p>
+        <a href="{% url 'spaceship_coordination:waiting_room' %}" class="btn">Refresh</a>
+    </div>
+    {% endif %}
+    
+    <div style="margin: 2rem 0; text-align: center;">
+        <a href="{% url 'spaceship_coordination:index' %}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+</div>
+{% endblock %}

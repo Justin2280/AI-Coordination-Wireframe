@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaceship Coordination Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .game-area {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            min-height: 600px;
+        }
+        .sidebar {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            height: fit-content;
+        }
+        .asteroid-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .asteroid-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .asteroid-card:hover {
+            border-color: #4CAF50;
+            transform: translateY(-2px);
+        }
+        .asteroid-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #4CAF50;
+        }
+        .asteroid-info {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #4CAF50;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #45a049;
+        }
+        .btn-secondary {
+            background: #2196F3;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #1976D2;
+        }
+        .btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        .status-panel {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        .chat-area {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .chat-messages {
+            height: 200px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .chat-input {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .chat-input input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Spaceship Coordination Experiment</h1>
+        <p>Round {{ game_summary.current_round }} - {{ game_summary.current_stage|title }} Stage</p>
+        <p><strong>Your Role:</strong> <span style="color: #FFD700;">{{ participant.role|title }}</span></p>
+    </div>
+
+    <div class="game-container">
+        <div class="game-area">
+            <h2>Mission Control</h2>
+            <p>Current System: <strong>{{ crew.current_system }}</strong></p>
+            
+            <div class="asteroid-grid">
+                {% for asteroid in asteroids %}
+                <div class="asteroid-card">
+                    <div class="asteroid-name">{{ asteroid.name }}</div>
+                    <div class="asteroid-info">
+                        Travel Cost: {{ asteroid.travel_cost }} PU
+                    </div>
+                    {% if asteroid.max_minerals %}
+                    <div class="asteroid-info">
+                        Max Minerals: {{ asteroid.max_minerals }}
+                    </div>
+                    {% endif %}
+                    {% if asteroid.shallow_cost %}
+                    <div class="asteroid-info">
+                        Shallow Mining: {{ asteroid.shallow_cost }} PU
+                    </div>
+                    {% endif %}
+                    {% if asteroid.deep_cost %}
+                    <div class="asteroid-info">
+                        Deep Mining: {{ asteroid.deep_cost }} PU
+                    </div>
+                    {% endif %}
+                    <div class="asteroid-info">
+                        Status: {% if asteroid.mined %}Mined{% else %}Available{% endif %}
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="travelTo('{{ asteroid.name }}')">
+                            Travel
+                        </button>
+                        {% if not asteroid.mined %}
+                        <button class="btn btn-secondary" onclick="sendProbe('{{ asteroid.name }}')">
+                            Send Probe
+                        </button>
+                        <button class="btn btn-secondary" onclick="deployRobot('{{ asteroid.name }}')">
+                            Deploy Robot
+                        </button>
+                        <button class="btn btn-primary" onclick="mineShallow('{{ asteroid.name }}')">
+                            Mine Shallow
+                        </button>
+                        <button class="btn btn-primary" onclick="mineDeep('{{ asteroid.name }}')">
+                            Mine Deep
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="status-panel">
+                <h3>Game Status</h3>
+                <div class="status-item">
+                    <span>Current Round:</span>
+                    <span>{{ game_summary.current_round }}</span>
+                </div>
+                <div class="status-item">
+                    <span>Stage:</span>
+                    <span>{{ game_summary.current_stage|title }}</span>
+                </div>
+                <div class="status-item">
+                    <span>PU Remaining:</span>
+                    <span>{{ game_summary.pu_remaining }}</span>
+                </div>
+                <div class="status-item">
+                    <span>Total Minerals:</span>
+                    <span>{{ game_summary.total_minerals }}</span>
+                </div>
+            </div>
+
+            <div class="status-panel">
+                <h3>Session Info</h3>
+                <div class="status-item">
+                    <span>Pressure:</span>
+                    <span>{{ session_config.pressure|title }}</span>
+                </div>
+                <div class="status-item">
+                    <span>Complexity:</span>
+                    <span>{{ session_config.complexity|title }}</span>
+                </div>
+                <div class="status-item">
+                    <span>Captain:</span>
+                    <span>{{ session_config.captain_type|title }}</span>
+                </div>
+            </div>
+
+            <div class="chat-area">
+                <h3>Team Communication</h3>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message">Welcome to the mission! Coordinate with your team.</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Game action functions
+        function travelTo(asteroidName) {
+            submitAction('travel', asteroidName);
+        }
+        
+        function sendProbe(asteroidName) {
+            submitAction('send_probe', asteroidName);
+        }
+        
+        function deployRobot(asteroidName) {
+            submitAction('deploy_robot', asteroidName);
+        }
+        
+        function mineShallow(asteroidName) {
+            submitAction('mine_shallow', asteroidName);
+        }
+        
+        function mineDeep(asteroidName) {
+            submitAction('mine_deep', asteroidName);
+        }
+        
+        function submitAction(actionType, targetAsteroid) {
+            const crewId = {{ crew.id }};
+            fetch(`/spaceship/api/crew/${crewId}/actions/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    action_type: actionType,
+                    target_asteroid: targetAsteroid
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload(); // Refresh to show updated state
+                } else {
+                    alert('Action failed: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to submit action');
+            });
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if (!message) return;
+            
+            const crewId = {{ crew.id }};
+            fetch(`/spaceship/api/crew/${crewId}/chat/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    addMessageToChat('You', message);
+                    input.value = '';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+        
+        function addMessageToChat(sender, message) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        
+        // Auto-refresh game state every 10 seconds
+        setInterval(function() {
+            location.reload();
+        }, 10000);
+    </script>
+</body>
+</html>
+
+

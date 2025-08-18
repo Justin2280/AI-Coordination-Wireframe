@@ -1,0 +1,576 @@
+INFO 2025-08-18 17:42:00,368 autoreload 28076 15772 Watching for file changes with StatReloader
+INFO 2025-08-18 17:43:24,951 autoreload 28076 15772 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\models.py changed, reloading.
+INFO 2025-08-18 17:43:26,348 autoreload 20748 24092 Watching for file changes with StatReloader
+INFO 2025-08-18 17:43:56,757 autoreload 18092 2956 Watching for file changes with StatReloader
+INFO 2025-08-18 18:02:34,621 autoreload 20748 24092 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\settings.py changed, reloading.
+INFO 2025-08-18 18:02:36,826 autoreload 23236 21092 Watching for file changes with StatReloader
+INFO 2025-08-18 18:02:56,351 autoreload 23236 21092 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\settings.py changed, reloading.
+INFO 2025-08-18 18:02:57,718 autoreload 16156 25232 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:03:18,019 log 16156 22544 Not Found: /
+WARNING 2025-08-18 18:03:18,671 log 16156 22544 Not Found: /favicon.ico
+INFO 2025-08-18 18:03:47,417 autoreload 16156 25232 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\settings.py changed, reloading.
+INFO 2025-08-18 18:03:49,046 autoreload 26816 11012 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:06:09,456 log 26816 24460 Not Found: /favicon.ico
+ERROR 2025-08-18 18:06:24,818 log 26816 14200 Internal Server Error: /spaceship/waiting/
+Traceback (most recent call last):
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py", line 71, in get
+    return render(request, 'spaceship_coordination/waiting_room.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: spaceship_coordination/waiting_room.html
+WARNING 2025-08-18 18:07:03,816 log 26816 14200 Not Found: /
+ERROR 2025-08-18 18:07:11,109 log 26816 14200 Internal Server Error: /spaceship/waiting/
+Traceback (most recent call last):
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py", line 71, in get
+    return render(request, 'spaceship_coordination/waiting_room.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: spaceship_coordination/waiting_room.html
+INFO 2025-08-18 18:10:31,446 autoreload 26816 11012 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-18 18:10:33,263 autoreload 24316 18072 Watching for file changes with StatReloader
+INFO 2025-08-18 18:10:39,761 autoreload 24316 18072 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\urls.py changed, reloading.
+INFO 2025-08-18 18:10:41,385 autoreload 28732 20548 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:11:04,379 log 28732 5508 Not Found: /accounts/login/
+INFO 2025-08-18 18:11:15,988 autoreload 28732 20548 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-18 18:11:17,284 autoreload 12612 19500 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:30:50,914 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:30:55,883 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:00,885 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:05,897 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:10,895 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:15,903 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:20,892 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:21,299 log 12612 24808 Not Found: /favicon.ico
+WARNING 2025-08-18 18:31:25,891 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:26,280 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:30,904 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:31,765 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:35,896 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:37,321 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:40,890 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:42,289 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:45,904 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:47,678 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:50,911 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:52,954 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:55,888 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:31:58,553 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:00,910 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:03,579 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:05,885 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:08,624 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:10,888 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:13,626 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:16,622 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:18,642 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:21,649 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:23,668 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:26,579 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:28,668 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:31,581 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:33,670 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:36,754 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:38,712 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:40,887 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:44,167 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:45,903 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:49,819 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:50,891 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:55,681 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:32:55,895 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:00,696 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:00,911 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:05,806 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:05,903 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:10,807 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:10,898 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:15,909 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:16,096 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:20,899 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:21,107 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:25,887 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:26,514 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:30,898 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:31,522 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:35,892 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:37,119 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:40,889 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:42,180 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:45,893 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:48,113 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:50,896 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:53,112 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:55,891 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:33:58,099 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:00,898 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:03,143 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:06,591 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:08,411 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:11,695 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:13,539 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:16,582 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:18,434 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:21,582 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:23,441 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:26,584 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:28,444 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:31,597 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:33,463 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:36,591 log 12612 11668 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:38,456 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:41,592 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:43,456 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:46,600 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:48,467 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:51,584 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:53,504 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:56,583 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:34:58,494 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:01,591 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:03,509 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:08,516 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:13,542 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:18,565 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:23,556 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:28,569 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:33,568 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:33,600 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:38,571 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:43,577 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:48,579 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:53,590 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:56,890 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:35:58,591 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:01,587 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:03,595 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:06,591 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:08,620 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:11,595 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:13,644 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:16,587 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:18,640 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:21,247 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:23,654 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:25,897 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:28,656 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:30,894 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:33,665 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:35,914 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:38,685 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:40,904 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:43,684 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:45,906 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:49,037 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:50,909 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:54,642 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:36:55,910 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:00,340 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:00,908 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:05,911 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:06,029 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:10,892 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:11,756 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:15,907 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:17,569 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:23,425 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:26,589 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:29,339 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:31,600 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:35,283 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:36,595 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:40,289 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:41,609 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:45,295 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:50,300 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:50,598 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:55,312 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:37:55,592 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:38:00,323 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:38:00,612 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:38:04,961 log 12612 27692 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:38:05,853 log 12612 24808 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:38:10,854 log 12612 24808 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:39:48,421 autoreload 13796 27600 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:39:50,784 log 13796 964 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:39:51,400 log 13796 964 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:39:56,409 log 13796 964 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:42:44,586 autoreload 7396 7400 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:42:44,814 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:42:44,835 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:42:49,546 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:42:54,561 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:42:59,579 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:04,585 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:09,808 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:14,825 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:19,838 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:24,860 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:30,028 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:35,427 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:40,569 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:41,620 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:45,377 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:46,597 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:50,390 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:51,608 log 7396 12116 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:55,402 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:43:56,614 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:00,925 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:01,611 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:05,923 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:10,605 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:10,935 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:15,612 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:15,946 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:20,625 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:21,177 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:25,599 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:26,740 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:30,319 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:31,939 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:35,329 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:36,951 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:40,321 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:42,153 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:45,328 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:47,171 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:50,489 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:53,017 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:56,643 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:44:58,019 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:01,643 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:03,044 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:08,033 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:13,044 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:18,056 log 7396 12060 Not Found: /spaceship/api/crew/status/
+ERROR 2025-08-18 18:45:20,416 log 7396 5704 Internal Server Error: /spaceship/admin/sessions/
+Traceback (most recent call last):
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py", line 370, in get
+    return render(request, 'spaceship_coordination/admin/session_list.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: spaceship_coordination/admin/session_list.html
+WARNING 2025-08-18 18:45:23,073 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:28,077 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:28,603 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:33,087 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:33,607 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:38,138 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:38,614 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:43,133 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:43,608 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:48,144 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:48,619 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:53,237 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:53,609 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:58,249 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:45:58,609 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:03,257 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:03,613 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:08,371 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:08,611 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:13,376 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:13,607 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:18,377 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:18,612 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:23,387 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:23,609 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:28,397 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:33,409 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:33,615 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:38,420 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:43,430 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:48,436 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:53,442 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:46:58,448 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:03,475 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:08,466 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:13,473 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:18,489 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:23,510 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:28,502 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:33,517 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:33,613 log 7396 5704 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:38,519 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:43,539 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:48,541 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:53,556 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:47:58,566 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:03,567 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:08,563 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:13,573 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:18,714 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:23,730 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:28,741 log 7396 12060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:33,610 log 7396 5704 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:48:33,689 autoreload 7396 7400 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-18 18:48:35,589 autoreload 9760 27908 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:48:35,947 log 9760 11304 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:48:38,361 autoreload 9760 27908 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-18 18:48:39,721 autoreload 27696 16064 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:48:40,012 log 27696 29228 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:44,003 log 27696 29228 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:48:46,733 autoreload 27696 16064 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\urls.py changed, reloading.
+INFO 2025-08-18 18:48:48,089 autoreload 25656 28336 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:48:49,046 log 25656 29184 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:48:54,071 log 25656 29184 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:48:57,372 autoreload 25656 28336 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\urls.py changed, reloading.
+INFO 2025-08-18 18:48:58,731 autoreload 27204 11568 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:48:59,071 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:04,065 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:09,069 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:14,078 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:19,095 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:24,099 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:29,109 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:33,922 log 27204 23900 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:34,115 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:39,116 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:44,127 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:49,147 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:54,433 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:49:59,155 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:04,156 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:09,155 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:14,161 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:19,175 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:24,180 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:29,183 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:33,618 log 27204 23900 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:34,187 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:39,728 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:44,733 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:49,794 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:54,789 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:50:59,795 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:04,803 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:09,806 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:14,829 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:19,835 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:25,164 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:33,969 log 27204 23900 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:41,168 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:46,167 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:51,179 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:51:56,192 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:01,196 log 27204 2392 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:06,196 log 27204 2392 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 18:52:17,318 autoreload 20496 11272 Watching for file changes with StatReloader
+WARNING 2025-08-18 18:52:17,565 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:17,579 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:21,349 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:27,370 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:32,380 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:33,921 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:37,381 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:42,422 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:47,548 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:52,653 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:52:57,569 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:02,575 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:07,596 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:12,935 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:17,943 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:22,957 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:27,960 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:32,980 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:33,643 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:37,990 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:42,990 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:47,996 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:53,015 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:53:58,016 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:03,026 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:08,014 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:13,033 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:18,047 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:23,087 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:28,079 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:33,099 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:33,633 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:38,116 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:43,118 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:48,119 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:53,125 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:54:58,421 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:03,430 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:08,450 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:13,454 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:18,462 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:23,449 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:28,455 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:33,636 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:34,024 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:39,045 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:44,059 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:49,073 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:54,151 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:55:59,156 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:04,166 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:10,148 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:15,159 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:20,160 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:25,161 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:30,188 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:33,639 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:35,173 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:40,469 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:46,366 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:51,645 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:56:56,645 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:01,669 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:06,662 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:11,684 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:16,689 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:21,703 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:26,701 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:31,729 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:33,640 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:36,716 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:41,720 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:46,744 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:51,751 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:57:56,762 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:01,761 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:06,776 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:11,795 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:16,791 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:21,808 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:26,792 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:31,808 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:33,624 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:36,809 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:41,817 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:46,839 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:51,855 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:58:56,867 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:01,882 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:06,898 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:11,909 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:16,896 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:21,917 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:26,916 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:31,946 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:33,648 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:36,956 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:42,449 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:47,439 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:52,460 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 18:59:57,460 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:02,469 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:08,424 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:13,429 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:18,423 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:23,474 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:28,491 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:33,513 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:33,647 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:38,526 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:43,515 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:48,528 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:53,531 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:00:58,547 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:03,558 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:08,563 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:13,854 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:18,868 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:23,865 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:28,870 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:33,648 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:33,945 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:38,965 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:44,020 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:49,027 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:54,288 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:01:59,299 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:04,307 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:09,311 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:14,321 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:19,323 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:24,338 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:29,347 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:33,642 log 20496 25060 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:34,841 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:39,990 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:44,981 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:49,990 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:55,020 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:02:58,279 log 20496 17276 Unauthorized: /spaceship/api/participant/status/
+WARNING 2025-08-18 19:03:00,038 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:05,023 log 20496 29208 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:10,033 log 20496 29208 Not Found: /spaceship/api/crew/status/
+INFO 2025-08-18 19:03:11,126 autoreload 20496 11272 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\urls.py changed, reloading.
+INFO 2025-08-18 19:03:12,985 autoreload 28704 21544 Watching for file changes with StatReloader
+WARNING 2025-08-18 19:03:15,667 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:20,667 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:25,678 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:30,680 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:33,935 log 28704 12420 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:35,685 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:40,697 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:45,702 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:51,418 log 28704 1044 Not Found: /spaceship/api/crew/status/
+WARNING 2025-08-18 19:03:56,783 log 28704 1044 Not Found: /spaceship/api/crew/status/

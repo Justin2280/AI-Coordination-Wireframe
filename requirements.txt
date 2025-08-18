@@ -1,0 +1,16 @@
+oTree==5.10.0
+Django==4.2.7
+channels==4.0.0
+channels-redis==4.1.0
+daphne==4.0.0
+psycopg2-binary==2.9.7
+redis==5.0.1
+pyautogen==0.2.0
+numpy==1.24.3
+pandas==2.0.3
+matplotlib==3.7.2
+seaborn==0.12.2
+python-dotenv==1.0.0
+gunicorn==21.2.0
+
+

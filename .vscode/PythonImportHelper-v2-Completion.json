@@ -1,0 +1,1754 @@
+[
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "ExperimentSession",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Crew",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Participant",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Asteroid",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "RoundState",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "GameEngine",
+        "importPath": "spaceship_coordination.game_logic",
+        "description": "spaceship_coordination.game_logic",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.game_logic",
+        "documentation": {}
+    },
+    {
+        "label": "AICaptain",
+        "importPath": "spaceship_coordination.ai_captain",
+        "description": "spaceship_coordination.ai_captain",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.ai_captain",
+        "documentation": {}
+    },
+    {
+        "label": "django.core.serializers.json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.core.serializers.json",
+        "description": "django.core.serializers.json",
+        "detail": "django.core.serializers.json",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoJSONEncoder",
+        "importPath": "django.core.serializers.json",
+        "description": "django.core.serializers.json",
+        "isExtraImport": true,
+        "detail": "django.core.serializers.json",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "format_html",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "re_path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "mark_safe",
+        "importPath": "django.utils.safestring",
+        "description": "django.utils.safestring",
+        "isExtraImport": true,
+        "detail": "django.utils.safestring",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncWebsocketConsumer",
+        "importPath": "channels.generic.websocket",
+        "description": "channels.generic.websocket",
+        "isExtraImport": true,
+        "detail": "channels.generic.websocket",
+        "documentation": {}
+    },
+    {
+        "label": "database_sync_to_async",
+        "importPath": "channels.db",
+        "description": "channels.db",
+        "isExtraImport": true,
+        "detail": "channels.db",
+        "documentation": {}
+    },
+    {
+        "label": "AnonymousUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseConstants",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSubsession",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "BaseGroup",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "BasePlayer",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "Currency",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "currency_range",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "SubmissionMustFail",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "Submission",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "Page",
+        "importPath": "otree.api",
+        "description": "otree.api",
+        "isExtraImport": true,
+        "detail": "otree.api",
+        "documentation": {}
+    },
+    {
+        "label": "Participant",
+        "importPath": "otree.models",
+        "description": "otree.models",
+        "isExtraImport": true,
+        "detail": "otree.models",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "user_passes_test",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "ProtocolTypeRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "URLRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "AuthMiddlewareStack",
+        "importPath": "channels.auth",
+        "description": "channels.auth",
+        "isExtraImport": true,
+        "detail": "channels.auth",
+        "documentation": {}
+    },
+    {
+        "label": "websocket_urlpatterns",
+        "importPath": "spaceship_coordination.routing",
+        "description": "spaceship_coordination.routing",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.routing",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "spaceship_coordination.management.commands.setup_test_game",
+        "description": "spaceship_coordination.management.commands.setup_test_game",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Set up a complete test game session'\n    def add_arguments(self, parser):\n        parser.add_argument(\n            '--session-id',\n            type=str,\n            default='test_session_001',\n            help='Session ID for the test session'\n        )\n    def handle(self, *args, **options):",
+        "detail": "spaceship_coordination.management.commands.setup_test_game",
+        "documentation": {}
+    },
+    {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "spaceship_coordination.management.commands.test_game",
+        "description": "spaceship_coordination.management.commands.test_game",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Test the Spaceship Coordination game logic'\n    def add_arguments(self, parser):\n        parser.add_argument(\n            '--create-session',\n            action='store_true',\n            help='Create a test experiment session',\n        )\n        parser.add_argument(\n            '--test-game',",
+        "detail": "spaceship_coordination.management.commands.test_game",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "spaceship_coordination.migrations.0001_initial",
+        "description": "spaceship_coordination.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Action',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('action_type', models.CharField(choices=[('do_nothing', 'Do Nothing'), ('travel', 'Travel'), ('send_probe', 'Send Probe'), ('mine_shallow', 'Mine Shallow'), ('mine_deep', 'Mine Deep'), ('deploy_robot', 'Deploy Robot')], max_length=20)),",
+        "detail": "spaceship_coordination.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "ExperimentSessionAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class ExperimentSessionAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for experiment sessions\"\"\"\n    list_display = ['id', 'session_id', 'pressure', 'complexity', 'captain_type', 'seed', 'created_at', 'completed']\n    list_filter = ['pressure', 'complexity', 'captain_type', 'completed', 'created_at']\n    search_fields = ['session_id', 'seed']\n    readonly_fields = ['created_at']\n    fieldsets = (\n        ('Session Information', {\n            'fields': ('session_id', 'pressure', 'complexity', 'captain_type', 'seed')\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "CrewAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class CrewAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for crews\"\"\"\n    list_display = ['id', 'room_id', 'current_round', 'current_stage', 'current_system', 'created_at', 'get_participants']\n    list_filter = ['current_stage', 'current_system', 'created_at']\n    search_fields = ['room_id']\n    readonly_fields = ['created_at', 'stage_start_time']\n    def get_participants(self, obj):\n        \"\"\"Display participant roles\"\"\"\n        participants = []\n        if obj.captain:",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ParticipantAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class ParticipantAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for participants\"\"\"\n    list_display = ['id', 'participant_id', 'role', 'crew', 'consent_given', 'comprehension_correct', 'survey_completed', 'bonus_amount']\n    list_filter = ['role', 'consent_given', 'comprehension_correct', 'survey_completed', 'created_at']\n    search_fields = ['participant_id', 'prolific_id']\n    readonly_fields = ['created_at', 'consent_timestamp']\n    fieldsets = (\n        ('Participant Information', {\n            'fields': ('participant_id', 'prolific_id', 'role', 'crew')\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AsteroidAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class AsteroidAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for asteroids\"\"\"\n    list_display = ['name', 'session', 'max_minerals', 'shallow_cost', 'deep_cost', 'travel_cost', 'mined', 'discovered_by', 'discovered_round']\n    list_filter = ['name', 'mined', 'discovered_round', 'session']\n    search_fields = ['name', 'session__id']\n    readonly_fields = ['discovered_round', 'mined_round']\n    fieldsets = (\n        ('Asteroid Properties', {\n            'fields': ('name', 'session', 'max_minerals', 'shallow_cost', 'deep_cost', 'travel_cost')\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "RoundStateAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class RoundStateAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for round states\"\"\"\n    list_display = ['id', 'crew', 'round_number', 'stage', 'pu_remaining', 'current_system', 'stage_start_time']\n    list_filter = ['stage', 'round_number', 'stage_start_time']\n    search_fields = ['crew__room_id']\n    readonly_fields = ['stage_start_time']\n    fieldsets = (\n        ('Round Information', {\n            'fields': ('crew', 'round_number', 'stage', 'current_system')\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ActionAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class ActionAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for actions\"\"\"\n    list_display = ['id', 'participant', 'round_state', 'action_type', 'target_asteroid', 'pu_spent', 'auto_do_nothing', 'timestamp']\n    list_filter = ['action_type', 'auto_do_nothing', 'timestamp']\n    search_fields = ['participant__otree_participant__code', 'target_asteroid']\n    readonly_fields = ['timestamp']\n    fieldsets = (\n        ('Action Details', {\n            'fields': ('participant', 'round_state', 'action_type', 'target_asteroid')\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "OutcomeAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class OutcomeAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for outcomes\"\"\"\n    list_display = ['id', 'round_state', 'asteroid', 'participant', 'minerals_gained', 'full_extraction', 'depth', 'intel_combo']\n    list_filter = ['full_extraction', 'depth', 'intel_combo', 'round_state__round_number']\n    search_fields = ['asteroid__name', 'participant__otree_participant__code']\n    fieldsets = (\n        ('Outcome Details', {\n            'fields': ('round_state', 'asteroid', 'participant', 'action')\n        }),\n        ('Results', {",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessageAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class ChatMessageAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for chat messages\"\"\"\n    list_display = ['id', 'from_participant', 'to_participant', 'round_state', 'message_preview', 'stage_only', 'timestamp']\n    list_filter = ['stage_only', 'timestamp']\n    search_fields = ['message', 'from_participant__otree_participant__code', 'to_participant__otree_participant__code']\n    readonly_fields = ['timestamp']\n    def message_preview(self, obj):\n        \"\"\"Show message preview\"\"\"\n        return obj.message[:50] + \"...\" if len(obj.message) > 50 else obj.message\n    message_preview.short_description = 'Message Preview'",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AnalyticsSnapshotAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class AnalyticsSnapshotAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for analytics snapshots\"\"\"\n    list_display = ['id', 'crew', 'round_number', 'cumulative_minerals', 'cumulative_pu_team', 'timestamp']\n    list_filter = ['round_number', 'timestamp']\n    search_fields = ['crew__room_id']\n    readonly_fields = ['timestamp']\n    fieldsets = (\n        ('Snapshot Information', {\n            'fields': ('crew', 'round_number')\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "SurveyAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class SurveyAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for surveys\"\"\"\n    list_display = ['id', 'participant', 'difficulty_rating', 'gender', 'age', 'employment_status', 'industry', 'completed_at']\n    list_filter = ['difficulty_rating', 'gender', 'employment_status', 'completed_at']\n    search_fields = ['participant__otree_participant__code', 'job_title']\n    readonly_fields = ['completed_at']\n    fieldsets = (\n        ('Participant', {\n            'fields': ('participant',)\n        }),",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "SystemEventAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class SystemEventAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for system events\"\"\"\n    list_display = ['id', 'crew', 'event_type', 'participant', 'timestamp', 'details_preview']\n    list_filter = ['event_type', 'timestamp']\n    search_fields = ['crew__room_id', 'participant__otree_participant__code']\n    readonly_fields = ['timestamp']\n    def details_preview(self, obj):\n        \"\"\"Show details preview\"\"\"\n        if obj.details:\n            details_str = str(obj.details)",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "IntelVisibilityAdmin",
+        "kind": 6,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "class IntelVisibilityAdmin(admin.ModelAdmin):\n    \"\"\"Admin interface for intel visibility tracking\"\"\"\n    list_display = ['id', 'round_state', 'asteroid', 'intel_type', 'visible_to_participant', 'discovered_round']\n    list_filter = ['intel_type', 'discovered_round']\n    search_fields = ['asteroid__name', 'visible_to_participant__otree_participant__code']\n    fieldsets = (\n        ('Visibility Information', {\n            'fields': ('round_state', 'asteroid', 'intel_type', 'visible_to_participant')\n        }),\n        ('Discovery', {",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "start_new_round",
+        "kind": 2,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "def start_new_round(modeladmin, request, queryset):\n    \"\"\"Admin action to start a new round for selected crews\"\"\"\n    from .game_logic import GameEngine\n    success_count = 0\n    for crew in queryset:\n        try:\n            game_engine = GameEngine(crew)\n            next_round = crew.current_round + 1\n            if next_round <= 5:\n                game_engine.start_round(next_round)",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "pause_crews",
+        "kind": 2,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "def pause_crews(modeladmin, request, queryset):\n    \"\"\"Admin action to pause selected crews\"\"\"\n    for crew in queryset:\n        try:\n            SystemEvent.objects.create(\n                crew=crew,\n                event_type='pause_round',\n                details={'timestamp': datetime.now().isoformat(), 'admin_action': True}\n            )\n        except Exception as e:",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "CrewAdmin.actions",
+        "kind": 5,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "CrewAdmin.actions = [start_new_round, pause_crews]\n# Admin site customization\nadmin.site.site_header = \"Spaceship Coordination Experiment Admin\"\nadmin.site.site_title = \"Spaceship Coordination Admin\"\nadmin.site.index_title = \"Welcome to Spaceship Coordination Experiment Administration\"",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.site_header",
+        "kind": 5,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "admin.site.site_header = \"Spaceship Coordination Experiment Admin\"\nadmin.site.site_title = \"Spaceship Coordination Admin\"\nadmin.site.index_title = \"Welcome to Spaceship Coordination Experiment Administration\"",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.site_title",
+        "kind": 5,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "admin.site.site_title = \"Spaceship Coordination Admin\"\nadmin.site.index_title = \"Welcome to Spaceship Coordination Experiment Administration\"",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.index_title",
+        "kind": 5,
+        "importPath": "spaceship_coordination.admin",
+        "description": "spaceship_coordination.admin",
+        "peekOfCode": "admin.site.index_title = \"Welcome to Spaceship Coordination Experiment Administration\"",
+        "detail": "spaceship_coordination.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AICaptain",
+        "kind": 6,
+        "importPath": "spaceship_coordination.ai_captain",
+        "description": "spaceship_coordination.ai_captain",
+        "peekOfCode": "class AICaptain:\n    \"\"\"AI Captain that provides coordination messages during briefing\"\"\"\n    def __init__(self, crew):\n        self.crew = crew\n        self.session = crew.session\n        self.game_engine = GameEngine(crew)\n        # AI personality and constraints\n        self.max_message_length = 300\n        self.rate_limit_seconds = 5\n        self.last_message_time = None",
+        "detail": "spaceship_coordination.ai_captain",
+        "documentation": {}
+    },
+    {
+        "label": "SpaceshipCoordinationConfig",
+        "kind": 6,
+        "importPath": "spaceship_coordination.apps",
+        "description": "spaceship_coordination.apps",
+        "peekOfCode": "class SpaceshipCoordinationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'spaceship_coordination'\n    verbose_name = 'Spaceship Coordination Experiment'",
+        "detail": "spaceship_coordination.apps",
+        "documentation": {}
+    },
+    {
+        "label": "GameConsumer",
+        "kind": 6,
+        "importPath": "spaceship_coordination.consumers",
+        "description": "spaceship_coordination.consumers",
+        "peekOfCode": "class GameConsumer(AsyncWebsocketConsumer):\n    \"\"\"WebSocket consumer for real-time game updates\"\"\"\n    async def connect(self):\n        \"\"\"Handle WebSocket connection\"\"\"\n        self.crew_id = self.scope['url_route']['kwargs']['crew_id']\n        self.crew_group_name = f'crew_{self.crew_id}'\n        # Join crew group\n        await self.channel_layer.group_add(\n            self.crew_group_name,\n            self.channel_name",
+        "detail": "spaceship_coordination.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "AdminConsumer",
+        "kind": 6,
+        "importPath": "spaceship_coordination.consumers",
+        "description": "spaceship_coordination.consumers",
+        "peekOfCode": "class AdminConsumer(AsyncWebsocketConsumer):\n    \"\"\"WebSocket consumer for admin monitoring\"\"\"\n    async def connect(self):\n        \"\"\"Handle admin WebSocket connection\"\"\"\n        # Check if user is admin (this would need proper authentication)\n        if not self.scope['user'].is_staff:\n            await self.close()\n            return\n        self.admin_group_name = 'admin_monitoring'\n        # Join admin group",
+        "detail": "spaceship_coordination.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "spaceship_coordination.consumers",
+        "description": "spaceship_coordination.consumers",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass GameConsumer(AsyncWebsocketConsumer):\n    \"\"\"WebSocket consumer for real-time game updates\"\"\"\n    async def connect(self):\n        \"\"\"Handle WebSocket connection\"\"\"\n        self.crew_id = self.scope['url_route']['kwargs']['crew_id']\n        self.crew_group_name = f'crew_{self.crew_id}'\n        # Join crew group\n        await self.channel_layer.group_add(\n            self.crew_group_name,",
+        "detail": "spaceship_coordination.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "GameEngine",
+        "kind": 6,
+        "importPath": "spaceship_coordination.game_logic",
+        "description": "spaceship_coordination.game_logic",
+        "peekOfCode": "class GameEngine:\n    \"\"\"Main game engine for managing rounds, actions, and outcomes\"\"\"\n    def __init__(self, crew):\n        self.crew = crew\n        self.session = crew.session\n        self.config = settings.EXPERIMENT_CONFIG\n        # Set random seed for this session\n        random.seed(self.session.seed)\n    def start_round(self, round_number):\n        \"\"\"Start a new round\"\"\"",
+        "detail": "spaceship_coordination.game_logic",
+        "documentation": {}
+    },
+    {
+        "label": "C",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class C:\n    name_in_url = 'spaceship_coordination'\n    players_per_group = 3\n    num_rounds = 6\n    # oTree expects these in uppercase\n    NAME_IN_URL = 'spaceship_coordination'\n    PLAYERS_PER_GROUP = 3\n    NUM_ROUNDS = 6\nclass ExperimentSession(models.Model):\n    \"\"\"Main session for the experiment\"\"\"",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExperimentSession",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class ExperimentSession(models.Model):\n    \"\"\"Main session for the experiment\"\"\"\n    session_id = models.CharField(max_length=100, unique=True)  # Session identifier\n    pressure = models.CharField(max_length=10, choices=[\n        ('high', 'High Pressure (90s)'),\n        ('low', 'Low Pressure (180s)')\n    ])\n    complexity = models.CharField(max_length=10, choices=[\n        ('high', 'High Complexity (Private Intel)'),\n        ('low', 'Low Complexity (Shared Intel)')",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Crew",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class Crew(models.Model):\n    \"\"\"Crew/room for a group of participants\"\"\"\n    session = models.ForeignKey(ExperimentSession, on_delete=models.CASCADE)\n    room_id = models.CharField(max_length=50, unique=True)\n    captain = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='captain_crews')\n    navigator = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='navigator_crews')\n    driller = models.ForeignKey('Participant', on_delete=models.CASCADE, related_name='driller_crews')\n    current_system = models.CharField(max_length=20, default='Alpha')\n    current_round = models.IntegerField(default=0)\n    current_stage = models.CharField(max_length=20, default='waiting', choices=[",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Participant",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class Participant(models.Model):\n    \"\"\"Extended participant model for the experiment\"\"\"\n    participant_id = models.CharField(max_length=100, unique=True)  # Participant identifier\n    prolific_id = models.CharField(max_length=100, blank=True)\n    role = models.CharField(max_length=20, choices=[\n        ('captain', 'Captain'),\n        ('navigator', 'Navigator'),\n        ('driller', 'Driller')\n    ])\n    crew = models.ForeignKey(Crew, on_delete=models.CASCADE, null=True, blank=True)",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Asteroid",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class Asteroid(models.Model):\n    \"\"\"Asteroid information and state\"\"\"\n    name = models.CharField(max_length=20, choices=[\n        ('Alpha', 'Alpha'),\n        ('Beta', 'Beta'),\n        ('Gamma', 'Gamma'),\n        ('Omega', 'Omega')\n    ])\n    max_minerals = models.IntegerField(help_text=\"Maximum minerals available\")\n    shallow_cost = models.IntegerField(help_text=\"Cost to mine shallow\")",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "RoundState",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class RoundState(models.Model):\n    \"\"\"State of the game for each round\"\"\"\n    crew = models.ForeignKey(Crew, on_delete=models.CASCADE)\n    round_number = models.IntegerField()\n    stage = models.CharField(max_length=20, choices=[\n        ('briefing', 'Briefing'),\n        ('action', 'Action'),\n        ('result', 'Result')\n    ])\n    stage_start_time = models.DateTimeField(auto_now_add=True)",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Action",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class Action(models.Model):\n    \"\"\"Actions taken by participants\"\"\"\n    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)\n    round_state = models.ForeignKey(RoundState, on_delete=models.CASCADE)\n    action_type = models.CharField(max_length=20, choices=[\n        ('do_nothing', 'Do Nothing'),\n        ('travel', 'Travel'),\n        ('send_probe', 'Send Probe'),\n        ('mine_shallow', 'Mine Shallow'),\n        ('mine_deep', 'Mine Deep'),",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Outcome",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class Outcome(models.Model):\n    \"\"\"Mining outcomes and results\"\"\"\n    round_state = models.ForeignKey(RoundState, on_delete=models.CASCADE)\n    asteroid = models.ForeignKey(Asteroid, on_delete=models.CASCADE)\n    participant = models.ForeignKey(Participant, on_delete=models.CASCADE)\n    action = models.ForeignKey(Action, on_delete=models.CASCADE)\n    minerals_gained = models.IntegerField()\n    full_extraction = models.BooleanField()\n    partial_fraction = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)\n    probability_basis = models.JSONField(encoder=DjangoJSONEncoder)",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class ChatMessage(models.Model):\n    \"\"\"Chat messages between participants\"\"\"\n    from_participant = models.ForeignKey(Participant, on_delete=models.CASCADE, related_name='sent_messages')\n    to_participant = models.ForeignKey(Participant, on_delete=models.CASCADE, related_name='received_messages')\n    round_state = models.ForeignKey(RoundState, on_delete=models.CASCADE)\n    message = models.TextField()\n    timestamp = models.DateTimeField(auto_now_add=True)\n    stage_only = models.CharField(max_length=20, default='briefing')\n    class Meta:\n        db_table = 'chat_message'",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "AnalyticsSnapshot",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class AnalyticsSnapshot(models.Model):\n    \"\"\"Analytics data for charts and tables\"\"\"\n    crew = models.ForeignKey(Crew, on_delete=models.CASCADE)\n    round_number = models.IntegerField()\n    cumulative_minerals = models.IntegerField()\n    cumulative_pu_team = models.IntegerField()\n    cumulative_pu_captain = models.IntegerField()\n    cumulative_pu_navigator = models.IntegerField()\n    cumulative_pu_driller = models.IntegerField()\n    timestamp = models.DateTimeField(auto_now_add=True)",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Survey",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class Survey(models.Model):\n    \"\"\"Debrief survey responses\"\"\"\n    participant = models.OneToOneField(Participant, on_delete=models.CASCADE)\n    difficulty_rating = models.IntegerField(choices=[(i, i) for i in range(1, 8)])\n    gender = models.CharField(max_length=20, choices=[\n        ('female', 'Female'),\n        ('male', 'Male'),\n        ('other', 'Other')\n    ])\n    gender_other = models.CharField(max_length=100, blank=True)",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "SystemEvent",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class SystemEvent(models.Model):\n    \"\"\"System events like disconnects, cancellations, etc.\"\"\"\n    crew = models.ForeignKey(Crew, on_delete=models.CASCADE)\n    event_type = models.CharField(max_length=30, choices=[\n        ('disconnect', 'Participant Disconnected'),\n        ('reconnect', 'Participant Reconnected'),\n        ('cancel', 'Session Cancelled'),\n        ('timeout', 'Action Timeout'),\n        ('grace_period_start', 'Grace Period Started'),\n        ('grace_period_end', 'Grace Period Ended')",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "IntelVisibility",
+        "kind": 6,
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "peekOfCode": "class IntelVisibility(models.Model):\n    \"\"\"Track intel visibility for audit purposes\"\"\"\n    round_state = models.ForeignKey(RoundState, on_delete=models.CASCADE)\n    asteroid = models.ForeignKey(Asteroid, on_delete=models.CASCADE)\n    intel_type = models.CharField(max_length=20, choices=[\n        ('max_minerals', 'Max Minerals'),\n        ('shallow_cost', 'Shallow Mining Cost'),\n        ('deep_cost', 'Deep Mining Cost')\n    ])\n    visible_to_participant = models.ForeignKey(Participant, on_delete=models.CASCADE)",
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
+        "label": "Constants",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class Constants(BaseConstants):\n    name_in_url = 'spaceship_coordination'\n    players_per_group = 3\n    num_rounds = 6  # Round 0 is training, Rounds 1-5 count for payout\nclass Subsession(BaseSubsession):\n    def creating_session(self):\n        \"\"\"Initialize the experiment session\"\"\"\n        if self.round_number == 1:\n            # Create experiment session with random conditions\n            pressure = random.choice(['high', 'low'])",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "Subsession",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class Subsession(BaseSubsession):\n    def creating_session(self):\n        \"\"\"Initialize the experiment session\"\"\"\n        if self.round_number == 1:\n            # Create experiment session with random conditions\n            pressure = random.choice(['high', 'low'])\n            complexity = random.choice(['high', 'low'])\n            captain_type = random.choice(['human', 'llm'])\n            seed = random.randint(1, 1000000)\n            experiment_session = ExperimentSession.objects.create(",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "Group",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class Group(BaseGroup):\n    def set_players(self):\n        \"\"\"Set player roles and create crew\"\"\"\n        if self.round_number == 1:\n            # Get experiment session\n            experiment_session = ExperimentSession.objects.get(\n                id=self.session.vars['experiment_session_id']\n            )\n            # Create crew\n            crew = Crew.objects.create(",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class Player(BasePlayer):\n    # Player fields\n    role = models.CharField()\n    crew_id = models.IntegerField()\n    current_system = models.CharField()\n    current_round = models.IntegerField()\n    current_stage = models.CharField()\n    # Consent and comprehension\n    consent_given = models.BooleanField(default=False)\n    comprehension_answer = models.CharField(max_length=500)",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "ConsentPage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class ConsentPage(Page):\n    \"\"\"Information and consent page\"\"\"\n    form_model = 'player'\n    form_fields = ['consent_given']\n    def is_displayed(self):\n        return self.round_number == 1\n    def before_next_page(self):\n        if self.player.consent_given:\n            self.player.consent_timestamp = datetime.now()\n            self.player.save()",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "StudyOverviewPage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class StudyOverviewPage(Page):\n    \"\"\"Study overview and payment information\"\"\"\n    form_model = 'player'\n    form_fields = ['comprehension_answer']\n    def is_displayed(self):\n        return self.round_number == 1 and self.player.consent_given\n    def error_message(self, values):\n        if values['comprehension_answer'] != 'guaranteed_plus_same_bonus':\n            return 'Incorrect answer. Please try again.'\n    def before_next_page(self):",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "WaitingRoomPage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class WaitingRoomPage(Page):\n    \"\"\"Waiting room until crew is formed\"\"\"\n    timeout_seconds = 300  # 5 minutes max wait\n    def is_displayed(self):\n        return self.round_number == 1 and self.player.comprehension_correct\n    def vars_for_template(self):\n        return {\n            'role': self.player.role,\n            'crew_id': self.player.crew_id\n        }",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "GamePage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class GamePage(Page):\n    \"\"\"Main game page with real-time updates\"\"\"\n    timeout_seconds = 300  # 5 minutes max per round\n    def is_displayed(self):\n        return self.round_number >= 1\n    def vars_for_template(self):\n        crew = self.player.get_crew()\n        return {\n            'role': self.player.role,\n            'round_number': self.round_number,",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "SurveyPage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class SurveyPage(Page):\n    \"\"\"Debrief survey page\"\"\"\n    form_model = 'player'\n    form_fields = [\n        'difficulty_rating', 'gender', 'gender_other', 'age', 'education',\n        'employment_status', 'industry', 'years_experience', 'job_title',\n        'annual_income', 'open_comments'\n    ]\n    def is_displayed(self):\n        return self.round_number == Constants.num_rounds",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "FinalResultPage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class FinalResultPage(Page):\n    \"\"\"Final game results and bonus calculation\"\"\"\n    def is_displayed(self):\n        return self.round_number == Constants.num_rounds and self.player.survey_completed\n    def vars_for_template(self):\n        # Calculate final results\n        crew = self.player.get_crew()\n        # Get cumulative data\n        analytics = AnalyticsSnapshot.objects.filter(crew=crew).order_by('round_number')\n        mineral_points = []",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "StudyCompletedPage",
+        "kind": 6,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "class StudyCompletedPage(Page):\n    \"\"\"Study completion and Prolific redirect\"\"\"\n    def is_displayed(self):\n        return self.round_number == Constants.num_rounds and self.player.survey_completed\n    def vars_for_template(self):\n        return {\n            'final_minerals': self.player.final_mineral_points,\n            'total_pu': self.player.total_pu_used,\n            'bonus': self.player.bonus_amount,\n            'prolific_completion_url': 'https://app.prolific.co/submissions/complete?cc=XXXXX'",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "page_sequence",
+        "kind": 5,
+        "importPath": "spaceship_coordination.pages",
+        "description": "spaceship_coordination.pages",
+        "peekOfCode": "page_sequence = [\n    ConsentPage,\n    StudyOverviewPage,\n    WaitingRoomPage,\n    GamePage,\n    SurveyPage,\n    FinalResultPage,\n    StudyCompletedPage,\n]",
+        "detail": "spaceship_coordination.pages",
+        "documentation": {}
+    },
+    {
+        "label": "websocket_urlpatterns",
+        "kind": 5,
+        "importPath": "spaceship_coordination.routing",
+        "description": "spaceship_coordination.routing",
+        "peekOfCode": "websocket_urlpatterns = [\n    re_path(r'ws/game/(?P<crew_id>\\w+)/$', consumers.GameConsumer.as_asgi()),\n    re_path(r'ws/admin/$', consumers.AdminConsumer.as_asgi()),\n]",
+        "detail": "spaceship_coordination.routing",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "spaceship_coordination.urls",
+        "description": "spaceship_coordination.urls",
+        "peekOfCode": "app_name = 'spaceship_coordination'\nurlpatterns = [\n    # Main pages\n    path('', views.IndexView.as_view(), name='index'),\n    path('game/', views.GameView.as_view(), name='game'),\n    path('waiting/', views.WaitingRoomView.as_view(), name='waiting_room'),\n    path('role-selection/', views.RoleSelectionView.as_view(), name='role_selection'),\n    path('cancelled/', views.GameCancelledView.as_view(), name='cancelled'),\n    # API endpoints\n    path('api/crew/<int:crew_id>/status/', views.CrewStatusView.as_view(), name='crew_status'),",
+        "detail": "spaceship_coordination.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "spaceship_coordination.urls",
+        "description": "spaceship_coordination.urls",
+        "peekOfCode": "urlpatterns = [\n    # Main pages\n    path('', views.IndexView.as_view(), name='index'),\n    path('game/', views.GameView.as_view(), name='game'),\n    path('waiting/', views.WaitingRoomView.as_view(), name='waiting_room'),\n    path('role-selection/', views.RoleSelectionView.as_view(), name='role_selection'),\n    path('cancelled/', views.GameCancelledView.as_view(), name='cancelled'),\n    # API endpoints\n    path('api/crew/<int:crew_id>/status/', views.CrewStatusView.as_view(), name='crew_status'),\n    path('api/participant/status/', views.ParticipantStatusView.as_view(), name='participant_status'),",
+        "detail": "spaceship_coordination.urls",
+        "documentation": {}
+    },
+    {
+        "label": "IndexView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class IndexView(View):\n    \"\"\"Index view for the main page\"\"\"\n    def get(self, request):\n        \"\"\"Display the main index page\"\"\"\n        return render(request, 'spaceship_coordination/index.html')\nclass WaitingRoomView(View):\n    \"\"\"Waiting room view for participants\"\"\"\n    def get(self, request):\n        \"\"\"Display waiting room\"\"\"\n        # Check if user already has a participant assigned",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "WaitingRoomView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class WaitingRoomView(View):\n    \"\"\"Waiting room view for participants\"\"\"\n    def get(self, request):\n        \"\"\"Display waiting room\"\"\"\n        # Check if user already has a participant assigned\n        participant_id = request.session.get('participant_id')\n        if participant_id:\n            try:\n                participant = Participant.objects.get(participant_id=participant_id)\n                crew = participant.crew",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "RoleSelectionView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class RoleSelectionView(View):\n    \"\"\"View for participants to select their role\"\"\"\n    def get(self, request):\n        \"\"\"Display role selection page\"\"\"\n        # Get available crews that need participants\n        available_crews = Crew.objects.filter(\n            current_stage='waiting'\n        ).exclude(\n            captain__isnull=False,\n            navigator__isnull=False,",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "GameView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class GameView(View):\n    \"\"\"Main game view\"\"\"\n    def get(self, request):\n        \"\"\"Display the main game interface\"\"\"\n        # Get participant from session\n        participant_id = request.session.get('participant_id')\n        if not participant_id:\n            return redirect('spaceship_coordination:waiting_room')\n        try:\n            participant = Participant.objects.get(participant_id=participant_id)",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "GameCancelledView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class GameCancelledView(View):\n    \"\"\"Game cancelled view\"\"\"\n    def get(self, request):\n        \"\"\"Display game cancellation message\"\"\"\n        return render(request, 'spaceship_coordination/cancelled.html', {\n            'message': 'Unfortunately, one of your crew members has abandoned the game. You will be redirected to Prolific shortly.'\n        })\n# API Views\nclass CrewStatusView(View):\n    \"\"\"API endpoint for crew status\"\"\"",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "CrewStatusView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class CrewStatusView(View):\n    \"\"\"API endpoint for crew status\"\"\"\n    def get(self, request, crew_id):\n        \"\"\"Get current crew status\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            # Get current round state\n            round_state = RoundState.objects.filter(\n                crew=crew\n            ).order_by('-round_number').first()",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "ParticipantStatusView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class ParticipantStatusView(View):\n    \"\"\"API endpoint for participant status\"\"\"\n    def get(self, request):\n        \"\"\"Get current participant status\"\"\"\n        participant_id = request.session.get('participant_id')\n        if not participant_id:\n            return JsonResponse({'error': 'No participant found'}, status=401)\n        try:\n            participant = Participant.objects.get(participant_id=participant_id)\n            crew = participant.crew",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "ActionSubmitView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class ActionSubmitView(View):\n    \"\"\"API endpoint for action submission\"\"\"\n    @method_decorator(csrf_exempt)\n    def dispatch(self, request, *args, **kwargs):\n        return super().dispatch(request, *args, **kwargs)\n    def post(self, request, crew_id):\n        \"\"\"Submit an action for a participant\"\"\"\n        try:\n            data = json.loads(request.body)\n            action_type = data.get('action_type')",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "ChatMessageView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class ChatMessageView(View):\n    \"\"\"API endpoint for chat messages\"\"\"\n    @method_decorator(csrf_exempt)\n    def dispatch(self, request, *args, **kwargs):\n        return super().dispatch(request, *args, **kwargs)\n    def post(self, request, crew_id):\n        \"\"\"Send a chat message\"\"\"\n        try:\n            data = json.loads(request.body)\n            message = data.get('message', '').strip()",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "RoundStatusView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class RoundStatusView(View):\n    \"\"\"API endpoint for round status\"\"\"\n    def get(self, request, crew_id, round_number):\n        \"\"\"Get status of a specific round\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            # Get round state\n            round_state = RoundState.objects.filter(\n                crew=crew,\n                round_number=round_number",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdminCrewListView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class AdminCrewListView(View):\n    \"\"\"Admin view for listing all crews\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def get(self, request):\n        \"\"\"Display list of all crews\"\"\"\n        crews = Crew.objects.all().order_by('-created_at')\n        context = {\n            'crews': crews,\n            'total_crews': crews.count(),\n            'active_crews': crews.filter(current_stage__in=['briefing', 'action', 'result']).count()",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdminCrewDetailView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class AdminCrewDetailView(View):\n    \"\"\"Admin view for crew details\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def get(self, request, crew_id):\n        \"\"\"Display detailed crew information\"\"\"\n        crew = get_object_or_404(Crew, id=crew_id)\n        # Get game summary\n        game_engine = GameEngine(crew)\n        game_summary = game_engine.get_game_summary()\n        # Get all round states",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdminSessionListView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class AdminSessionListView(View):\n    \"\"\"Admin view for listing all sessions\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def get(self, request):\n        \"\"\"Display list of all sessions\"\"\"\n        sessions = ExperimentSession.objects.all().order_by('-created_at')\n        context = {\n            'sessions': sessions,\n            'total_sessions': sessions.count(),\n            'active_sessions': sessions.filter(completed=False).count()",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdminAnalyticsView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class AdminAnalyticsView(View):\n    \"\"\"Admin view for system analytics\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def get(self, request):\n        \"\"\"Display system analytics\"\"\"\n        # Get overall statistics\n        total_crews = Crew.objects.count()\n        total_participants = Participant.objects.count()\n        total_sessions = ExperimentSession.objects.count()\n        # Get condition distribution",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "StartGameView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class StartGameView(View):\n    \"\"\"View for starting a new game\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def post(self, request, crew_id):\n        \"\"\"Start a new game for a crew\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            # Start the game\n            game_engine = GameEngine(crew)\n            round_state = game_engine.start_round(0)  # Start with training round",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "NextStageView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class NextStageView(View):\n    \"\"\"View for advancing to next stage\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def post(self, request, crew_id):\n        \"\"\"Advance to next stage\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            current_stage = crew.current_stage\n            # Get current round state\n            round_state = RoundState.objects.filter(",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "PauseGameView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class PauseGameView(View):\n    \"\"\"View for pausing a game\"\"\"\n    @method_decorator(user_passes_test(lambda u: u.is_staff))\n    def post(self, request, crew_id):\n        \"\"\"Pause a game\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            # Log pause event\n            SystemEvent.objects.create(\n                crew=crew,",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "GameResultsView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class GameResultsView(View):\n    \"\"\"View for displaying game results\"\"\"\n    def get(self, request, crew_id):\n        \"\"\"Display game results\"\"\"\n        crew = get_object_or_404(Crew, id=crew_id)\n        # Get game summary\n        game_engine = GameEngine(crew)\n        game_summary = game_engine.get_game_summary()\n        # Get analytics data\n        analytics = AnalyticsSnapshot.objects.filter(crew=crew).order_by('round_number')",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "CrewAnalyticsView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class CrewAnalyticsView(View):\n    \"\"\"View for crew analytics\"\"\"\n    def get(self, request, crew_id):\n        \"\"\"Display crew analytics\"\"\"\n        crew = get_object_or_404(Crew, id=crew_id)\n        # Get analytics data\n        analytics = AnalyticsSnapshot.objects.filter(crew=crew).order_by('round_number')\n        # Prepare chart data\n        rounds = [a.round_number for a in analytics]\n        minerals = [a.cumulative_minerals for a in analytics]",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "SurveyView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class SurveyView(View):\n    \"\"\"View for the debrief survey\"\"\"\n    def get(self, request, crew_id):\n        \"\"\"Display survey form\"\"\"\n        crew = get_object_or_404(Crew, id=crew_id)\n        context = {\n            'crew': crew,\n            'industries': [\n                'Architecture & Engineering',\n                'Arts/Design/Media',",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "GameCompleteView",
+        "kind": 6,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "class GameCompleteView(View):\n    \"\"\"View for game completion\"\"\"\n    def get(self, request, crew_id):\n        \"\"\"Display game completion page\"\"\"\n        crew = get_object_or_404(Crew, id=crew_id)\n        # Calculate final results\n        game_engine = GameEngine(crew)\n        game_summary = game_engine.get_game_summary()\n        # Calculate bonus\n        final_minerals = game_summary.get('cumulative_minerals', 0)",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "spaceship_coordination.views",
+        "description": "spaceship_coordination.views",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass IndexView(View):\n    \"\"\"Index view for the main page\"\"\"\n    def get(self, request):\n        \"\"\"Display the main index page\"\"\"\n        return render(request, 'spaceship_coordination/index.html')\nclass WaitingRoomView(View):\n    \"\"\"Waiting room view for participants\"\"\"\n    def get(self, request):\n        \"\"\"Display waiting room\"\"\"",
+        "detail": "spaceship_coordination.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "asgi",
+        "description": "asgi",
+        "peekOfCode": "application = ProtocolTypeRouter({\n    \"http\": get_asgi_application(),\n    \"websocket\": AuthMiddlewareStack(\n        URLRouter(websocket_urlpatterns)\n    ),\n})",
+        "detail": "asgi",
+        "documentation": {}
+    },
+    {
+        "label": "run_command",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def run_command(command, check=True):\n    \"\"\"Run a shell command\"\"\"\n    print(f\"Running: {command}\")\n    try:\n        result = subprocess.run(command, shell=True, check=check, capture_output=True, text=True)\n        if result.stdout:\n            print(result.stdout)\n        return result.returncode == 0\n    except subprocess.CalledProcessError as e:\n        print(f\"Error running command: {e}\")",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "check_prerequisites",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def check_prerequisites():\n    \"\"\"Check if required software is installed\"\"\"\n    print(\"Checking prerequisites...\")\n    # Check Python version\n    if sys.version_info < (3, 11):\n        print(\"ERROR: Python 3.11+ is required\")\n        return False\n    # Check if virtual environment exists\n    if not Path(\"venv\").exists():\n        print(\"Virtual environment not found. Creating...\")",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "setup_environment",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def setup_environment():\n    \"\"\"Set up the Python environment\"\"\"\n    print(\"Setting up environment...\")\n    # Activate virtual environment and install requirements\n    if os.name == 'nt':  # Windows\n        pip_cmd = \"venv\\\\Scripts\\\\pip\"\n        python_cmd = \"venv\\\\Scripts\\\\python\"\n    else:  # Unix/Linux/Mac\n        pip_cmd = \"venv/bin/pip\"\n        python_cmd = \"venv/bin/python\"",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "setup_database",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def setup_database():\n    \"\"\"Set up the database\"\"\"\n    print(\"Setting up database...\")\n    # Check if .env file exists\n    if not Path(\".env\").exists():\n        print(\"Creating .env file...\")\n        env_content = \"\"\"DEBUG=True\nSECRET_KEY=your-secret-key-here-change-in-production\nDB_NAME=spaceship_coordination\nDB_USER=postgres",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "create_superuser",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def create_superuser():\n    \"\"\"Create a superuser account\"\"\"\n    print(\"Creating superuser account...\")\n    if os.name == 'nt':  # Windows\n        python_cmd = \"venv\\\\Scripts\\\\python\"\n    else:  # Unix/Linux/Mac\n        python_cmd = \"venv/bin/python\"\n    # Check if superuser already exists\n    result = subprocess.run(\n        f\"{python_cmd} manage.py shell -c \\\"from django.contrib.auth.models import User; print(User.objects.filter(is_superuser=True).count())\\\"\",",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "start_services",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def start_services():\n    \"\"\"Start required services\"\"\"\n    print(\"Starting services...\")\n    # Check if Redis is running\n    try:\n        import redis\n        r = redis.Redis(host='localhost', port=6379, db=0)\n        r.ping()\n        print(\"Redis is already running\")\n    except:",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "run_tests",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def run_tests():\n    \"\"\"Run the test suite\"\"\"\n    print(\"Running tests...\")\n    if os.name == 'nt':  # Windows\n        python_cmd = \"venv\\\\Scripts\\\\python\"\n    else:  # Unix/Linux/Mac\n        python_cmd = \"venv/bin/python\"\n    if not run_command(f\"{python_cmd} manage.py test spaceship_coordination\"):\n        return False\n    return True",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "deploy",
+        "description": "deploy",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description=\"Deploy Spaceship Coordination Experiment\")\n    parser.add_argument(\"--setup\", action=\"store_true\", help=\"Set up the environment\")\n    parser.add_argument(\"--test\", action=\"store_true\", help=\"Run tests\")\n    parser.add_argument(\"--start\", action=\"store_true\", help=\"Start the application\")\n    parser.add_argument(\"--full\", action=\"store_true\", help=\"Full setup and start\")\n    args = parser.parse_args()\n    if args.full or args.setup:\n        if not check_prerequisites():\n            sys.exit(1)",
+        "detail": "deploy",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key-here-change-in-production')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key-here-change-in-production')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'\nALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'otree',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'otree',\n    'channels',\n    'spaceship_coordination',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'urls'",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ROOT_URLCONF = 'urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "WSGI_APPLICATION = 'wsgi.application'\n# Database\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\nAUTH_PASSWORD_VALIDATORS = [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JS, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JS, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Media files",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JS, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Media files\nMEDIA_URL = '/media/'",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JS, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# oTree settings",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Media files\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# oTree settings\nOTREE_APPS = [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# oTree settings\nOTREE_APPS = [\n    'spaceship_coordination',\n]\nOTREE_PRODUCTION = not DEBUG\n# oTree session configuration",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# oTree settings\nOTREE_APPS = [\n    'spaceship_coordination',\n]\nOTREE_PRODUCTION = not DEBUG\n# oTree session configuration\nSESSION_CONFIGS = [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# oTree settings\nOTREE_APPS = [\n    'spaceship_coordination',\n]\nOTREE_PRODUCTION = not DEBUG\n# oTree session configuration\nSESSION_CONFIGS = [\n    {\n        'name': 'spaceship_coordination',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "OTREE_APPS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "OTREE_APPS = [\n    'spaceship_coordination',\n]\nOTREE_PRODUCTION = not DEBUG\n# oTree session configuration\nSESSION_CONFIGS = [\n    {\n        'name': 'spaceship_coordination',\n        'display_name': 'Spaceship Coordination Experiment',\n        'app_sequence': ['spaceship_coordination'],",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "OTREE_PRODUCTION",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "OTREE_PRODUCTION = not DEBUG\n# oTree session configuration\nSESSION_CONFIGS = [\n    {\n        'name': 'spaceship_coordination',\n        'display_name': 'Spaceship Coordination Experiment',\n        'app_sequence': ['spaceship_coordination'],\n        'num_demo_participants': 3,\n    },\n]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_CONFIGS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "SESSION_CONFIGS = [\n    {\n        'name': 'spaceship_coordination',\n        'display_name': 'Spaceship Coordination Experiment',\n        'app_sequence': ['spaceship_coordination'],\n        'num_demo_participants': 3,\n    },\n]\nSESSION_CONFIG_DEFAULTS = {\n    'real_world_currency_per_point': 1.00,",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION_CONFIG_DEFAULTS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "SESSION_CONFIG_DEFAULTS = {\n    'real_world_currency_per_point': 1.00,\n    'participation_fee': 5.00,\n    'doc': 'Spaceship Coordination Experiment',\n}\n# Channels configuration for WebSocket support\nASGI_APPLICATION = 'asgi.application'\nCHANNEL_LAYERS = {\n    'default': {\n        'BACKEND': 'channels_redis.core.RedisChannelLayer',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ASGI_APPLICATION",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ASGI_APPLICATION = 'asgi.application'\nCHANNEL_LAYERS = {\n    'default': {\n        'BACKEND': 'channels_redis.core.RedisChannelLayer',\n        'CONFIG': {\n            \"hosts\": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],\n        },\n    },\n}\n# Redis configuration",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "CHANNEL_LAYERS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "CHANNEL_LAYERS = {\n    'default': {\n        'BACKEND': 'channels_redis.core.RedisChannelLayer',\n        'CONFIG': {\n            \"hosts\": [os.environ.get('REDIS_URL', 'redis://localhost:6379')],\n        },\n    },\n}\n# Redis configuration\nREDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "REDIS_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')\n# Experiment configuration\nEXPERIMENT_CONFIG = {\n    'PU_PER_ROUND': 4,\n    'TRAVEL_COSTS': {\n        'Alpha': 0,\n        'Beta': 1,\n        'Gamma': 2,\n        'Omega': 3,\n    },",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EXPERIMENT_CONFIG",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EXPERIMENT_CONFIG = {\n    'PU_PER_ROUND': 4,\n    'TRAVEL_COSTS': {\n        'Alpha': 0,\n        'Beta': 1,\n        'Gamma': 2,\n        'Omega': 3,\n    },\n    'PROBE_COST': 1,\n    'ROBOT_COST': 1,",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGING",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',\n            'style': '{',\n        },\n    },\n    'handlers': {",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "urls",
+        "description": "urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('', include('otree.urls')),  # Temporarily commented out\n    path('spaceship/', include('spaceship_coordination.urls')),\n]\n# Serve static files during development\nif settings.DEBUG:\n    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "wsgi",
+        "description": "wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "wsgi",
+        "documentation": {}
+    }
+]

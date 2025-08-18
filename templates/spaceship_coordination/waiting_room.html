@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting Room - Spaceship Coordination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .spaceship-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        .loading-dots {
+            display: inline-block;
+            animation: dots 1.5s infinite;
+        }
+        .status {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes dots {
+            0%, 20% { content: "Waiting"; }
+            40% { content: "Waiting."; }
+            60% { content: "Waiting.."; }
+            80%, 100% { content: "Waiting..."; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spaceship-icon">🚀</div>
+        <h1>Welcome to the Spaceship Coordination Experiment</h1>
+        <div class="message">
+            {{ message }}
+        </div>
+        <div class="loading-dots">
+            <span>Waiting</span><span>.</span><span>.</span><span>.</span>
+        </div>
+        <div class="status">
+            Please remain on this page. You will be automatically assigned to a crew shortly.
+        </div>
+    </div>
+
+    <script>
+        // Check participant status every 3 seconds
+        setInterval(function() {
+            fetch('/spaceship/api/participant/status/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.game_started) {
+                        // Game has started, redirect to game
+                        window.location.href = '/spaceship/game/';
+                    }
+                })
+                .catch(error => {
+                    console.log('Still waiting for game to start...');
+                });
+        }, 3000);
+        
+        // Also check when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/spaceship/api/participant/status/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.game_started) {
+                        window.location.href = '/spaceship/game/';
+                    }
+                })
+                .catch(error => {
+                    console.log('Checking initial status...');
+                });
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,53 @@
+{% extends 'spaceship_coordination/base.html' %}
+
+{% block title %}Welcome - Spaceship Coordination Experiment{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Welcome to the Spaceship Coordination Experiment</h2>
+    
+    <p>This is a multiplayer coordination game designed to study team decision-making under different conditions.</p>
+    
+    <div style="margin: 2rem 0;">
+        <h3>Quick Navigation</h3>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a href="{% url 'spaceship_coordination:waiting_room' %}" class="btn">
+                🚀 Join Waiting Room
+            </a>
+            <a href="{% url 'spaceship_coordination:admin_crews' %}" class="btn btn-secondary">
+                👥 Admin: Manage Crews
+            </a>
+            <a href="{% url 'spaceship_coordination:admin_sessions' %}" class="btn btn-secondary">
+                📊 Admin: View Sessions
+            </a>
+        </div>
+    </div>
+    
+    <div style="margin: 2rem 0;">
+        <h3>About the Experiment</h3>
+        <p>In this experiment, you will work as part of a 3-person crew to mine valuable minerals from asteroids across different star systems.</p>
+        
+        <h4>Your Role</h4>
+        <ul>
+            <li><strong>Captain:</strong> Coordinates the team and makes strategic decisions</li>
+            <li><strong>Navigator:</strong> Controls travel between systems and asteroids</li>
+            <li><strong>Driller:</strong> Mines asteroids for minerals</li>
+        </ul>
+        
+        <h4>Objective</h4>
+        <p>Maximize your team's mineral points while managing your limited Power Units (PU) budget.</p>
+    </div>
+    
+    <div style="margin: 2rem 0;">
+        <h3>Getting Started</h3>
+        <ol>
+            <li>Click "Join Waiting Room" to begin</li>
+            <li>Wait for other participants to join</li>
+            <li>Complete the consent and comprehension check</li>
+            <li>Begin the coordination game</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+
+
