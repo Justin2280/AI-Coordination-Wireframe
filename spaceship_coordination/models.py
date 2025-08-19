@@ -48,7 +48,7 @@ class Crew(models.Model):
     room_id = models.CharField(max_length=50, unique=True)
     captain = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='captain_crews')
     navigator = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='navigator_crews')
-    driller = models.ForeignKey('Participant', on_delete=models.CASCADE, related_name='driller_crews')
+    driller = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='driller_crews')
     current_system = models.CharField(max_length=20, default='Alpha')
     current_round = models.IntegerField(default=0)
     current_stage = models.CharField(max_length=20, default='waiting', choices=[

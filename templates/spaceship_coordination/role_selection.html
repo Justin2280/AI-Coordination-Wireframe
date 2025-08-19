@@ -57,38 +57,20 @@
             <div style="margin: 1rem 0;">
                 <h5>Available Roles:</h5>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    {% if not crew.captain %}
+                    {% for role in crew.open_roles %}
                     <form method="post" style="display: inline;">
                         {% csrf_token %}
                         <input type="hidden" name="crew_id" value="{{ crew.id }}">
-                        <input type="hidden" name="role" value="captain">
-                        <button type="submit" class="btn" style="background: #FFD700; color: #000;">
-                            🎯 Join as Captain
+                        <input type="hidden" name="role" value="{{ role }}">
+                        <button type="submit" class="btn" 
+                                style="background: {% if role == 'captain' %}#FFD700; color: #000;{% elif role == 'navigator' %}#4CAF50;{% else %}#2196F3;{% endif %}">
+                            {% if role == 'captain' %}🎯 Join as Captain
+                            {% elif role == 'navigator' %}🧭 Join as Navigator
+                            {% else %}⛏️ Join as Driller
+                            {% endif %}
                         </button>
                     </form>
-                    {% endif %}
-                    
-                    {% if not crew.navigator %}
-                    <form method="post" style="display: inline;">
-                        {% csrf_token %}
-                        <input type="hidden" name="crew_id" value="{{ crew.id }}">
-                        <input type="hidden" name="role" value="navigator">
-                        <button type="submit" class="btn" style="background: #4CAF50;">
-                            🧭 Join as Navigator
-                        </button>
-                    </form>
-                    {% endif %}
-                    
-                    {% if not crew.driller %}
-                    <form method="post" style="display: inline;">
-                        {% csrf_token %}
-                        <input type="hidden" name="crew_id" value="{{ crew.id }}">
-                        <input type="hidden" name="role" value="driller">
-                        <button type="submit" class="btn" style="background: #2196F3;">
-                            ⛏️ Join as Driller
-                        </button>
-                    </form>
-                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

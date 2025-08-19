@@ -56,8 +56,8 @@ class WaitingRoomView(View):
                 # Clear invalid session
                 request.session.pop('participant_id', None)
         
-        # No participant assigned, show role selection
-        return render(request, 'spaceship_coordination/role_selection.html')
+        # No participant assigned, redirect to role selection
+        return redirect('spaceship_coordination:role_selection')
 
 
 class RoleSelectionView(View):
@@ -66,13 +66,24 @@ class RoleSelectionView(View):
     def get(self, request):
         """Display role selection page"""
         # Get available crews that need participants
-        available_crews = Crew.objects.filter(
-            current_stage='waiting'
-        ).exclude(
-            captain__isnull=False,
-            navigator__isnull=False,
-            driller__isnull=False
-        )
+        available_crews = []
+        
+        waiting_crews = Crew.objects.filter(current_stage='waiting')
+        
+        for crew in waiting_crews:
+            # Check if this crew has any open roles
+            open_roles = []
+            if not crew.captain:
+                open_roles.append('captain')
+            if not crew.navigator:
+                open_roles.append('navigator')
+            if not crew.driller:
+                open_roles.append('driller')
+            
+            if open_roles:
+                # Add crew with open roles info
+                crew.open_roles = open_roles
+                available_crews.append(crew)
         
         context = {
             'available_crews': available_crews

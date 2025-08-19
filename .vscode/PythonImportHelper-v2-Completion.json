@@ -105,6 +105,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "transaction",
         "importPath": "django.db",
         "description": "django.db",
@@ -708,6 +724,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "spaceship_coordination.migrations.0002_alter_crew_driller",
+        "description": "spaceship_coordination.migrations.0002_alter_crew_driller",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('spaceship_coordination', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='crew',\n            name='driller',\n            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='driller_crews', to='spaceship_coordination.participant'),\n        ),",
+        "detail": "spaceship_coordination.migrations.0002_alter_crew_driller",
+        "documentation": {}
+    },
+    {
         "label": "ExperimentSessionAdmin",
         "kind": 6,
         "importPath": "spaceship_coordination.admin",
@@ -946,7 +971,7 @@
         "kind": 6,
         "importPath": "spaceship_coordination.models",
         "description": "spaceship_coordination.models",
-        "peekOfCode": "class Crew(models.Model):\n    \"\"\"Crew/room for a group of participants\"\"\"\n    session = models.ForeignKey(ExperimentSession, on_delete=models.CASCADE)\n    room_id = models.CharField(max_length=50, unique=True)\n    captain = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='captain_crews')\n    navigator = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='navigator_crews')\n    driller = models.ForeignKey('Participant', on_delete=models.CASCADE, related_name='driller_crews')\n    current_system = models.CharField(max_length=20, default='Alpha')\n    current_round = models.IntegerField(default=0)\n    current_stage = models.CharField(max_length=20, default='waiting', choices=[",
+        "peekOfCode": "class Crew(models.Model):\n    \"\"\"Crew/room for a group of participants\"\"\"\n    session = models.ForeignKey(ExperimentSession, on_delete=models.CASCADE)\n    room_id = models.CharField(max_length=50, unique=True)\n    captain = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='captain_crews')\n    navigator = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='navigator_crews')\n    driller = models.ForeignKey('Participant', on_delete=models.SET_NULL, null=True, blank=True, related_name='driller_crews')\n    current_system = models.CharField(max_length=20, default='Alpha')\n    current_round = models.IntegerField(default=0)\n    current_stage = models.CharField(max_length=20, default='waiting', choices=[",
         "detail": "spaceship_coordination.models",
         "documentation": {}
     },
@@ -1198,7 +1223,7 @@
         "kind": 6,
         "importPath": "spaceship_coordination.views",
         "description": "spaceship_coordination.views",
-        "peekOfCode": "class RoleSelectionView(View):\n    \"\"\"View for participants to select their role\"\"\"\n    def get(self, request):\n        \"\"\"Display role selection page\"\"\"\n        # Get available crews that need participants\n        available_crews = Crew.objects.filter(\n            current_stage='waiting'\n        ).exclude(\n            captain__isnull=False,\n            navigator__isnull=False,",
+        "peekOfCode": "class RoleSelectionView(View):\n    \"\"\"View for participants to select their role\"\"\"\n    def get(self, request):\n        \"\"\"Display role selection page\"\"\"\n        # Get available crews that need participants\n        available_crews = []\n        waiting_crews = Crew.objects.filter(current_stage='waiting')\n        for crew in waiting_crews:\n            # Check if this crew has any open roles\n            open_roles = []",
         "detail": "spaceship_coordination.views",
         "documentation": {}
     },
