@@ -97,6 +97,27 @@ This experiment simulates a mining spaceship operation where 3-person crews must
    python manage.py runserver
    ```
 
+## 🆕 **New Features: Automatic Session Setup**
+
+### **Automatic Setup**
+- **New sessions automatically create** default asteroids and crew
+- **Default asteroids**: Alpha, Beta, Gamma, Omega with balanced stats
+- **Default crew**: Ready for participants to join
+
+### **Admin Portal Actions**
+- **Create Default Setup**: Manually create setup for existing sessions
+- **Reset to Default**: Reset session to clean state
+- **Session Overview**: See crew and asteroid counts at a glance
+
+### **Management Commands**
+```bash
+# Create a test session with automatic setup
+python manage.py create_test_session
+
+# Create with custom parameters
+python manage.py create_test_session --session-id "high_pressure_test" --pressure high --complexity low --captain-type human
+```
+
 ## Game Mechanics
 
 ### Roles

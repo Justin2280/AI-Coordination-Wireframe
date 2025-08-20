@@ -497,13 +497,100 @@ class GameEngine:
             'crew_id': crew.id,
             'current_round': crew.current_round,
             'current_stage': crew.current_stage,
-            'current_system': crew.current_system,
-            'cumulative_minerals': analytics.last().cumulative_minerals if analytics.exists() else 0,
-            'cumulative_pu_used': analytics.last().cumulative_pu_team if analytics.exists() else 0,
-            'round_summaries': [
-                self.get_round_summary(i) for i in range(crew.current_round + 1)
-            ]
+            'total_minerals': self._calculate_total_minerals(),
+            'total_pu_spent': sum(action.pu_spent for action in actions),
+            'rounds_completed': analytics.count(),
+            'last_updated': crew.stage_start_time
         }
+    
+    def get_available_actions(self, participant):
+        """Get available actions for a participant based on their role and current stage"""
+        if self.current_round_state.stage != 'action':
+            return []
+        
+        if participant.role == 'navigator':
+            return [
+                {'type': 'do_nothing', 'label': 'Do Nothing', 'pu_cost': 0},
+                {'type': 'travel', 'label': 'Travel', 'pu_cost': 1},
+                {'type': 'send_probe', 'label': 'Send Probe', 'pu_cost': 1}
+            ]
+        elif participant.role == 'driller':
+            return [
+                {'type': 'do_nothing', 'label': 'Do Nothing', 'pu_cost': 0},
+                {'type': 'mine_shallow', 'label': 'Mine Shallow', 'pu_cost': 1},
+                {'type': 'mine_deep', 'label': 'Mine Deep', 'pu_cost': 2},
+                {'type': 'deploy_robot', 'label': 'Deploy Robot', 'pu_cost': 1}
+            ]
+        
+        return []
+    
+    def can_communicate(self, participant):
+        """Check if participant can communicate based on current stage and role"""
+        # Check both the round state stage and the crew's current stage
+        if (self.current_round_state.stage != 'briefing' and 
+            self.crew.current_stage != 'briefing'):
+            return False
+        
+        # Only captain can communicate during briefing
+        return participant.role == 'captain'
+    
+    def get_asteroid_info(self, asteroid_name, participant):
+        """Get asteroid information based on complexity and participant's intel"""
+        try:
+            asteroid = Asteroid.objects.get(
+                name=asteroid_name,
+                session=self.crew.session
+            )
+            
+            info = {
+                'name': asteroid.name,
+                'travel_cost': asteroid.travel_cost,
+                'discovered': asteroid.discovered_by is not None
+            }
+            
+            # Check complexity level
+            if self.crew.session.complexity == 'low':
+                # Low complexity: share all info
+                info.update({
+                    'max_minerals': asteroid.max_minerals,
+                    'shallow_cost': asteroid.shallow_cost,
+                    'deep_cost': asteroid.deep_cost,
+                    'mined': asteroid.mined
+                })
+            else:
+                # High complexity: only show info if participant has intel
+                if asteroid.discovered_by == participant:
+                    info['max_minerals'] = asteroid.max_minerals
+                
+                # Check if participant has probed this asteroid
+                probe_action = Action.objects.filter(
+                    participant=participant,
+                    action_type='send_probe',
+                    target_asteroid=asteroid_name
+                ).exists()
+                
+                if probe_action:
+                    info['max_minerals'] = asteroid.max_minerals
+                
+                # Check if participant has deployed robot
+                robot_action = Action.objects.filter(
+                    participant=participant,
+                    action_type='deploy_robot',
+                    target_asteroid=asteroid_name
+                ).exists()
+                
+                if robot_action:
+                    info.update({
+                        'shallow_cost': asteroid.shallow_cost,
+                        'deep_cost': asteroid.deep_cost
+                    })
+                
+                info['mined'] = asteroid.mined
+            
+            return info
+            
+        except Asteroid.DoesNotExist:
+            return None
 
 
 

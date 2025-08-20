@@ -13,7 +13,7 @@ from datetime import datetime
 @admin.register(ExperimentSession)
 class ExperimentSessionAdmin(admin.ModelAdmin):
     """Admin interface for experiment sessions"""
-    list_display = ['id', 'session_id', 'pressure', 'complexity', 'captain_type', 'seed', 'created_at', 'completed']
+    list_display = ['id', 'session_id', 'pressure', 'complexity', 'captain_type', 'seed', 'created_at', 'completed', 'get_crew_count', 'get_asteroid_count']
     list_filter = ['pressure', 'complexity', 'captain_type', 'completed', 'created_at']
     search_fields = ['session_id', 'seed']
     readonly_fields = ['created_at']
@@ -26,6 +26,62 @@ class ExperimentSessionAdmin(admin.ModelAdmin):
             'fields': ('completed', 'created_at')
         }),
     )
+    
+    actions = ['create_default_setup', 'reset_to_default', 'start_new_round', 'pause_crews']
+    
+    def get_crew_count(self, obj):
+        """Display number of crews"""
+        return obj.crew_set.count()
+    get_crew_count.short_description = 'Crews'
+    
+    def get_asteroid_count(self, obj):
+        """Display number of asteroids"""
+        return obj.asteroid_set.count()
+    get_asteroid_count.short_description = 'Asteroids'
+    
+    def create_default_setup(self, request, queryset):
+        """Create default asteroids and crew for selected sessions"""
+        created_count = 0
+        for session in queryset:
+            try:
+                session.create_default_setup()
+                created_count += 1
+            except Exception as e:
+                self.message_user(request, f"Error creating setup for {session.session_id}: {str(e)}", level='ERROR')
+        
+        if created_count > 0:
+            self.message_user(request, f"Created default setup for {created_count} sessions")
+    create_default_setup.short_description = "Create default setup for selected sessions"
+    
+    def reset_to_default(self, request, queryset):
+        """Reset selected sessions to default state"""
+        reset_count = 0
+        for session in queryset:
+            try:
+                session.reset_to_default()
+                reset_count += 1
+            except Exception as e:
+                self.message_user(request, f"Error resetting {session.session_id}: {str(e)}", level='ERROR')
+        
+        if reset_count > 0:
+            self.message_user(request, f"Reset {reset_count} sessions to default state")
+    reset_to_default.short_description = "Reset selected sessions to default"
+    
+    def start_new_round(self, request, queryset):
+        """Start new round for selected sessions"""
+        for session in queryset:
+            # Implementation for starting new round
+            pass
+        self.message_user(request, f"Started new round for {queryset.count()} sessions")
+    start_new_round.short_description = "Start new round for selected sessions"
+    
+    def pause_crews(self, request, queryset):
+        """Pause selected crews"""
+        for session in queryset:
+            # Implementation for pausing crews
+            pass
+        self.message_user(request, f"Paused {queryset.count()} crews")
+    pause_crews.short_description = "Pause selected crews"
 
 
 @admin.register(Crew)

@@ -69,6 +69,7 @@
             display: flex;
             gap: 0.5rem;
             margin-top: 1rem;
+            flex-wrap: wrap;
         }
         .btn {
             padding: 0.5rem 1rem;
@@ -82,19 +83,20 @@
             background: #4CAF50;
             color: white;
         }
-        .btn-primary:hover {
+        .btn-primary:hover:not(:disabled) {
             background: #45a049;
         }
         .btn-secondary {
             background: #2196F3;
             color: white;
         }
-        .btn-secondary:hover {
+        .btn-secondary:hover:not(:disabled) {
             background: #1976D2;
         }
         .btn:disabled {
             background: #666;
             cursor: not-allowed;
+            opacity: 0.6;
         }
         .status-panel {
             background: rgba(255, 255, 255, 0.1);
@@ -113,14 +115,24 @@
             padding: 1rem;
             margin-top: 1rem;
         }
-        .chat-messages {
-            height: 200px;
-            overflow-y: auto;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-        }
+                 .chat-messages {
+             height: 200px;
+             overflow-y: auto;
+             background: rgba(0, 0, 0, 0.3);
+             border-radius: 5px;
+             padding: 0.5rem;
+             margin-bottom: 1rem;
+         }
+         .message {
+             margin-bottom: 0.5rem;
+             padding: 0.25rem 0;
+         }
+         .own-message {
+             background: rgba(76, 175, 80, 0.2);
+             padding: 0.25rem 0.5rem;
+             border-radius: 3px;
+             margin: 0.25rem -0.25rem;
+         }
         .chat-input {
             display: flex;
             gap: 0.5rem;
@@ -136,6 +148,17 @@
         .chat-input input::placeholder {
             color: rgba(255, 255, 255, 0.6);
         }
+        .stage-indicator {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .stage-briefing { background: rgba(255, 193, 7, 0.2); }
+        .stage-action { background: rgba(76, 175, 80, 0.2); }
+        .stage-result { background: rgba(33, 150, 243, 0.2); }
     </style>
 </head>
 <body>
@@ -149,6 +172,45 @@
         <div class="game-area">
             <h2>Mission Control</h2>
             <p>Current System: <strong>{{ crew.current_system }}</strong></p>
+            
+                         <!-- Stage Indicator -->
+             <div class="stage-indicator stage-{{ game_summary.current_stage }}">
+                 {% if game_summary.current_stage == 'briefing' %}
+                     🎯 Briefing Stage - Captain coordinates team discussion
+                 {% elif game_summary.current_stage == 'action' %}
+                     ⚡ Action Stage - Navigator acts first, then Driller
+                     {% if participant.role == 'navigator' %}
+                         <br><span style="color: #4CAF50;">✅ Your turn to act!</span>
+                     {% elif participant.role == 'driller' %}
+                         <br><span style="color: #FF9800;">⏳ Waiting for Navigator to act first...</span>
+                     {% endif %}
+                 {% elif game_summary.current_stage == 'result' %}
+                     📊 Result Stage - Processing actions...
+                 {% endif %}
+             </div>
+             
+             <!-- Debug Info (remove this later) -->
+             <div style="background: rgba(255,0,0,0.1); padding: 5px; margin: 5px 0; font-size: 12px; border-radius: 3px;">
+                 <strong>Debug:</strong> Backend Stage: {{ crew.current_stage }}, Display Stage: {{ game_summary.current_stage }}, Round: {{ crew.current_round }}
+             </div>
+             
+             <!-- Central Action Button for Navigator -->
+             {% if participant.role == 'navigator' and game_summary.current_stage == 'action' %}
+             <div style="text-align: center; margin: 20px 0; padding: 20px; background: rgba(76, 175, 80, 0.2); border-radius: 10px; border: 2px solid #4CAF50;">
+                 <h3 style="margin: 0 0 15px 0; color: #4CAF50;">🎯 Your Turn to Act!</h3>
+                 <p style="margin: 0 0 15px 0;">Choose your actions or click "Do Nothing" to pass your turn</p>
+                 <button class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 30px;" onclick="submitAction('do_nothing')">
+                     😴 Do Nothing (Pass Turn)
+                 </button>
+                 <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #888;">After you act, the Driller will be able to take their turn</p>
+             </div>
+             {% elif participant.role == 'driller' and game_summary.current_stage == 'action' %}
+             <div style="text-align: center; margin: 20px 0; padding: 20px; background: rgba(255, 152, 0, 0.2); border-radius: 10px; border: 2px solid #FF9800;">
+                 <h3 style="margin: 0 0 15px 0; color: #FF9800;">⏳ Waiting for Navigator</h3>
+                 <p style="margin: 0 0 15px 0;">The Navigator must act first before you can take your turn</p>
+                 <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #888;">Your action buttons will be enabled once the Navigator completes their turn</p>
+             </div>
+             {% endif %}
             
             <div class="asteroid-grid">
                 {% for asteroid in asteroids %}
@@ -177,27 +239,38 @@
                     </div>
                     
                     <div class="action-buttons">
-                        <button class="btn btn-primary" onclick="travelTo('{{ asteroid.name }}')">
-                            Travel
-                        </button>
-                        {% if not asteroid.mined %}
-                        <button class="btn btn-secondary" onclick="sendProbe('{{ asteroid.name }}')">
-                            Send Probe
-                        </button>
-                        <button class="btn btn-secondary" onclick="deployRobot('{{ asteroid.name }}')">
-                            Deploy Robot
-                        </button>
-                        <button class="btn btn-primary" onclick="mineShallow('{{ asteroid.name }}')">
-                            Mine Shallow
-                        </button>
-                        <button class="btn btn-primary" onclick="mineDeep('{{ asteroid.name }}')">
-                            Mine Deep
-                        </button>
+                        {% if participant.role == 'navigator' and game_summary.current_stage == 'action' %}
+                            <button class="btn btn-primary" onclick="submitAction('travel', '{{ asteroid.name }}')" 
+                                    {% if asteroid.name == crew.current_system %}disabled{% endif %}>
+                                🚀 Travel
+                            </button>
+                            <button class="btn btn-secondary" onclick="submitAction('send_probe', '{{ asteroid.name }}')">
+                                🔍 Send Probe
+                            </button>
+                        {% elif participant.role == 'driller' and game_summary.current_stage == 'action' %}
+                            {% if not asteroid.mined %}
+                                <button class="btn btn-primary" onclick="submitAction('mine_shallow', '{{ asteroid.name }}')" 
+                                        id="driller-mine-shallow-{{ asteroid.name }}" disabled>
+                                    ⛏️ Mine Shallow
+                                </button>
+                                <button class="btn btn-primary" onclick="submitAction('mine_deep', '{{ asteroid.name }}')" 
+                                        id="driller-mine-deep-{{ asteroid.name }}" disabled>
+                                    ⛏️ Mine Deep
+                                </button>
+                                <button class="btn btn-secondary" onclick="submitAction('deploy_robot', '{{ asteroid.name }}')" 
+                                        id="driller-robot-{{ asteroid.name }}" disabled>
+                                    🤖 Deploy Robot
+                                </button>
+                            {% endif %}
                         {% endif %}
+                        
+
                     </div>
                 </div>
                 {% endfor %}
             </div>
+            
+
         </div>
 
         <div class="sidebar">
@@ -219,6 +292,10 @@
                     <span>Total Minerals:</span>
                     <span>{{ game_summary.total_minerals }}</span>
                 </div>
+                <div class="status-item">
+                    <span>Time Remaining:</span>
+                    <span>{{ game_summary.time_remaining }}s</span>
+                </div>
             </div>
 
             <div class="status-panel">
@@ -237,58 +314,91 @@
                 </div>
             </div>
 
-            <div class="chat-area">
-                <h3>Team Communication</h3>
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message">Welcome to the mission! Coordinate with your team.</div>
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="chatInput" placeholder="Type your message...">
-                    <button class="btn btn-primary" onclick="sendMessage()">Send</button>
-                </div>
-            </div>
+                                      {% if participant.role == 'captain' %}
+                 <!-- Captain sees single chat window with three send buttons -->
+                 <div class="chat-area">
+                     <h3>Team Communication</h3>
+                     <div class="chat-messages" id="chatMessages">
+                         <div class="message">Welcome to the mission! Coordinate with your team.</div>
+                         {% if can_receive_messages %}
+                             {% for msg in chat_messages %}
+                             <div class="message {% if msg.is_own %}own-message{% endif %}">
+                                 <strong>{{ msg.sender }}:</strong> {{ msg.message }}
+                                 <small style="color: #888; float: right;">{{ msg.timestamp }}</small>
+                             </div>
+                             {% endfor %}
+                         {% endif %}
+                     </div>
+                     {% if can_communicate %}
+                     <div class="chat-input">
+                         <input type="text" id="chatInput" placeholder="Type your message...">
+                         <div style="display: flex; gap: 10px; margin-top: 10px;">
+                             <button class="btn btn-primary" onclick="sendMessage('all', event)">Send to All</button>
+                             <button class="btn btn-secondary" onclick="sendMessage('navigator', event)">Send to Nav</button>
+                             <button class="btn btn-secondary" onclick="sendMessage('driller', event)">Send to Drill</button>
+                         </div>
+                     </div>
+                     {% endif %}
+                 </div>
+             {% else %}
+                 <!-- Navigator and Driller see single chat window -->
+                 <div class="chat-area">
+                     <h3>Team Communication</h3>
+                     <div class="chat-messages" id="chatMessages">
+                         <div class="message">Welcome to the mission! Coordinate with your team.</div>
+                         {% if can_receive_messages %}
+                             {% for msg in chat_messages %}
+                             <div class="message {% if msg.is_own %}own-message{% endif %}">
+                                 <strong>{{ msg.sender }}:</strong> {{ msg.message }}
+                                 <small style="color: #888; float: right;">{{ msg.timestamp }}</small>
+                             </div>
+                             {% endfor %}
+                         {% else %}
+                             <div class="message">Communication closed during this stage.</div>
+                         {% endif %}
+                     </div>
+                     {% if can_communicate %}
+                     <div class="chat-input">
+                         <input type="text" id="chatInput" placeholder="Message to Captain...">
+                         <button class="btn btn-primary" onclick="sendMessage('captain', event)">Send to Captain</button>
+                     </div>
+                     {% else %}
+                     <div class="chat-input">
+                         <input type="text" disabled placeholder="Communication closed">
+                         <button class="btn btn-secondary" disabled>Send</button>
+                     </div>
+                     <small>Communication is only open during briefing stage.</small>
+                     {% endif %}
+                 </div>
+             {% endif %}
         </div>
     </div>
 
     <script>
         // Game action functions
-        function travelTo(asteroidName) {
-            submitAction('travel', asteroidName);
-        }
-        
-        function sendProbe(asteroidName) {
-            submitAction('send_probe', asteroidName);
-        }
-        
-        function deployRobot(asteroidName) {
-            submitAction('deploy_robot', asteroidName);
-        }
-        
-        function mineShallow(asteroidName) {
-            submitAction('mine_shallow', asteroidName);
-        }
-        
-        function mineDeep(asteroidName) {
-            submitAction('mine_deep', asteroidName);
-        }
-        
-        function submitAction(actionType, targetAsteroid) {
+        function submitAction(actionType, targetAsteroid = null) {
             const crewId = {{ crew.id }};
+            const data = {
+                action_type: actionType
+            };
+            
+            if (targetAsteroid) {
+                data.target_asteroid = targetAsteroid;
+            }
+            
             fetch(`/spaceship/api/crew/${crewId}/actions/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRFToken': getCookie('csrftoken')
                 },
-                body: JSON.stringify({
-                    action_type: actionType,
-                    target_asteroid: targetAsteroid
-                })
+                body: JSON.stringify(data)
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    location.reload(); // Refresh to show updated state
+                    // Refresh page to show updated state
+                    location.reload();
                 } else {
                     alert('Action failed: ' + data.error);
                 }
@@ -299,42 +409,125 @@
             });
         }
         
-        function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const message = input.value.trim();
-            if (!message) return;
-            
-            const crewId = {{ crew.id }};
-            fetch(`/spaceship/api/crew/${crewId}/chat/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': getCookie('csrftoken')
-                },
-                body: JSON.stringify({
-                    message: message
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    addMessageToChat('You', message);
-                    input.value = '';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }
+                 function sendMessage(toRole = 'all', event) {
+             let input;
+             if ('{{ participant.role }}' === 'captain') {
+                 input = document.getElementById('chatInput');
+             } else {
+                 input = document.getElementById('chatInput');
+             }
+             
+             const message = input.value.trim();
+             if (!message) return;
+             
+             const crewId = {{ crew.id }};
+             fetch(`/spaceship/api/crew/${crewId}/chat/`, {
+                 method: 'POST',
+                 headers: {
+                     'Content-Type': 'application/json',
+                     'X-CSRFToken': getCookie('csrftoken')
+                 },
+                 body: JSON.stringify({
+                     message: message,
+                     to_role: toRole
+                 })
+             })
+             .then(response => response.json())
+             .then(data => {
+                 if (data.success) {
+                     input.value = '';
+                     
+                     // Show success feedback - find the button that was clicked
+                     if (event && event.target) {
+                         const clickedButton = event.target;
+                         const originalText = clickedButton.textContent;
+                         clickedButton.textContent = '✓ Sent';
+                         clickedButton.style.background = '#4CAF50';
+                         setTimeout(() => {
+                             clickedButton.textContent = originalText;
+                             clickedButton.style.background = '';
+                         }, 1000);
+                     }
+                     
+                     // Refresh chat messages
+                     refreshChatMessages();
+                 } else {
+                     alert('Failed to send message: ' + (data.error || 'Unknown error'));
+                 }
+             })
+             .catch(error => {
+                 console.error('Error:', error);
+                 alert('Failed to send message. Please try again.');
+             });
+         }
         
-        function addMessageToChat(sender, message) {
-            const chatMessages = document.getElementById('chatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'message';
-            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
+                 function addMessageToChat(sender, message) {
+             const chatMessages = document.getElementById('chatMessages');
+             const messageDiv = document.createElement('div');
+             messageDiv.className = 'message';
+             messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+             chatMessages.appendChild(messageDiv);
+             chatMessages.scrollTop = chatMessages.scrollHeight;
+         }
+         
+         function refreshChatMessages() {
+             // Fetch new chat messages without refreshing the page
+             const crewId = {{ crew.id }};
+             console.log('Fetching chat messages for crew:', crewId);
+             
+             fetch(`/spaceship/api/crew/${crewId}/chat/`)
+                 .then(response => {
+                     console.log('Chat API response status:', response.status);
+                     return response.json();
+                 })
+                 .then(data => {
+                     console.log('Chat API response data:', data);
+                     if (data.success) {
+                         console.log('Updating chat display with', data.messages.length, 'messages');
+                         updateChatDisplay(data.messages);
+                     } else {
+                         console.log('Chat API returned error:', data.error);
+                     }
+                 })
+                 .catch(error => {
+                     console.error('Error fetching chat messages:', error);
+                 });
+         }
+         
+         function updateChatDisplay(messages) {
+             console.log('updateChatDisplay called with', messages.length, 'messages');
+             const chatMessages = document.getElementById('chatMessages');
+             
+             // Keep the welcome message
+             const welcomeMessage = chatMessages.querySelector('.message:first-child');
+             if (!welcomeMessage) {
+                 console.log('No welcome message found, creating one');
+                 const welcomeDiv = document.createElement('div');
+                 welcomeDiv.className = 'message';
+                 welcomeDiv.textContent = 'Welcome to the mission! Coordinate with your team.';
+                 chatMessages.appendChild(welcomeDiv);
+             }
+             
+             // Clear existing chat messages (but keep welcome message)
+             const existingMessages = chatMessages.querySelectorAll('.message:not(:first-child)');
+             existingMessages.forEach(msg => msg.remove());
+             
+             // Add all chat messages
+             messages.forEach((msg, index) => {
+                 console.log('Adding message', index + 1, ':', msg.sender, '-', msg.message);
+                 const messageDiv = document.createElement('div');
+                 messageDiv.className = `message ${msg.is_own ? 'own-message' : ''}`;
+                 messageDiv.innerHTML = `
+                     <strong>${msg.sender}:</strong> ${msg.message}
+                     <small style="color: #888; float: right;">${msg.timestamp}</small>
+                 `;
+                 chatMessages.appendChild(messageDiv);
+             });
+             
+             // Scroll to bottom
+             chatMessages.scrollTop = chatMessages.scrollHeight;
+             console.log('Chat display updated, total messages:', chatMessages.children.length);
+         }
         
         function getCookie(name) {
             let cookieValue = null;
@@ -351,10 +544,127 @@
             return cookieValue;
         }
         
-        // Auto-refresh game state every 10 seconds
-        setInterval(function() {
-            location.reload();
-        }, 10000);
+        // Check if navigator has acted and enable driller buttons
+        function checkNavigatorAction() {
+            if ('{{ participant.role }}' === 'driller' && '{{ game_summary.current_stage }}' === 'action') {
+                const crewId = {{ crew.id }};
+                fetch(`/spaceship/api/crew/${crewId}/navigator-status/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.navigator_acted) {
+                            // Enable all driller buttons
+                            document.querySelectorAll('[id^="driller-"]').forEach(button => {
+                                button.disabled = false;
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.log('Checking navigator status...');
+                    });
+            }
+        }
+        
+        // Check navigator status every 2 seconds during action stage
+        if ('{{ participant.role }}' === 'driller' && '{{ game_summary.current_stage }}' === 'action') {
+            setInterval(checkNavigatorAction, 2000);
+            checkNavigatorAction(); // Check immediately
+        }
+        
+                 // Synchronized timer updates every second
+         let timerInterval;
+         let currentTimeRemaining = parseInt('{{ game_summary.time_remaining }}') || 0;
+         
+         function syncTimer() {
+             // Get synchronized timer from server
+             fetch(`/spaceship/api/crew/{{ crew.id }}/timer-sync/`)
+                 .then(response => response.json())
+                 .then(data => {
+                     // Update local timer
+                     currentTimeRemaining = data.time_remaining;
+                     
+                     // Find the time remaining element
+                     const timeRemainingElements = document.querySelectorAll('.status-item span');
+                     let timeRemainingElement = null;
+                     
+                     for (let i = 0; i < timeRemainingElements.length; i++) {
+                         if (timeRemainingElements[i].textContent === 'Time Remaining:') {
+                             timeRemainingElement = timeRemainingElements[i + 1];
+                             break;
+                         }
+                     }
+                     
+                     if (timeRemainingElement) {
+                         timeRemainingElement.textContent = currentTimeRemaining + 's';
+                         
+                         // Update the global variable for other functions
+                         window.gameTimeRemaining = currentTimeRemaining;
+                         
+                         // Add visual warning when time is running low
+                         if (currentTimeRemaining <= 10) {
+                             timeRemainingElement.style.color = '#ff4444';
+                             timeRemainingElement.style.fontWeight = 'bold';
+                         } else if (currentTimeRemaining <= 30) {
+                             timeRemainingElement.style.color = '#ffaa00';
+                         } else {
+                             timeRemainingElement.style.color = '';
+                             timeRemainingElement.style.fontWeight = '';
+                         }
+                         
+                         // Check if stage changed
+                         if (data.current_stage !== '{{ game_summary.current_stage }}') {
+                             location.reload();
+                         }
+                     }
+                     
+                     // If time's up, wait for server to advance stage
+                     if (currentTimeRemaining <= 0) {
+                         // Don't refresh immediately - let server handle stage advancement
+                         // Just keep checking for stage changes
+                         console.log('Time is up, waiting for stage advancement...');
+                     }
+                 })
+                 .catch(error => {
+                     console.log('Timer sync error:', error);
+                 });
+         }
+         
+         // Start synchronized timer updates
+         if ('{{ game_summary.current_stage }}' !== 'completed') {
+             timerInterval = setInterval(syncTimer, 1000);
+             syncTimer(); // Sync immediately
+         }
+        
+                 // Update game state every 10 seconds (much less frequent)
+         setInterval(function() {
+             fetch(`/spaceship/api/crew/{{ crew.id }}/status/`)
+                 .then(response => response.json())
+                 .then(data => {
+                     // Only refresh if stage changed
+                     if (data.current_stage !== '{{ game_summary.current_stage }}') {
+                         location.reload();
+                     }
+                 })
+                 .catch(error => {
+                     console.log('Checking game status...');
+                 });
+         }, 10000);
+         
+         // Update chat messages every 3 seconds for real-time updates
+         if ('{{ can_receive_messages }}' === 'True') {
+             console.log('Setting up real-time chat updates every 3 seconds');
+             setInterval(function() {
+                 console.log('Refreshing chat messages...');
+                 refreshChatMessages();
+             }, 3000);
+             
+             // Also refresh immediately when page loads
+             setTimeout(function() {
+                 console.log('Initial chat refresh...');
+                 refreshChatMessages();
+             }, 1000);
+         } else {
+             console.log('Chat updates disabled - can_receive_messages = {{ can_receive_messages }}');
+         }
     </script>
 </body>
 </html>

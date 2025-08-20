@@ -6,6 +6,8 @@ import json
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.serializers.json import DjangoJSONEncoder
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Constants class
 class C:
@@ -40,6 +42,58 @@ class ExperimentSession(models.Model):
     
     class Meta:
         db_table = 'experiment_session'
+    
+    def create_default_setup(self):
+        """Create default asteroids and crew for this session"""
+        from django.utils import timezone
+        import random
+        
+        # Set random seed for this session
+        if not self.seed:
+            self.seed = random.randint(1, 999999)
+            self.save()
+        
+        # Create default asteroids
+        default_asteroids = [
+            {'name': 'Alpha', 'max_minerals': 128, 'shallow_cost': 2, 'deep_cost': 3, 'travel_cost': 1},
+            {'name': 'Beta', 'max_minerals': 105, 'shallow_cost': 1, 'deep_cost': 3, 'travel_cost': 2},
+            {'name': 'Gamma', 'max_minerals': 94, 'shallow_cost': 2, 'deep_cost': 4, 'travel_cost': 3},
+            {'name': 'Omega', 'max_minerals': 140, 'shallow_cost': 2, 'deep_cost': 2, 'travel_cost': 3}
+        ]
+        
+        for asteroid_data in default_asteroids:
+            Asteroid.objects.create(
+                session=self,
+                **asteroid_data
+            )
+        
+        # Create default crew
+        crew = Crew.objects.create(
+            session=self,
+            room_id=f"crew_{self.session_id}",
+            current_system='Alpha',
+            current_round=0,
+            current_stage='waiting'
+        )
+        
+        return crew
+    
+    def reset_to_default(self):
+        """Reset session to default state"""
+        # Delete all existing data
+        self.crew_set.all().delete()
+        self.asteroid_set.all().delete()
+        self.participant_set.all().delete()
+        
+        # Reset session state
+        self.completed = False
+        self.save()
+        
+        # Recreate default setup
+        return self.create_default_setup()
+    
+    def __str__(self):
+        return f"Session {self.session_id} - {self.pressure}/{self.complexity}/{self.captain_type}"
 
 
 class Crew(models.Model):
@@ -181,11 +235,16 @@ class Outcome(models.Model):
 class ChatMessage(models.Model):
     """Chat messages between participants"""
     from_participant = models.ForeignKey(Participant, on_delete=models.CASCADE, related_name='sent_messages')
-    to_participant = models.ForeignKey(Participant, on_delete=models.CASCADE, related_name='received_messages')
+    to_participant = models.ForeignKey(Participant, on_delete=models.CASCADE, related_name='received_messages', null=True, blank=True)
     round_state = models.ForeignKey(RoundState, on_delete=models.CASCADE)
     message = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     stage_only = models.CharField(max_length=20, default='briefing')
+    
+    @property
+    def is_broadcast(self):
+        """Check if this message is visible to all team members"""
+        return self.to_participant is None
     
     class Meta:
         db_table = 'chat_message'
@@ -275,5 +334,17 @@ class IntelVisibility(models.Model):
     class Meta:
         db_table = 'intel_visibility'
         unique_together = ['round_state', 'asteroid', 'intel_type', 'visible_to_participant']
+
+
+# Signals
+@receiver(post_save, sender=ExperimentSession)
+def create_default_setup_on_save(sender, instance, created, **kwargs):
+    """Automatically create default setup when a new ExperimentSession is created"""
+    if created:
+        try:
+            instance.create_default_setup()
+        except Exception as e:
+            # Log the error but don't fail the save
+            print(f"Error creating default setup for session {instance.session_id}: {str(e)}")
 
 

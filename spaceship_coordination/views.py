@@ -14,8 +14,8 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from django.db import transaction
 from .models import *
-from .game_logic import GameEngine
 from .ai_captain import AICaptain
+from django.utils import timezone
 
 logger = logging.getLogger(__name__)
 
@@ -171,41 +171,283 @@ class GameView(View):
             
             # Get current game state
             try:
-                game_engine = GameEngine(crew)
-                game_summary = game_engine.get_game_summary()
-            except:
+                
+                # Get or create round state for current round
+                try:
+                    round_state = RoundState.objects.get(
+                        crew=crew,
+                        round_number=crew.current_round
+                    )
+                except RoundState.DoesNotExist:
+                    # Create round state if it doesn't exist
+                    round_state = RoundState.objects.create(
+                        crew=crew,
+                        round_number=crew.current_round,
+                        stage=crew.current_stage,
+                        pu_remaining=4,  # Start with 4 PU per round
+                        current_system=crew.current_system,
+                        briefing_time_remaining=180 if crew.session.pressure == 'low' else 90,
+                        action_time_remaining=15,
+                        result_time_remaining=15
+                    )
+                
+                # Ensure round state stage matches crew stage
+                if round_state.stage != crew.current_stage:
+                    round_state.stage = crew.current_stage
+                    round_state.save()
+                
+                # Calculate time remaining using the same logic as _update_timers
+                now = timezone.now()
+                time_elapsed = (now - round_state.stage_start_time).total_seconds()
+                
+                if crew.current_stage == 'briefing':
+                    total_duration = 180 if crew.session.pressure == 'low' else 90
+                    time_remaining = max(0, int(total_duration - time_elapsed))
+                elif crew.current_stage == 'action':
+                    total_duration = 15
+                    time_remaining = max(0, int(total_duration - time_elapsed))
+                elif crew.current_stage == 'result':
+                    total_duration = 15
+                    time_remaining = max(0, int(total_duration - time_elapsed))
+                else:
+                    time_remaining = 0
+                
+                # Create game summary
+                game_summary = {
+                    'current_round': crew.current_round,
+                    'current_stage': crew.current_stage,
+                    'pu_remaining': round_state.pu_remaining,
+                    'total_minerals': 0,  # Will calculate this later
+                    'round_progress': f"{crew.current_round}/5",
+                    'stage_progress': "1/3",
+                    'time_remaining': time_remaining
+                }
+                
+                # Update timers if needed
+                self._update_timers(round_state, crew)
+                
+                # Get available actions for this participant
+                available_actions = []
+                if crew.current_stage == 'action':
+                    if participant.role == 'navigator':
+                        available_actions = [
+                            {'type': 'do_nothing', 'label': 'Do Nothing', 'pu_cost': 0},
+                            {'type': 'travel', 'label': 'Travel', 'pu_cost': 1},
+                            {'type': 'send_probe', 'label': 'Send Probe', 'pu_cost': 1}
+                        ]
+                    elif participant.role == 'driller':
+                        available_actions = [
+                            {'type': 'do_nothing', 'label': 'Do Nothing', 'pu_cost': 0},
+                            {'type': 'mine_shallow', 'label': 'Mine Shallow', 'pu_cost': 1},
+                            {'type': 'mine_deep', 'label': 'Mine Deep', 'pu_cost': 2},
+                            {'type': 'deploy_robot', 'label': 'Deploy Robot', 'pu_cost': 1}
+                        ]
+                
+                # Get asteroid information
+                asteroids = []
+                for asteroid_name in ['Alpha', 'Beta', 'Gamma', 'Omega']:
+                    try:
+                        asteroid = Asteroid.objects.get(
+                            name=asteroid_name,
+                            session=crew.session
+                        )
+                        asteroid_info = {
+                            'name': asteroid.name,
+                            'travel_cost': asteroid.travel_cost,
+                            'max_minerals': asteroid.max_minerals,
+                            'shallow_cost': asteroid.shallow_cost,
+                            'deep_cost': asteroid.deep_cost,
+                            'mined': asteroid.mined
+                        }
+                        asteroids.append(asteroid_info)
+                    except Asteroid.DoesNotExist:
+                        pass
+                
+                # Communication status - Captain can send to anyone, Navigator/Driller can send to Captain
+                if crew.current_stage == 'briefing':
+                    if participant.role == 'captain':
+                        can_communicate = True  # Captain can send to anyone
+                    else:
+                        can_communicate = True  # Navigator/Driller can send to Captain
+                else:
+                    can_communicate = False  # No communication outside briefing
+                
+                # All participants can receive messages during briefing
+                can_receive_messages = (crew.current_stage == 'briefing')
+                
+                # Debug logging
+                logger.info(f"Participant {participant.id} ({participant.role}) can_communicate: {can_communicate}")
+                logger.info(f"Participant {participant.id} ({participant.role}) can_receive_messages: {can_receive_messages}")
+                logger.info(f"Crew {crew.id} current_stage: {crew.current_stage}")
+                
+                # Get chat messages for this crew and round - be more explicit about broadcast messages
+                chat_messages = ChatMessage.objects.filter(
+                    round_state=round_state
+                ).order_by('timestamp')
+                
+                # Debug logging for chat messages
+                logger.info(f"Found {chat_messages.count()} chat messages for crew {crew.id}, round {crew.current_round}")
+                logger.info(f"RoundState ID: {round_state.id}, Round Number: {round_state.round_number}")
+                
+                for msg in chat_messages:
+                    logger.info(f"Chat message: id={msg.id}, from={msg.from_participant.role}, to_participant={msg.to_participant}, is_broadcast={msg.is_broadcast}, message='{msg.message[:50]}...'")
+                
+                # Format chat messages for display - simplify the logic
+                formatted_messages = []
+                for msg in chat_messages:
+                    # For broadcast messages (to_participant=None), show to everyone
+                    # For direct messages, show to sender and recipient
+                    if msg.to_participant is None:  # Broadcast message
+                        is_visible = True
+                        logger.info(f"Broadcast message '{msg.message[:30]}...' is visible to {participant.role}")
+                    elif msg.to_participant == participant or msg.from_participant == participant:
+                        is_visible = True
+                        logger.info(f"Direct message '{msg.message[:30]}...' is visible to {participant.role}")
+                    else:
+                        is_visible = False
+                        logger.info(f"Message '{msg.message[:30]}...' is NOT visible to {participant.role}")
+                    
+                    if is_visible:
+                        formatted_messages.append({
+                            'sender': msg.from_participant.role.title(),
+                            'message': msg.message,
+                            'timestamp': msg.timestamp.strftime('%H:%M:%S'),
+                            'is_own': msg.from_participant == participant
+                        })
+                
+                logger.info(f"Formatted {len(formatted_messages)} messages for participant {participant.role}")
+                
+                # Additional debug info for Captain
+                if participant.role == 'captain':
+                    logger.info(f"Captain {participant.id} - Total messages: {chat_messages.count()}")
+                    logger.info(f"Captain {participant.id} - Formatted messages: {len(formatted_messages)}")
+                    for i, msg in enumerate(chat_messages):
+                        logger.info(f"  Message {i+1}: from={msg.from_participant.role}, to={msg.to_participant.role if msg.to_participant else 'ALL'}, text='{msg.message[:30]}...'")
+                
+            except Exception as e:
+                logger.error(f"Game engine error: {str(e)}")
                 # Fallback if game engine fails
                 game_summary = {
                     'current_round': crew.current_round,
                     'current_stage': crew.current_stage,
                     'pu_remaining': 4,
-                    'total_minerals': 0
+                    'total_minerals': 0,
+                    'round_progress': f"{crew.current_round}/5",
+                    'stage_progress': "1/3",
+                    'time_remaining': 0
                 }
-            
-            # Get visible asteroids for the current user
-            asteroids = crew.session.asteroid_set.all()
+                available_actions = []
+                asteroids = []
+                can_communicate = False
             
             context = {
                 'participant': participant,
                 'crew': crew,
                 'game_summary': game_summary,
+                'available_actions': available_actions,
                 'asteroids': asteroids,
+                'can_communicate': can_communicate,
+                'can_receive_messages': can_receive_messages,
                 'session_config': {
                     'pressure': crew.session.pressure,
                     'complexity': crew.session.complexity,
                     'captain_type': crew.session.captain_type
-                }
+                },
+                'chat_messages': formatted_messages
             }
             
             return render(request, 'spaceship_coordination/game.html', context)
             
         except Participant.DoesNotExist:
-            request.session.pop('participant_id', None)
             return redirect('spaceship_coordination:waiting_room')
         except Exception as e:
-            logger.error(f"Error in game view: {str(e)}")
-            messages.error(request, "An error occurred while loading the game.")
+            logger.error(f"Game view error: {str(e)}")
             return redirect('spaceship_coordination:waiting_room')
+    
+    def _update_timers(self, round_state, crew):
+        """Update stage timers and advance stages when time runs out"""
+        now = timezone.now()
+        
+        # Ensure crew and round_state are in sync
+        if crew.current_stage != round_state.stage:
+            round_state.stage = crew.current_stage
+            round_state.stage_start_time = now
+            round_state.save()
+            logger.info(f"Crew {crew.id} stage synchronized: {crew.current_stage}")
+        
+        # Calculate time elapsed since stage start
+        time_elapsed = (now - round_state.stage_start_time).total_seconds()
+        
+        # Get the total duration for current stage
+        if crew.current_stage == 'briefing':
+            total_duration = 180 if crew.session.pressure == 'low' else 90
+            time_remaining = max(0, int(total_duration - time_elapsed))
+            
+            # Only advance when time actually runs out
+            if time_remaining <= 0:
+                crew.current_stage = 'action'
+                crew.save()
+                round_state.stage = 'action'
+                round_state.stage_start_time = now
+                round_state.action_time_remaining = 15
+                round_state.save()
+                logger.info(f"Crew {crew.id} advanced from briefing to action stage after {int(time_elapsed)}s")
+            else:
+                # Update the stored time remaining
+                round_state.briefing_time_remaining = time_remaining
+                round_state.save()
+        
+        elif crew.current_stage == 'action':
+            total_duration = 15
+            time_remaining = max(0, int(total_duration - time_elapsed))
+            
+            # Only advance when time actually runs out
+            if time_remaining <= 0:
+                crew.current_stage = 'result'
+                crew.save()
+                round_state.stage = 'result'
+                round_state.stage_start_time = now
+                round_state.result_time_remaining = 15
+                round_state.save()
+                logger.info(f"Crew {crew.id} advanced from action to result stage after {int(time_elapsed)}s")
+            else:
+                # Update the stored time remaining
+                round_state.action_time_remaining = time_remaining
+                round_state.save()
+        
+        elif crew.current_stage == 'result':
+            total_duration = 15
+            time_remaining = max(0, int(total_duration - time_elapsed))
+            
+            # Only advance when time actually runs out
+            if time_remaining <= 0:
+                if crew.current_round < 5:
+                    crew.current_round += 1
+                    crew.current_stage = 'briefing'
+                    crew.save()
+                    
+                    # Create new round state with proper initial times
+                    new_round_state = RoundState.objects.create(
+                        crew=crew,
+                        round_number=crew.current_round,
+                        stage='briefing',
+                        pu_remaining=4,
+                        current_system=crew.current_system,
+                        briefing_time_remaining=180 if crew.session.pressure == 'low' else 90,
+                        action_time_remaining=15,
+                        result_time_remaining=15,
+                        stage_start_time=now
+                    )
+                    logger.info(f"Crew {crew.id} advanced to round {crew.current_round}")
+                else:
+                    # Game complete
+                    crew.current_stage = 'completed'
+                    crew.save()
+                    logger.info(f"Crew {crew.id} completed the game")
+            else:
+                # Update the stored time remaining
+                round_state.result_time_remaining = time_remaining
+                round_state.save()
 
 
 class GameCancelledView(View):
@@ -287,58 +529,171 @@ class ParticipantStatusView(View):
 
 
 class ActionSubmitView(View):
-    """API endpoint for action submission"""
-    
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
+    """API endpoint for submitting game actions"""
     
     def post(self, request, crew_id):
-        """Submit an action for a participant"""
+        """Process action submission"""
         try:
-            data = json.loads(request.body)
-            action_type = data.get('action_type')
-            target_asteroid = data.get('target_asteroid')
-            pu_spent = data.get('pu_spent', 0)
-            
-            if not action_type:
-                return JsonResponse({'error': 'Action type is required'}, status=400)
-            
             # Get participant from session
             participant_id = request.session.get('participant_id')
             if not participant_id:
-                return JsonResponse({'error': 'Not authenticated'}, status=401)
+                return JsonResponse({'success': False, 'error': 'No participant found'})
             
             participant = Participant.objects.get(participant_id=participant_id)
             crew = participant.crew
             
             if crew.id != crew_id:
-                return JsonResponse({'error': 'Access denied'}, status=403)
+                return JsonResponse({'success': False, 'error': 'Access denied'})
             
-            # Submit action to game engine
+            # Parse action data
+            data = json.loads(request.body)
+            action_type = data.get('action_type')
+            target_asteroid = data.get('target_asteroid')
+            
+            # Check if we're in action stage
             try:
-                game_engine = GameEngine(crew)
-                success, message = game_engine.submit_action(
-                    participant, action_type, target_asteroid, pu_spent
+                round_state = RoundState.objects.get(
+                    crew=crew,
+                    round_number=crew.current_round
                 )
+            except RoundState.DoesNotExist:
+                return JsonResponse({'success': False, 'error': 'No active round state'})
+            
+            if round_state.stage != 'action':
+                return JsonResponse({'success': False, 'error': 'No active action stage'})
+            
+            # Calculate PU cost for the action
+            pu_spent = 0
+            if action_type == 'travel':
+                pu_spent = 1
+            elif action_type == 'send_probe':
+                pu_spent = 1
+            elif action_type == 'mine_shallow':
+                pu_spent = 1
+            elif action_type == 'mine_deep':
+                pu_spent = 2
+            elif action_type == 'deploy_robot':
+                pu_spent = 1
+            elif action_type == 'do_nothing':
+                pu_spent = 0
+            else:
+                return JsonResponse({'success': False, 'error': 'Invalid action type'})
+            
+            # Check if participant has enough PU
+            if round_state.pu_remaining < pu_spent:
+                return JsonResponse({'success': False, 'error': f'Not enough PU. Required: {pu_spent}, Available: {round_state.pu_remaining}'})
+            
+            # Check sequential action order: Navigator first, then Driller
+            if participant.role == 'driller':
+                # Check if navigator has acted first
+                navigator_action = Action.objects.filter(
+                    round_state=round_state,
+                    participant__role='navigator'
+                ).first()
                 
-                if success:
-                    return JsonResponse({
-                        'success': True,
-                        'message': message,
-                        'pu_remaining': crew.roundstate_set.last().pu_remaining if crew.roundstate_set.exists() else 4
-                    })
-                else:
-                    return JsonResponse({'error': message}, status=400)
-            except Exception as e:
-                logger.error(f"Game engine error: {str(e)}")
-                return JsonResponse({'error': 'Game engine error'}, status=500)
+                if not navigator_action:
+                    return JsonResponse({'success': False, 'error': 'Navigator must act first before Driller can act'})
+            
+            # Create the action
+            action = Action.objects.create(
+                participant=participant,
+                round_state=round_state,
+                action_type=action_type,
+                target_asteroid=target_asteroid,
+                pu_spent=pu_spent
+            )
+            
+            # Update PU remaining
+            round_state.pu_remaining -= pu_spent
+            round_state.save()
+            
+            # Process specific actions
+            if action_type == 'travel' and target_asteroid:
+                crew.current_system = target_asteroid
+                crew.save()
+                round_state.current_system = target_asteroid
+                round_state.save()
+                logger.info(f"Navigator {participant.id} traveled to {target_asteroid}")
+            elif action_type == 'send_probe' and target_asteroid:
+                logger.info(f"Navigator {participant.id} sent probe to {target_asteroid}")
+            elif action_type == 'deploy_robot' and target_asteroid:
+                logger.info(f"Driller {participant.id} deployed robot to {target_asteroid}")
+            elif action_type == 'mine_shallow' and target_asteroid:
+                try:
+                    asteroid = Asteroid.objects.get(
+                        name=target_asteroid,
+                        session=crew.session
+                    )
+                    if not asteroid.mined:
+                        # Mark asteroid as mined
+                        asteroid.mined = True
+                        asteroid.mined_round = crew.current_round
+                        asteroid.save()
+                        
+                        # Create outcome (simplified for now)
+                        Outcome.objects.create(
+                            round_state=round_state,
+                            asteroid=asteroid,
+                            participant=participant,
+                            action=action,
+                            minerals_gained=asteroid.max_minerals // 2,  # Simplified
+                            full_extraction=False,
+                            partial_fraction=0.5,
+                            probability_basis={},
+                            depth='shallow',
+                            intel_combo='none'
+                        )
+                        logger.info(f"Driller {participant.id} mined {target_asteroid} (shallow)")
+                except Asteroid.DoesNotExist:
+                    pass
+            elif action_type == 'mine_deep' and target_asteroid:
+                try:
+                    asteroid = Asteroid.objects.get(
+                        name=target_asteroid,
+                        session=crew.session
+                    )
+                    if not asteroid.mined:
+                        # Mark asteroid as mined
+                        asteroid.mined = True
+                        asteroid.mined_round = crew.current_round
+                        asteroid.save()
+                        
+                        # Create outcome (simplified for now)
+                        Outcome.objects.create(
+                            round_state=round_state,
+                            asteroid=asteroid,
+                            action=action,
+                            minerals_gained=asteroid.max_minerals,  # Full extraction for deep mining
+                            full_extraction=True,
+                            partial_fraction=1.0,
+                            probability_basis={},
+                            depth='deep',
+                            intel_combo='none'
+                        )
+                        logger.info(f"Driller {participant.id} mined {target_asteroid} (deep)")
+                except Asteroid.DoesNotExist:
+                    pass
+            elif action_type == 'do_nothing':
+                logger.info(f"{participant.role.title()} {participant.id} chose to do nothing")
+            
+            # If this was the navigator's action, enable driller actions
+            if participant.role == 'navigator':
+                logger.info(f"Navigator {participant.id} completed action, driller can now act")
+            elif participant.role == 'driller':
+                logger.info(f"Driller {participant.id} completed action, round actions complete")
+            
+            return JsonResponse({
+                'success': True,
+                'action_id': action.id,
+                'pu_remaining': round_state.pu_remaining,
+                'message': f'{participant.role.title()} action completed successfully'
+            })
                 
-        except json.JSONDecodeError:
-            return JsonResponse({'error': 'Invalid JSON'}, status=400)
+        except Participant.DoesNotExist:
+            return JsonResponse({'success': False, 'error': 'Participant not found'})
         except Exception as e:
-            logger.error(f"Error submitting action: {str(e)}")
-            return JsonResponse({'error': 'Internal server error'}, status=500)
+            logger.error(f"Action submission error: {str(e)}")
+            return JsonResponse({'success': False, 'error': 'An error occurred'})
 
 
 class ChatMessageView(View):
@@ -370,34 +725,80 @@ class ChatMessageView(View):
                 return JsonResponse({'error': 'Access denied'}, status=403)
             
             # Get current round state
-            round_state = RoundState.objects.filter(
-                crew=crew,
-                stage='briefing'
-            ).first()
+            try:
+                round_state = RoundState.objects.get(
+                    crew=crew,
+                    round_number=crew.current_round
+                )
+                logger.info(f"ChatMessageView: Found RoundState ID={round_state.id}, round_number={round_state.round_number}, crew={crew.id}")
+            except RoundState.DoesNotExist:
+                logger.error(f"ChatMessageView: No RoundState found for crew {crew.id}, round {crew.current_round}")
+                return JsonResponse({'error': 'No active round state'}, status=400)
             
-            if not round_state:
+            # Check if we're in briefing stage
+            if crew.current_stage != 'briefing':
+                logger.error(f"ChatMessageView: Not in briefing stage, current_stage={crew.current_stage}")
                 return JsonResponse({'error': 'No active briefing stage'}, status=400)
             
-            # Find recipient
-            to_participant = None
-            if to_role == 'captain':
-                to_participant = crew.captain
+            # Create chat message based on to_role
+            if to_role == 'all':
+                # Broadcast message - visible to all team members
+                chat_message = ChatMessage.objects.create(
+                    from_participant=from_participant,
+                    to_participant=None,  # None means visible to all
+                    round_state=round_state,
+                    message=message,
+                    stage_only='briefing'
+                )
+            elif to_role == 'captain':
+                # Direct message to Captain
+                captain = crew.participant_set.filter(role='captain').first()
+                if captain:
+                    chat_message = ChatMessage.objects.create(
+                        from_participant=from_participant,
+                        to_participant=captain,  # Direct to Captain
+                        round_state=round_state,
+                        message=message,
+                        stage_only='briefing'
+                    )
+                else:
+                    return JsonResponse({'error': 'Captain not found'}, status=400)
             elif to_role == 'navigator':
-                to_participant = crew.navigator
+                # Direct message to Navigator
+                navigator = crew.participant_set.filter(role='navigator').first()
+                if navigator:
+                    chat_message = ChatMessage.objects.create(
+                        from_participant=from_participant,
+                        to_participant=navigator,  # Direct to Navigator
+                        round_state=round_state,
+                        message=message,
+                        stage_only='briefing'
+                    )
+                else:
+                    return JsonResponse({'error': 'Navigator not found'}, status=400)
             elif to_role == 'driller':
-                to_participant = crew.driller
+                # Direct message to Driller
+                driller = crew.participant_set.filter(role='driller').first()
+                if driller:
+                    chat_message = ChatMessage.objects.create(
+                        from_participant=from_participant,
+                        to_participant=driller,  # Direct to Driller
+                        round_state=round_state,
+                        message=message,
+                        stage_only='briefing'
+                    )
+                else:
+                    return JsonResponse({'error': 'Driller not found'}, status=400)
+            else:
+                return JsonResponse({'error': f'Invalid to_role: {to_role}. Valid values are: all, captain, navigator, driller'}, status=400)
             
-            if not to_participant:
-                return JsonResponse({'error': 'Invalid participant roles'}, status=400)
+            # Debug logging - test the is_broadcast property
+            logger.info(f"Created chat message: id={chat_message.id}, from={from_participant.role}, to_participant={chat_message.to_participant}, is_broadcast={chat_message.is_broadcast}, message='{message[:50]}...'")
+            logger.info(f"Direct property check: to_participant is None = {chat_message.to_participant is None}")
             
-            # Create chat message
-            chat_message = ChatMessage.objects.create(
-                from_participant=from_participant,
-                to_participant=to_participant,
-                round_state=round_state,
-                message=message,
-                stage_only='briefing'
-            )
+            # Verify the message was created correctly
+            chat_message.refresh_from_db()
+            logger.info(f"After refresh: to_participant={chat_message.to_participant}, is_broadcast={chat_message.is_broadcast}")
             
             return JsonResponse({
                 'success': True,
@@ -410,6 +811,65 @@ class ChatMessageView(View):
         except Exception as e:
             logger.error(f"Error sending chat message: {str(e)}")
             return JsonResponse({'error': 'Internal server error'}, status=500)
+    
+    def get(self, request, crew_id):
+        """Get chat messages for a crew"""
+        try:
+            # Get participant from session
+            participant_id = request.session.get('participant_id')
+            if not participant_id:
+                return JsonResponse({'error': 'Not authenticated'}, status=401)
+            
+            participant = Participant.objects.get(participant_id=participant_id)
+            crew = participant.crew
+            
+            if crew.id != crew_id:
+                return JsonResponse({'error': 'Access denied'}, status=403)
+            
+            # Get current round state
+            try:
+                round_state = RoundState.objects.get(
+                    crew=crew,
+                    round_number=crew.current_round
+                )
+            except RoundState.DoesNotExist:
+                return JsonResponse({'error': 'No active round state'}, status=400)
+            
+            # Get chat messages for this crew and round
+            chat_messages = ChatMessage.objects.filter(
+                round_state=round_state
+            ).order_by('timestamp')
+            
+            # Format chat messages for display
+            formatted_messages = []
+            for msg in chat_messages:
+                # For broadcast messages (to_participant=None), show to everyone
+                # For direct messages, show to sender and recipient
+                if msg.to_participant is None:  # Broadcast message
+                    is_visible = True
+                elif msg.to_participant == participant or msg.from_participant == participant:
+                    is_visible = True
+                else:
+                    is_visible = False
+                
+                if is_visible:
+                    formatted_messages.append({
+                        'sender': msg.from_participant.role.title(),
+                        'message': msg.message,
+                        'timestamp': msg.timestamp.strftime('%H:%M:%S'),
+                        'is_own': msg.from_participant == participant
+                    })
+            
+            return JsonResponse({
+                'success': True,
+                'messages': formatted_messages
+            })
+            
+        except Participant.DoesNotExist:
+            return JsonResponse({'error': 'Participant not found'}, status=404)
+        except Exception as e:
+            logger.error(f"Error getting chat messages: {str(e)}")
+            return JsonResponse({'error': 'Internal server error'}, status=500)
 
 
 class RoundStatusView(View):
@@ -419,58 +879,147 @@ class RoundStatusView(View):
         """Get status of a specific round"""
         try:
             crew = get_object_or_404(Crew, id=crew_id)
-            
-            # Get round state
-            round_state = RoundState.objects.filter(
+            round_state = RoundState.objects.get(
                 crew=crew,
                 round_number=round_number
-            ).first()
-            
-            if not round_state:
-                return JsonResponse({'error': 'Round not found'}, status=404)
+            )
             
             # Get actions for this round
             actions = Action.objects.filter(round_state=round_state)
-            action_data = []
             
-            for action in actions:
-                action_data.append({
-                    'participant_role': action.participant.role,
-                    'action_type': action.action_type,
-                    'target_asteroid': action.target_asteroid,
-                    'pu_spent': action.pu_spent,
-                    'auto_do_nothing': action.auto_do_nothing,
-                    'timestamp': action.timestamp.isoformat()
-                })
-            
-            # Get outcomes for this round
-            outcomes = Outcome.objects.filter(round_state=round_state)
-            outcome_data = []
-            
-            for outcome in outcomes:
-                outcome_data.append({
-                    'asteroid': outcome.asteroid.name,
-                    'minerals_gained': outcome.minerals_gained,
-                    'full_extraction': outcome.full_extraction,
-                    'depth': outcome.depth,
-                    'intel_combo': outcome.intel_combo
-                })
-            
-            status = {
+            return JsonResponse({
                 'round_number': round_number,
                 'stage': round_state.stage,
                 'pu_remaining': round_state.pu_remaining,
                 'current_system': round_state.current_system,
-                'stage_start_time': round_state.stage_start_time.isoformat(),
-                'actions': action_data,
-                'outcomes': outcome_data
-            }
+                'actions': [
+                    {
+                        'participant': action.participant.role,
+                        'action_type': action.action_type,
+                        'target': action.target_asteroid,
+                        'pu_spent': action.pu_spent
+                    }
+                    for action in actions
+                ]
+            })
             
-            return JsonResponse(status)
-            
+        except (Crew.DoesNotExist, RoundState.DoesNotExist):
+            return JsonResponse({'error': 'Round not found'}, status=404)
         except Exception as e:
-            logger.error(f"Error getting round status: {str(e)}")
-            return JsonResponse({'error': 'Failed to get round status'}, status=500)
+            logger.error(f"Round status error: {str(e)}")
+            return JsonResponse({'error': 'Internal server error'}, status=500)
+
+
+class NavigatorStatusView(View):
+    """API endpoint to check if navigator has acted"""
+    
+    def get(self, request, crew_id):
+        """Check if navigator has submitted an action in current round"""
+        try:
+            crew = get_object_or_404(Crew, id=crew_id)
+            
+            # Get current round state
+            try:
+                round_state = RoundState.objects.get(
+                    crew=crew,
+                    round_number=crew.current_round
+                )
+            except RoundState.DoesNotExist:
+                return JsonResponse({'navigator_acted': False})
+            
+            # Check if navigator has submitted any action
+            navigator_action = Action.objects.filter(
+                round_state=round_state,
+                participant__role='navigator'
+            ).first()
+            
+            return JsonResponse({
+                'navigator_acted': navigator_action is not None,
+                'navigator_action': navigator_action.action_type if navigator_action else None
+            })
+            
+        except Crew.DoesNotExist:
+            return JsonResponse({'error': 'Crew not found'}, status=404)
+        except Exception as e:
+            logger.error(f"Navigator status error: {str(e)}")
+            return JsonResponse({'error': 'Internal server error'}, status=500)
+
+
+class CrewStatusView(View):
+    """API endpoint to get current crew status for timer system"""
+    
+    def get(self, request, crew_id):
+        """Get current crew status without full page refresh"""
+        try:
+            crew = get_object_or_404(Crew, id=crew_id)
+            
+            return JsonResponse({
+                'current_stage': crew.current_stage,
+                'current_round': crew.current_round,
+                'current_system': crew.current_system
+            })
+            
+        except Crew.DoesNotExist:
+            return JsonResponse({'error': 'Crew not found'}, status=404)
+        except Exception as e:
+            logger.error(f"Crew status error: {str(e)}")
+            return JsonResponse({'error': 'Internal server error'}, status=500)
+
+
+class TimerSyncView(View):
+    """API endpoint to get synchronized timer information"""
+    
+    def get(self, request, crew_id):
+        """Get synchronized timer info for all players"""
+        try:
+            crew = get_object_or_404(Crew, id=crew_id)
+            
+            # Get current round state
+            try:
+                round_state = RoundState.objects.get(
+                    crew=crew,
+                    round_number=crew.current_round
+                )
+            except RoundState.DoesNotExist:
+                return JsonResponse({'error': 'No active round state'}, status=404)
+            
+            # Update timers first
+            game_view = GameView()
+            game_view._update_timers(round_state, crew)
+            
+            # Refresh crew and round_state after potential updates
+            crew.refresh_from_db()
+            round_state.refresh_from_db()
+            
+            # Calculate remaining time using the same logic as _update_timers
+            now = timezone.now()
+            time_elapsed = (now - round_state.stage_start_time).total_seconds()
+            
+            if crew.current_stage == 'briefing':
+                total_duration = 180 if crew.session.pressure == 'low' else 90
+                time_remaining = max(0, int(total_duration - time_elapsed))
+            elif crew.current_stage == 'action':
+                total_duration = 15
+                time_remaining = max(0, int(total_duration - time_elapsed))
+            elif crew.current_stage == 'result':
+                total_duration = 15
+                time_remaining = max(0, int(total_duration - time_elapsed))
+            else:
+                time_remaining = 0
+            
+            return JsonResponse({
+                'current_stage': crew.current_stage,
+                'current_round': crew.current_round,
+                'time_remaining': time_remaining,
+                'stage_start_time': round_state.stage_start_time.isoformat(),
+                'pu_remaining': round_state.pu_remaining
+            })
+            
+        except Crew.DoesNotExist:
+            return JsonResponse({'error': 'Crew not found'}, status=404)
+        except Exception as e:
+            logger.error(f"Timer sync error: {str(e)}")
+            return JsonResponse({'error': 'Internal server error'}, status=500)
 
 
 # Admin Views
