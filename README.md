@@ -120,6 +120,15 @@ python manage.py create_test_session --session-id "high_pressure_test" --pressur
 
 ## Game Mechanics
 
+### Formal Implementation
+The game mechanics are now fully implemented according to the formal specifications document, including:
+
+- **Round Structure**: Briefing → Action → Result stages with proper timing
+- **Action Validation**: Enforces all formal constraints (max probes, max robots, PU limits)
+- **Mining Outcomes**: Probability-based system using formal probability matrix
+- **Intel Visibility**: Proper implementation of high/low complexity conditions
+- **State Transitions**: Follows formal execution order (Navigator effects precede Driller effects)
+
 ### Roles
 - **Captain**: Coordinates during briefing, cannot take actions
 - **Navigator**: Travels between asteroids, sends probes (max 2/round)
@@ -141,6 +150,12 @@ Success probability depends on:
 1. **Depth**: Shallow vs Deep
 2. **Intel**: Probe + Robot combination
 3. **Random factors** with configurable probability matrix
+
+### Intel Visibility
+- **High Complexity**: Intel remains private to discoverer
+- **Low Complexity**: Intel automatically shared with all crew members
+- **Probes**: Reveal maximum minerals available
+- **Robots**: Reveal mining costs (shallow and deep)
 
 ## Experimental Design
 
@@ -260,6 +275,29 @@ python manage.py test spaceship_coordination
 coverage run --source='.' manage.py test
 coverage report
 ```
+
+### Testing Enhanced Game Mechanics
+
+Test the implementation of formal game mechanics:
+
+```bash
+# Test high complexity, low pressure
+python manage.py test_game_mechanics --session-id "test_high_complexity" --complexity high --pressure low
+
+# Test low complexity, high pressure  
+python manage.py test_game_mechanics --session-id "test_low_complexity" --complexity low --pressure high
+
+# Test with custom session ID
+python manage.py test_game_mechanics --session-id "custom_test" --complexity high --pressure high
+```
+
+The test command validates:
+- Round progression and stage transitions
+- Action validation and constraints
+- Mining outcomes and probability calculations
+- Intel visibility based on complexity
+- Communication rules enforcement
+- Game state management
 
 ## Deployment
 

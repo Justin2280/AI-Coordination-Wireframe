@@ -7015,3 +7015,1738 @@ INFO 2025-08-19 14:28:33,675 views 17848 31188 Formatted 0 messages for particip
 INFO 2025-08-19 14:28:33,675 views 17848 30896 Formatted 0 messages for participant driller
 INFO 2025-08-19 15:32:23,905 autoreload 17848 23332 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
 INFO 2025-08-19 15:32:25,883 autoreload 16868 17632 Watching for file changes with StatReloader
+INFO 2025-08-21 13:49:00,440 autoreload 10888 2644 Watching for file changes with StatReloader
+WARNING 2025-08-21 13:49:07,071 log 10888 20640 Not Found: /
+WARNING 2025-08-21 13:49:07,166 log 10888 20640 Not Found: /favicon.ico
+WARNING 2025-08-21 13:49:20,573 log 10888 37344 Not Found: /favicon.ico
+INFO 2025-08-22 09:16:15,846 autoreload 33704 8008 Watching for file changes with StatReloader
+WARNING 2025-08-22 09:16:17,077 log 33704 28148 Not Found: /favicon.ico
+INFO 2025-08-22 09:45:42,594 autoreload 33704 8008 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\game_logic.py changed, reloading.
+INFO 2025-08-22 09:45:43,762 autoreload 33236 35740 Watching for file changes with StatReloader
+INFO 2025-08-22 09:46:07,078 autoreload 33236 35740 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:46:08,256 autoreload 55108 36600 Watching for file changes with StatReloader
+INFO 2025-08-22 09:46:20,498 autoreload 55108 36600 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:46:21,749 autoreload 37008 6400 Watching for file changes with StatReloader
+INFO 2025-08-22 09:46:29,818 autoreload 37008 6400 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:46:31,011 autoreload 33976 6420 Watching for file changes with StatReloader
+INFO 2025-08-22 09:46:43,249 autoreload 33976 6420 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:46:44,558 autoreload 16448 30988 Watching for file changes with StatReloader
+INFO 2025-08-22 09:46:51,455 autoreload 16448 30988 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:46:52,565 autoreload 24176 32880 Watching for file changes with StatReloader
+INFO 2025-08-22 09:47:12,176 autoreload 24176 32880 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:47:13,530 autoreload 20096 20880 Watching for file changes with StatReloader
+INFO 2025-08-22 09:47:20,490 autoreload 20096 20880 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:47:21,544 autoreload 33060 12736 Watching for file changes with StatReloader
+INFO 2025-08-22 09:47:39,099 autoreload 33060 12736 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\admin.py changed, reloading.
+INFO 2025-08-22 09:47:40,084 autoreload 16572 16128 Watching for file changes with StatReloader
+INFO 2025-08-22 09:51:34,773 autoreload 16572 16128 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\admin.py changed, reloading.
+INFO 2025-08-22 09:51:35,659 autoreload 17160 18776 Watching for file changes with StatReloader
+WARNING 2025-08-22 09:52:28,616 log 17160 53740 Not Found: /
+WARNING 2025-08-22 09:52:44,218 log 17160 54128 Not Found: /favicon.ico
+ERROR 2025-08-22 09:56:47,859 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:47,860 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:47,935 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:47,936 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,009 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,009 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,070 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,071 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,136 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,137 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,207 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,209 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,274 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,275 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,343 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,344 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,422 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,423 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,441 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,442 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,522 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,523 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,554 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,555 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,631 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,632 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,674 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,678 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,706 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,710 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,847 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,848 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,902 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,904 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:48,964 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:48,965 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,017 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,017 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,075 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,075 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,130 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,131 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,192 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,194 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,225 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,226 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,279 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,279 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,335 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,336 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,385 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,385 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,437 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,438 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,496 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,497 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,560 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,560 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,620 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,621 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,684 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,685 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:49,739 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:49,740 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:50,897 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:50,898 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:50,953 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:50,953 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,005 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,006 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,063 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,063 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,121 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,122 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,180 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,181 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,236 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,237 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,296 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,298 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,374 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,382 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:51,523 views 17160 18064 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:51,530 views 17160 18064 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:58,805 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:58,805 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:58,851 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:58,852 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:58,898 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:58,900 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:58,946 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:58,948 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:58,998 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:58,999 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:59,046 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:59,047 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:59,096 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:59,097 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:59,144 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:59,145 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:59,194 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:59,195 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:59,241 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:59,243 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:56:59,293 views 17160 34372 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:56:59,294 views 17160 34372 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,591 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,592 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,642 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,643 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,691 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,692 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,755 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,755 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,809 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,810 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,869 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,870 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,928 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,928 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:05,986 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:05,987 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:06,049 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:06,051 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:06,104 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:06,104 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+ERROR 2025-08-22 09:57:06,161 views 17160 40192 Game engine error: name 'GameEngine' is not defined
+ERROR 2025-08-22 09:57:06,162 views 17160 40192 Game view error: cannot access local variable 'can_receive_messages' where it is not associated with a value
+INFO 2025-08-22 09:58:31,785 autoreload 17160 18776 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\game_logic.py changed, reloading.
+INFO 2025-08-22 09:58:32,838 autoreload 45916 16460 Watching for file changes with StatReloader
+INFO 2025-08-22 09:58:47,822 autoreload 45916 16460 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:58:48,800 autoreload 33572 46860 Watching for file changes with StatReloader
+INFO 2025-08-22 09:58:51,520 autoreload 33572 46860 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:58:52,359 autoreload 33940 52712 Watching for file changes with StatReloader
+INFO 2025-08-22 09:59:32,257 autoreload 33940 52712 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:59:33,262 autoreload 40372 45232 Watching for file changes with StatReloader
+INFO 2025-08-22 09:59:35,941 autoreload 40372 45232 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:59:36,776 autoreload 15444 25980 Watching for file changes with StatReloader
+INFO 2025-08-22 09:59:47,602 autoreload 15444 25980 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:59:48,656 autoreload 51300 21940 Watching for file changes with StatReloader
+INFO 2025-08-22 09:59:50,303 autoreload 51300 21940 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 09:59:51,176 autoreload 5248 28272 Watching for file changes with StatReloader
+INFO 2025-08-22 10:03:24,178 autoreload 5248 28272 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 10:03:25,398 autoreload 50100 26068 Watching for file changes with StatReloader
+INFO 2025-08-22 10:03:29,118 views 50100 31152 Crew 11 advanced from briefing to action stage after 401s
+INFO 2025-08-22 10:03:29,125 views 50100 31152 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:03:29,126 views 50100 31152 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:03:29,128 views 50100 31152 Crew 11 current_stage: action
+INFO 2025-08-22 10:03:29,137 views 50100 31152 Found 0 chat messages for crew 11, round 0
+INFO 2025-08-22 10:03:29,141 views 50100 31152 RoundState ID: 46, Round Number: 0
+INFO 2025-08-22 10:03:29,151 views 50100 31152 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:03:29,360 views 50100 31152 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:03:29,361 views 50100 31152 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:03:29,361 views 50100 31152 Crew 11 current_stage: action
+INFO 2025-08-22 10:03:29,362 views 50100 31152 Found 0 chat messages for crew 11, round 0
+INFO 2025-08-22 10:03:29,364 views 50100 31152 RoundState ID: 46, Round Number: 0
+INFO 2025-08-22 10:03:29,365 views 50100 31152 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:03:43,646 views 50100 18428 Crew 11 advanced from action to result stage after 14s
+INFO 2025-08-22 10:03:43,721 views 50100 31152 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:03:43,721 views 50100 31152 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:03:43,721 views 50100 31152 Crew 11 current_stage: result
+INFO 2025-08-22 10:03:43,723 views 50100 31152 Found 0 chat messages for crew 11, round 0
+INFO 2025-08-22 10:03:43,723 views 50100 31152 RoundState ID: 46, Round Number: 0
+INFO 2025-08-22 10:03:43,729 views 50100 31152 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:03:49,793 views 50100 10212 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:03:49,793 views 50100 10212 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:03:49,793 views 50100 10212 Crew 11 current_stage: result
+INFO 2025-08-22 10:03:49,794 views 50100 10212 Found 0 chat messages for crew 11, round 0
+INFO 2025-08-22 10:03:49,794 views 50100 10212 RoundState ID: 46, Round Number: 0
+INFO 2025-08-22 10:03:49,795 views 50100 10212 Formatted 0 messages for participant navigator
+WARNING 2025-08-22 10:03:49,853 log 50100 10212 Not Found: /favicon.ico
+INFO 2025-08-22 10:03:58,109 views 50100 10212 Crew 11 advanced to round 1
+WARNING 2025-08-22 10:03:58,106 log 50100 18428 Not Found: /spaceship/api/crew/11/timer-sync/
+INFO 2025-08-22 10:03:58,333 views 50100 31152 Participant 35 (driller) can_communicate: True
+INFO 2025-08-22 10:03:58,333 views 50100 31152 Participant 35 (driller) can_receive_messages: True
+INFO 2025-08-22 10:03:58,335 views 50100 31152 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:03:58,338 views 50100 31152 Found 0 chat messages for crew 11, round 1
+INFO 2025-08-22 10:03:58,338 views 50100 31152 RoundState ID: 47, Round Number: 1
+INFO 2025-08-22 10:03:58,341 views 50100 31152 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:03:58,385 views 50100 10212 Participant 34 (navigator) can_communicate: True
+INFO 2025-08-22 10:03:58,402 views 50100 10212 Participant 34 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:03:58,404 views 50100 10212 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:03:58,412 views 50100 10212 Found 0 chat messages for crew 11, round 1
+INFO 2025-08-22 10:03:58,416 views 50100 10212 RoundState ID: 47, Round Number: 1
+INFO 2025-08-22 10:03:58,421 views 50100 10212 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:06:57,576 views 50100 18428 Crew 11 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:06:57,637 views 50100 42500 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:06:57,638 views 50100 42500 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:06:57,639 views 50100 42500 Crew 11 current_stage: action
+INFO 2025-08-22 10:06:57,642 views 50100 42500 Found 0 chat messages for crew 11, round 1
+INFO 2025-08-22 10:06:57,643 views 50100 42500 RoundState ID: 47, Round Number: 1
+INFO 2025-08-22 10:06:57,645 views 50100 42500 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:06:57,839 views 50100 53016 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:06:57,840 views 50100 53016 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:06:57,841 views 50100 53016 Crew 11 current_stage: action
+WARNING 2025-08-22 10:06:57,847 log 50100 42500 Not Found: /favicon.ico
+INFO 2025-08-22 10:06:57,847 views 50100 53016 Found 0 chat messages for crew 11, round 1
+INFO 2025-08-22 10:06:57,848 views 50100 53016 RoundState ID: 47, Round Number: 1
+INFO 2025-08-22 10:06:57,853 views 50100 53016 Formatted 0 messages for participant navigator
+WARNING 2025-08-22 10:06:57,923 log 50100 53016 Not Found: /favicon.ico
+INFO 2025-08-22 10:07:12,086 views 50100 14136 Crew 11 advanced from action to result stage after 14s
+INFO 2025-08-22 10:07:12,144 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:07:12,144 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:07:12,145 views 50100 18428 Crew 11 current_stage: result
+INFO 2025-08-22 10:07:12,148 views 50100 18428 Found 0 chat messages for crew 11, round 1
+INFO 2025-08-22 10:07:12,148 views 50100 18428 RoundState ID: 47, Round Number: 1
+INFO 2025-08-22 10:07:12,150 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:07:12,262 views 50100 53016 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:07:12,263 views 50100 53016 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:07:12,263 views 50100 53016 Crew 11 current_stage: result
+INFO 2025-08-22 10:07:12,283 views 50100 53016 Found 0 chat messages for crew 11, round 1
+INFO 2025-08-22 10:07:12,285 views 50100 53016 RoundState ID: 47, Round Number: 1
+INFO 2025-08-22 10:07:12,286 views 50100 53016 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:07:26,584 views 50100 53016 Crew 11 advanced to round 2
+INFO 2025-08-22 10:07:26,639 views 50100 53016 Participant 34 (navigator) can_communicate: True
+INFO 2025-08-22 10:07:26,640 views 50100 53016 Participant 34 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:07:26,641 views 50100 53016 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:07:26,653 views 50100 53016 Found 0 chat messages for crew 11, round 2
+INFO 2025-08-22 10:07:26,653 views 50100 53016 RoundState ID: 48, Round Number: 2
+INFO 2025-08-22 10:07:26,658 views 50100 53016 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:07:26,751 views 50100 18428 Participant 35 (driller) can_communicate: True
+INFO 2025-08-22 10:07:26,752 views 50100 18428 Participant 35 (driller) can_receive_messages: True
+INFO 2025-08-22 10:07:26,752 views 50100 18428 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:07:26,754 views 50100 18428 Found 0 chat messages for crew 11, round 2
+INFO 2025-08-22 10:07:26,755 views 50100 18428 RoundState ID: 48, Round Number: 2
+INFO 2025-08-22 10:07:26,758 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:10:25,652 views 50100 18428 Crew 11 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:10:25,726 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:10:25,727 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:10:25,727 views 50100 18428 Crew 11 current_stage: action
+INFO 2025-08-22 10:10:25,731 views 50100 18428 Found 0 chat messages for crew 11, round 2
+INFO 2025-08-22 10:10:25,733 views 50100 18428 RoundState ID: 48, Round Number: 2
+INFO 2025-08-22 10:10:25,735 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:10:26,042 views 50100 47732 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:10:26,043 views 50100 47732 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:10:26,044 views 50100 47732 Crew 11 current_stage: action
+INFO 2025-08-22 10:10:26,047 views 50100 47732 Found 0 chat messages for crew 11, round 2
+INFO 2025-08-22 10:10:26,047 views 50100 47732 RoundState ID: 48, Round Number: 2
+INFO 2025-08-22 10:10:26,050 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:10:40,078 views 50100 14136 Crew 11 advanced from action to result stage after 14s
+INFO 2025-08-22 10:10:40,146 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:10:40,147 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:10:40,147 views 50100 18428 Crew 11 current_stage: result
+INFO 2025-08-22 10:10:40,152 views 50100 18428 Found 0 chat messages for crew 11, round 2
+INFO 2025-08-22 10:10:40,153 views 50100 18428 RoundState ID: 48, Round Number: 2
+INFO 2025-08-22 10:10:40,157 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:10:40,574 views 50100 47732 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:10:40,575 views 50100 47732 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:10:40,575 views 50100 47732 Crew 11 current_stage: result
+INFO 2025-08-22 10:10:40,577 views 50100 47732 Found 0 chat messages for crew 11, round 2
+INFO 2025-08-22 10:10:40,578 views 50100 47732 RoundState ID: 48, Round Number: 2
+INFO 2025-08-22 10:10:40,581 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:10:54,684 views 50100 18428 Crew 11 advanced to round 3
+INFO 2025-08-22 10:10:54,761 views 50100 18428 Participant 35 (driller) can_communicate: True
+INFO 2025-08-22 10:10:54,762 views 50100 18428 Participant 35 (driller) can_receive_messages: True
+INFO 2025-08-22 10:10:54,762 views 50100 18428 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:10:54,766 views 50100 18428 Found 0 chat messages for crew 11, round 3
+INFO 2025-08-22 10:10:54,767 views 50100 18428 RoundState ID: 49, Round Number: 3
+INFO 2025-08-22 10:10:54,770 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:10:54,946 views 50100 47732 Participant 34 (navigator) can_communicate: True
+INFO 2025-08-22 10:10:54,947 views 50100 47732 Participant 34 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:10:54,947 views 50100 47732 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:10:54,951 views 50100 47732 Found 0 chat messages for crew 11, round 3
+INFO 2025-08-22 10:10:54,951 views 50100 47732 RoundState ID: 49, Round Number: 3
+INFO 2025-08-22 10:10:54,954 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:13:53,937 views 50100 47732 Crew 11 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:13:53,997 views 50100 47732 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:13:53,997 views 50100 47732 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:13:53,998 views 50100 47732 Crew 11 current_stage: action
+INFO 2025-08-22 10:13:54,001 views 50100 47732 Found 0 chat messages for crew 11, round 3
+INFO 2025-08-22 10:13:54,003 views 50100 47732 RoundState ID: 49, Round Number: 3
+INFO 2025-08-22 10:13:54,006 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:13:54,431 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:13:54,432 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:13:54,433 views 50100 18428 Crew 11 current_stage: action
+INFO 2025-08-22 10:13:54,436 views 50100 18428 Found 0 chat messages for crew 11, round 3
+INFO 2025-08-22 10:13:54,437 views 50100 18428 RoundState ID: 49, Round Number: 3
+INFO 2025-08-22 10:13:54,440 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:14:08,395 views 50100 47732 Crew 11 advanced from action to result stage after 14s
+INFO 2025-08-22 10:14:08,454 views 50100 47732 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:14:08,455 views 50100 47732 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:14:08,455 views 50100 47732 Crew 11 current_stage: result
+INFO 2025-08-22 10:14:08,458 views 50100 47732 Found 0 chat messages for crew 11, round 3
+INFO 2025-08-22 10:14:08,459 views 50100 47732 RoundState ID: 49, Round Number: 3
+INFO 2025-08-22 10:14:08,462 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:14:08,950 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:14:08,951 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:14:08,953 views 50100 18428 Crew 11 current_stage: result
+INFO 2025-08-22 10:14:08,956 views 50100 18428 Found 0 chat messages for crew 11, round 3
+INFO 2025-08-22 10:14:08,956 views 50100 18428 RoundState ID: 49, Round Number: 3
+INFO 2025-08-22 10:14:08,959 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:14:22,753 views 50100 47732 Crew 11 advanced to round 4
+INFO 2025-08-22 10:14:22,806 views 50100 47732 Participant 34 (navigator) can_communicate: True
+INFO 2025-08-22 10:14:22,807 views 50100 47732 Participant 34 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:14:22,807 views 50100 47732 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:14:22,812 views 50100 47732 Found 0 chat messages for crew 11, round 4
+INFO 2025-08-22 10:14:22,813 views 50100 47732 RoundState ID: 50, Round Number: 4
+INFO 2025-08-22 10:14:22,817 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:14:23,471 views 50100 18428 Participant 35 (driller) can_communicate: True
+INFO 2025-08-22 10:14:23,472 views 50100 18428 Participant 35 (driller) can_receive_messages: True
+INFO 2025-08-22 10:14:23,472 views 50100 18428 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:14:23,476 views 50100 18428 Found 0 chat messages for crew 11, round 4
+INFO 2025-08-22 10:14:23,477 views 50100 18428 RoundState ID: 50, Round Number: 4
+INFO 2025-08-22 10:14:23,480 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:17:22,557 views 50100 18428 Crew 11 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:17:22,671 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:17:22,672 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:17:22,673 views 50100 18428 Crew 11 current_stage: action
+INFO 2025-08-22 10:17:22,675 views 50100 18428 Found 0 chat messages for crew 11, round 4
+INFO 2025-08-22 10:17:22,676 views 50100 18428 RoundState ID: 50, Round Number: 4
+INFO 2025-08-22 10:17:22,680 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:17:22,853 views 50100 47732 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:17:22,853 views 50100 47732 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:17:22,854 views 50100 47732 Crew 11 current_stage: action
+INFO 2025-08-22 10:17:22,856 views 50100 47732 Found 0 chat messages for crew 11, round 4
+INFO 2025-08-22 10:17:22,857 views 50100 47732 RoundState ID: 50, Round Number: 4
+INFO 2025-08-22 10:17:22,863 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:17:37,134 views 50100 14136 Crew 11 advanced from action to result stage after 14s
+INFO 2025-08-22 10:17:37,202 views 50100 18428 Participant 35 (driller) can_communicate: False
+INFO 2025-08-22 10:17:37,202 views 50100 18428 Participant 35 (driller) can_receive_messages: False
+INFO 2025-08-22 10:17:37,203 views 50100 18428 Crew 11 current_stage: result
+INFO 2025-08-22 10:17:37,211 views 50100 18428 Found 0 chat messages for crew 11, round 4
+INFO 2025-08-22 10:17:37,211 views 50100 18428 RoundState ID: 50, Round Number: 4
+INFO 2025-08-22 10:17:37,215 views 50100 18428 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:17:37,317 views 50100 47732 Participant 34 (navigator) can_communicate: False
+INFO 2025-08-22 10:17:37,317 views 50100 47732 Participant 34 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:17:37,318 views 50100 47732 Crew 11 current_stage: result
+INFO 2025-08-22 10:17:37,321 views 50100 47732 Found 0 chat messages for crew 11, round 4
+INFO 2025-08-22 10:17:37,322 views 50100 47732 RoundState ID: 50, Round Number: 4
+INFO 2025-08-22 10:17:37,324 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:17:51,732 views 50100 47732 Crew 11 advanced to round 5
+INFO 2025-08-22 10:17:51,780 views 50100 47732 Participant 34 (navigator) can_communicate: True
+INFO 2025-08-22 10:17:51,781 views 50100 47732 Participant 34 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:17:51,781 views 50100 47732 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:17:51,784 views 50100 47732 Found 0 chat messages for crew 11, round 5
+INFO 2025-08-22 10:17:51,784 views 50100 47732 RoundState ID: 51, Round Number: 5
+INFO 2025-08-22 10:17:51,787 views 50100 47732 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:17:52,011 views 50100 18428 Participant 35 (driller) can_communicate: True
+INFO 2025-08-22 10:17:52,015 views 50100 18428 Participant 35 (driller) can_receive_messages: True
+INFO 2025-08-22 10:17:52,017 views 50100 18428 Crew 11 current_stage: briefing
+INFO 2025-08-22 10:17:52,025 views 50100 18428 Found 0 chat messages for crew 11, round 5
+INFO 2025-08-22 10:17:52,025 views 50100 18428 RoundState ID: 51, Round Number: 5
+INFO 2025-08-22 10:17:52,027 views 50100 18428 Formatted 0 messages for participant driller
+ERROR 2025-08-22 10:18:21,354 views 50100 47732 Timer sync error: No Crew matches the given query.
+ERROR 2025-08-22 10:18:21,355 log 50100 47732 Internal Server Error: /spaceship/api/crew/11/timer-sync/
+ERROR 2025-08-22 10:18:21,670 views 50100 18428 Timer sync error: No Crew matches the given query.
+ERROR 2025-08-22 10:18:21,672 log 50100 18428 Internal Server Error: /spaceship/api/crew/11/timer-sync/
+INFO 2025-08-22 10:18:55,873 views 50100 54448 Participant 37 (navigator) can_communicate: True
+INFO 2025-08-22 10:18:55,874 views 50100 54448 Participant 37 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:18:55,875 views 50100 54448 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:18:55,879 views 50100 54448 Found 0 chat messages for crew 12, round 0
+INFO 2025-08-22 10:18:55,880 views 50100 54448 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:18:55,883 views 50100 54448 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:18:56,075 views 50100 31152 Participant 38 (driller) can_communicate: True
+INFO 2025-08-22 10:18:56,076 views 50100 31152 Participant 38 (driller) can_receive_messages: True
+INFO 2025-08-22 10:18:56,076 views 50100 31152 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:18:56,080 views 50100 31152 Found 0 chat messages for crew 12, round 0
+INFO 2025-08-22 10:18:56,080 views 50100 31152 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:18:56,082 views 50100 31152 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:18:57,360 views 50100 47732 Participant 36 (captain) can_communicate: True
+INFO 2025-08-22 10:18:57,361 views 50100 47732 Participant 36 (captain) can_receive_messages: True
+INFO 2025-08-22 10:18:57,363 views 50100 47732 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:18:57,366 views 50100 47732 Found 0 chat messages for crew 12, round 0
+INFO 2025-08-22 10:18:57,367 views 50100 47732 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:18:57,371 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:18:57,371 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:18:57,372 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:19:02,663 views 50100 47732 ChatMessageView: Found RoundState ID=52, round_number=0, crew=12
+INFO 2025-08-22 10:19:02,671 views 50100 47732 Created chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:19:02,673 views 50100 47732 Direct property check: to_participant is None = True
+INFO 2025-08-22 10:19:02,675 views 50100 47732 After refresh: to_participant=None, is_broadcast=True
+INFO 2025-08-22 10:19:12,683 views 50100 47732 ChatMessageView: Found RoundState ID=52, round_number=0, crew=12
+INFO 2025-08-22 10:19:12,701 views 50100 47732 Created chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:19:12,702 views 50100 47732 Direct property check: to_participant is None = False
+INFO 2025-08-22 10:19:12,708 views 50100 47732 After refresh: to_participant=Participant object (37), is_broadcast=False
+INFO 2025-08-22 10:19:19,854 views 50100 47732 ChatMessageView: Found RoundState ID=52, round_number=0, crew=12
+INFO 2025-08-22 10:19:19,868 views 50100 47732 Created chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:19:19,869 views 50100 47732 Direct property check: to_participant is None = False
+INFO 2025-08-22 10:19:19,875 views 50100 47732 After refresh: to_participant=Participant object (38), is_broadcast=False
+INFO 2025-08-22 10:19:23,670 views 50100 54448 ChatMessageView: Found RoundState ID=52, round_number=0, crew=12
+INFO 2025-08-22 10:19:23,682 views 50100 54448 Created chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:19:23,682 views 50100 54448 Direct property check: to_participant is None = False
+INFO 2025-08-22 10:19:23,688 views 50100 54448 After refresh: to_participant=Participant object (36), is_broadcast=False
+INFO 2025-08-22 10:19:26,111 views 50100 31152 ChatMessageView: Found RoundState ID=52, round_number=0, crew=12
+INFO 2025-08-22 10:19:26,124 views 50100 31152 Created chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:19:26,124 views 50100 31152 Direct property check: to_participant is None = False
+INFO 2025-08-22 10:19:26,129 views 50100 31152 After refresh: to_participant=Participant object (36), is_broadcast=False
+INFO 2025-08-22 10:21:55,120 views 50100 14136 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:21:55,228 views 50100 14136 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:21:55,229 views 50100 14136 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:21:55,230 views 50100 14136 Crew 12 current_stage: action
+INFO 2025-08-22 10:21:55,231 views 50100 14136 Found 5 chat messages for crew 12, round 0
+INFO 2025-08-22 10:21:55,233 views 50100 14136 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:21:55,239 views 50100 14136 Chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:21:55,245 views 50100 14136 Chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:21:55,250 views 50100 14136 Chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:21:55,255 views 50100 14136 Chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:21:55,261 views 50100 14136 Chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:21:55,262 views 50100 14136 Broadcast message 'Hi...' is visible to driller
+INFO 2025-08-22 10:21:55,263 views 50100 14136 Message 'Test...' is NOT visible to driller
+INFO 2025-08-22 10:21:55,263 views 50100 14136 Direct message 'Test 4...' is visible to driller
+INFO 2025-08-22 10:21:55,264 views 50100 14136 Message 'Hi...' is NOT visible to driller
+INFO 2025-08-22 10:21:55,265 views 50100 14136 Direct message 'Hi...' is visible to driller
+INFO 2025-08-22 10:21:55,265 views 50100 14136 Formatted 3 messages for participant driller
+WARNING 2025-08-22 10:21:55,546 log 50100 14136 Not Found: /favicon.ico
+INFO 2025-08-22 10:21:55,851 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:21:55,852 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:21:55,852 views 50100 47732 Crew 12 current_stage: action
+INFO 2025-08-22 10:21:55,856 views 50100 47732 Found 5 chat messages for crew 12, round 0
+INFO 2025-08-22 10:21:55,857 views 50100 47732 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:21:55,864 views 50100 47732 Chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:21:55,870 views 50100 47732 Chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:21:55,877 views 50100 47732 Chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:21:55,882 views 50100 47732 Chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:21:55,888 views 50100 47732 Chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:21:55,890 views 50100 47732 Broadcast message 'Hi...' is visible to captain
+INFO 2025-08-22 10:21:55,891 views 50100 47732 Direct message 'Test...' is visible to captain
+INFO 2025-08-22 10:21:55,891 views 50100 47732 Direct message 'Test 4...' is visible to captain
+INFO 2025-08-22 10:21:55,892 views 50100 47732 Direct message 'Hi...' is visible to captain
+INFO 2025-08-22 10:21:55,893 views 50100 47732 Direct message 'Hi...' is visible to captain
+INFO 2025-08-22 10:21:55,895 views 50100 47732 Formatted 5 messages for participant captain
+INFO 2025-08-22 10:21:55,895 views 50100 47732 Captain 36 - Total messages: 5
+INFO 2025-08-22 10:21:55,896 views 50100 47732 Captain 36 - Formatted messages: 5
+INFO 2025-08-22 10:21:55,897 views 50100 47732   Message 1: from=captain, to=ALL, text='Hi...'
+INFO 2025-08-22 10:21:55,898 views 50100 47732   Message 2: from=captain, to=navigator, text='Test...'
+INFO 2025-08-22 10:21:55,899 views 50100 47732   Message 3: from=captain, to=driller, text='Test 4...'
+INFO 2025-08-22 10:21:55,899 views 50100 47732   Message 4: from=navigator, to=captain, text='Hi...'
+INFO 2025-08-22 10:21:55,900 views 50100 47732   Message 5: from=driller, to=captain, text='Hi...'
+WARNING 2025-08-22 10:21:56,012 log 50100 47732 Not Found: /favicon.ico
+INFO 2025-08-22 10:22:09,207 views 50100 47732 Crew 12 advanced from action to result stage after 14s
+INFO 2025-08-22 10:22:09,291 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:22:09,292 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:22:09,292 views 50100 47732 Crew 12 current_stage: result
+INFO 2025-08-22 10:22:09,296 views 50100 47732 Found 5 chat messages for crew 12, round 0
+INFO 2025-08-22 10:22:09,296 views 50100 47732 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:22:09,303 views 50100 47732 Chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:22:09,309 views 50100 47732 Chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:22:09,314 views 50100 47732 Chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:22:09,318 views 50100 47732 Chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:09,325 views 50100 47732 Chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:09,326 views 50100 47732 Broadcast message 'Hi...' is visible to captain
+INFO 2025-08-22 10:22:09,326 views 50100 47732 Direct message 'Test...' is visible to captain
+INFO 2025-08-22 10:22:09,327 views 50100 47732 Direct message 'Test 4...' is visible to captain
+INFO 2025-08-22 10:22:09,328 views 50100 47732 Direct message 'Hi...' is visible to captain
+INFO 2025-08-22 10:22:09,329 views 50100 47732 Direct message 'Hi...' is visible to captain
+INFO 2025-08-22 10:22:09,329 views 50100 47732 Formatted 5 messages for participant captain
+INFO 2025-08-22 10:22:09,330 views 50100 47732 Captain 36 - Total messages: 5
+INFO 2025-08-22 10:22:09,330 views 50100 47732 Captain 36 - Formatted messages: 5
+INFO 2025-08-22 10:22:09,331 views 50100 47732   Message 1: from=captain, to=ALL, text='Hi...'
+INFO 2025-08-22 10:22:09,331 views 50100 47732   Message 2: from=captain, to=navigator, text='Test...'
+INFO 2025-08-22 10:22:09,331 views 50100 47732   Message 3: from=captain, to=driller, text='Test 4...'
+INFO 2025-08-22 10:22:09,333 views 50100 47732   Message 4: from=navigator, to=captain, text='Hi...'
+INFO 2025-08-22 10:22:09,333 views 50100 47732   Message 5: from=driller, to=captain, text='Hi...'
+INFO 2025-08-22 10:22:09,923 views 50100 36640 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:22:09,923 views 50100 36640 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:22:09,925 views 50100 36640 Crew 12 current_stage: result
+INFO 2025-08-22 10:22:09,928 views 50100 36640 Found 5 chat messages for crew 12, round 0
+INFO 2025-08-22 10:22:09,929 views 50100 36640 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:22:09,938 views 50100 36640 Chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:22:09,946 views 50100 36640 Chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:22:09,953 views 50100 36640 Chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:22:09,960 views 50100 36640 Chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:09,965 views 50100 36640 Chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:09,967 views 50100 36640 Broadcast message 'Hi...' is visible to driller
+INFO 2025-08-22 10:22:09,968 views 50100 36640 Message 'Test...' is NOT visible to driller
+INFO 2025-08-22 10:22:09,969 views 50100 36640 Direct message 'Test 4...' is visible to driller
+INFO 2025-08-22 10:22:09,970 views 50100 36640 Message 'Hi...' is NOT visible to driller
+INFO 2025-08-22 10:22:09,970 views 50100 36640 Direct message 'Hi...' is visible to driller
+INFO 2025-08-22 10:22:09,971 views 50100 36640 Formatted 3 messages for participant driller
+INFO 2025-08-22 10:22:22,382 views 50100 54448 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:22:22,384 views 50100 54448 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:22:22,384 views 50100 18288 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:22:22,385 views 50100 54448 Crew 12 current_stage: result
+INFO 2025-08-22 10:22:22,385 views 50100 18288 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:22:22,389 views 50100 18288 Crew 12 current_stage: result
+INFO 2025-08-22 10:22:22,391 views 50100 54448 Found 5 chat messages for crew 12, round 0
+INFO 2025-08-22 10:22:22,391 views 50100 18288 Found 5 chat messages for crew 12, round 0
+INFO 2025-08-22 10:22:22,392 views 50100 54448 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:22:22,393 views 50100 18288 RoundState ID: 52, Round Number: 0
+INFO 2025-08-22 10:22:22,401 views 50100 54448 Chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:22:22,406 views 50100 18288 Chat message: id=47, from=captain, to_participant=None, is_broadcast=True, message='Hi...'
+INFO 2025-08-22 10:22:22,413 views 50100 54448 Chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:22:22,416 views 50100 18288 Chat message: id=48, from=captain, to_participant=Participant object (37), is_broadcast=False, message='Test...'
+INFO 2025-08-22 10:22:22,422 views 50100 54448 Chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:22:22,423 views 50100 18288 Chat message: id=49, from=captain, to_participant=Participant object (38), is_broadcast=False, message='Test 4...'
+INFO 2025-08-22 10:22:22,433 views 50100 54448 Chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:22,434 views 50100 18288 Chat message: id=50, from=navigator, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:22,446 views 50100 18288 Chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:22,448 views 50100 54448 Chat message: id=51, from=driller, to_participant=Participant object (36), is_broadcast=False, message='Hi...'
+INFO 2025-08-22 10:22:22,448 views 50100 18288 Broadcast message 'Hi...' is visible to navigator
+INFO 2025-08-22 10:22:22,449 views 50100 54448 Broadcast message 'Hi...' is visible to navigator
+INFO 2025-08-22 10:22:22,450 views 50100 18288 Direct message 'Test...' is visible to navigator
+INFO 2025-08-22 10:22:22,450 views 50100 54448 Direct message 'Test...' is visible to navigator
+INFO 2025-08-22 10:22:22,451 views 50100 18288 Message 'Test 4...' is NOT visible to navigator
+INFO 2025-08-22 10:22:22,451 views 50100 54448 Message 'Test 4...' is NOT visible to navigator
+INFO 2025-08-22 10:22:22,452 views 50100 18288 Direct message 'Hi...' is visible to navigator
+INFO 2025-08-22 10:22:22,452 views 50100 54448 Direct message 'Hi...' is visible to navigator
+INFO 2025-08-22 10:22:22,454 views 50100 18288 Message 'Hi...' is NOT visible to navigator
+INFO 2025-08-22 10:22:22,454 views 50100 54448 Message 'Hi...' is NOT visible to navigator
+INFO 2025-08-22 10:22:22,454 views 50100 18288 Formatted 3 messages for participant navigator
+INFO 2025-08-22 10:22:22,455 views 50100 54448 Formatted 3 messages for participant navigator
+INFO 2025-08-22 10:22:23,518 views 50100 36640 Crew 12 advanced to round 1
+INFO 2025-08-22 10:22:23,611 views 50100 36640 Participant 38 (driller) can_communicate: True
+INFO 2025-08-22 10:22:23,611 views 50100 36640 Participant 38 (driller) can_receive_messages: True
+INFO 2025-08-22 10:22:23,612 views 50100 36640 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:22:23,615 views 50100 36640 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:22:23,615 views 50100 36640 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:22:23,618 views 50100 36640 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:22:23,674 views 50100 18288 Participant 37 (navigator) can_communicate: True
+INFO 2025-08-22 10:22:23,675 views 50100 18288 Participant 37 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:22:23,675 views 50100 18288 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:22:23,677 views 50100 18288 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:22:23,678 views 50100 18288 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:22:23,682 views 50100 18288 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:22:23,852 views 50100 47732 Participant 36 (captain) can_communicate: True
+INFO 2025-08-22 10:22:23,852 views 50100 47732 Participant 36 (captain) can_receive_messages: True
+INFO 2025-08-22 10:22:23,852 views 50100 47732 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:22:23,854 views 50100 47732 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:22:23,854 views 50100 47732 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:22:23,857 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:22:23,858 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:22:23,858 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:25:23,396 views 50100 36640 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:25:23,521 views 50100 36640 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:25:23,521 views 50100 36640 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:25:23,521 views 50100 36640 Crew 12 current_stage: action
+INFO 2025-08-22 10:25:23,524 views 50100 36640 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:23,525 views 50100 36640 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:23,528 views 50100 36640 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:25:23,630 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:25:23,631 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:25:23,631 views 50100 47732 Crew 12 current_stage: action
+INFO 2025-08-22 10:25:23,633 views 50100 47732 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:23,633 views 50100 47732 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:23,636 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:25:23,637 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:25:23,637 views 50100 47732 Captain 36 - Formatted messages: 0
+WARNING 2025-08-22 10:25:23,865 log 50100 47732 Not Found: /favicon.ico
+WARNING 2025-08-22 10:25:23,932 log 50100 36640 Not Found: /favicon.ico
+INFO 2025-08-22 10:25:27,480 views 50100 23728 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:25:27,481 views 50100 23728 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:25:27,482 views 50100 23728 Crew 12 current_stage: action
+INFO 2025-08-22 10:25:27,489 views 50100 23728 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:27,489 views 50100 23728 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:27,494 views 50100 23728 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:25:27,528 views 50100 18288 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:25:27,529 views 50100 18288 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:25:27,530 views 50100 18288 Crew 12 current_stage: action
+INFO 2025-08-22 10:25:27,536 views 50100 18288 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:27,536 views 50100 18288 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:27,540 views 50100 18288 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:25:38,048 views 50100 47732 Crew 12 advanced from action to result stage after 14s
+INFO 2025-08-22 10:25:38,182 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:25:38,184 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:25:38,185 views 50100 47732 Crew 12 current_stage: result
+INFO 2025-08-22 10:25:38,188 views 50100 47732 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:38,189 views 50100 47732 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:38,197 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:25:38,199 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:25:38,201 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:25:38,263 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:25:38,266 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:25:38,268 views 50100 38608 Crew 12 current_stage: result
+INFO 2025-08-22 10:25:38,284 views 50100 38608 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:38,286 views 50100 38608 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:38,289 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:25:38,456 views 50100 18288 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:25:38,457 views 50100 18288 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:25:38,458 views 50100 18288 Crew 12 current_stage: result
+INFO 2025-08-22 10:25:38,462 views 50100 18288 Found 0 chat messages for crew 12, round 1
+INFO 2025-08-22 10:25:38,462 views 50100 18288 RoundState ID: 53, Round Number: 1
+INFO 2025-08-22 10:25:38,466 views 50100 18288 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:25:52,431 views 50100 47732 Crew 12 advanced to round 2
+INFO 2025-08-22 10:25:52,498 views 50100 47732 Participant 36 (captain) can_communicate: True
+INFO 2025-08-22 10:25:52,498 views 50100 47732 Participant 36 (captain) can_receive_messages: True
+INFO 2025-08-22 10:25:52,499 views 50100 47732 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:25:52,502 views 50100 47732 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:25:52,503 views 50100 47732 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:25:52,505 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:25:52,505 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:25:52,507 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:25:53,127 views 50100 38608 Participant 38 (driller) can_communicate: True
+INFO 2025-08-22 10:25:53,132 views 50100 38608 Participant 38 (driller) can_receive_messages: True
+INFO 2025-08-22 10:25:53,133 views 50100 38608 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:25:53,135 views 50100 38608 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:25:53,136 views 50100 38608 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:25:53,138 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:25:59,504 views 50100 18288 Participant 37 (navigator) can_communicate: True
+INFO 2025-08-22 10:25:59,505 views 50100 18288 Participant 37 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:25:59,506 views 50100 18288 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:25:59,511 views 50100 18288 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:25:59,512 views 50100 18288 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:25:59,515 views 50100 18288 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:28:52,148 views 50100 47732 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:28:52,224 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:28:52,225 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:28:52,225 views 50100 47732 Crew 12 current_stage: action
+INFO 2025-08-22 10:28:52,229 views 50100 47732 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:28:52,230 views 50100 47732 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:28:52,234 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:28:52,235 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:28:52,235 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:28:52,563 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:28:52,564 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:28:52,565 views 50100 38608 Crew 12 current_stage: action
+INFO 2025-08-22 10:28:52,569 views 50100 38608 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:28:52,569 views 50100 38608 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:28:52,574 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:29:06,575 views 50100 38608 Crew 12 advanced from action to result stage after 14s
+INFO 2025-08-22 10:29:06,717 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:29:06,718 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:29:06,719 views 50100 47732 Crew 12 current_stage: result
+INFO 2025-08-22 10:29:06,726 views 50100 47732 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:29:06,728 views 50100 47732 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:29:06,734 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:29:06,740 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:29:06,743 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:29:07,014 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:29:07,021 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:29:07,025 views 50100 38608 Crew 12 current_stage: result
+INFO 2025-08-22 10:29:07,034 views 50100 38608 Found 0 chat messages for crew 12, round 2
+INFO 2025-08-22 10:29:07,047 views 50100 38608 RoundState ID: 54, Round Number: 2
+INFO 2025-08-22 10:29:07,069 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:29:20,623 views 50100 38608 Crew 12 advanced to round 3
+INFO 2025-08-22 10:29:20,735 views 50100 38608 Participant 38 (driller) can_communicate: True
+INFO 2025-08-22 10:29:20,735 views 50100 38608 Participant 38 (driller) can_receive_messages: True
+INFO 2025-08-22 10:29:20,736 views 50100 38608 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:29:20,739 views 50100 38608 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:29:20,740 views 50100 38608 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:29:20,744 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:29:21,122 views 50100 47732 Participant 36 (captain) can_communicate: True
+INFO 2025-08-22 10:29:21,122 views 50100 47732 Participant 36 (captain) can_receive_messages: True
+INFO 2025-08-22 10:29:21,123 views 50100 47732 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:29:21,125 views 50100 47732 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:29:21,126 views 50100 47732 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:29:21,128 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:29:21,130 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:29:21,130 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:32:19,887 views 50100 47732 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:32:19,968 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:32:19,970 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:32:19,971 views 50100 47732 Crew 12 current_stage: action
+INFO 2025-08-22 10:32:19,976 views 50100 47732 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:19,977 views 50100 47732 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:19,980 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:32:19,981 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:32:19,981 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:32:20,343 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:32:20,344 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:32:20,345 views 50100 38608 Crew 12 current_stage: action
+INFO 2025-08-22 10:32:20,348 views 50100 38608 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:20,349 views 50100 38608 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:20,353 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:32:27,505 views 50100 18288 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:32:27,505 views 50100 18288 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:32:27,509 views 50100 18288 Crew 12 current_stage: action
+INFO 2025-08-22 10:32:27,514 views 50100 18288 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:27,514 views 50100 18288 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:27,518 views 50100 18288 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:32:27,577 views 50100 48968 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:32:27,578 views 50100 48968 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:32:27,578 views 50100 48968 Crew 12 current_stage: action
+INFO 2025-08-22 10:32:27,582 views 50100 48968 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:27,583 views 50100 48968 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:27,586 views 50100 48968 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:32:34,332 views 50100 47732 Crew 12 advanced from action to result stage after 14s
+INFO 2025-08-22 10:32:34,406 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:32:34,407 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:32:34,409 views 50100 47732 Crew 12 current_stage: result
+INFO 2025-08-22 10:32:34,412 views 50100 47732 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:34,413 views 50100 47732 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:34,416 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:32:34,419 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:32:34,420 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:32:34,513 views 50100 48968 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:32:34,513 views 50100 48968 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:32:34,515 views 50100 48968 Crew 12 current_stage: result
+INFO 2025-08-22 10:32:34,519 views 50100 48968 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:34,519 views 50100 48968 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:34,525 views 50100 48968 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:32:34,942 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:32:34,942 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:32:34,944 views 50100 38608 Crew 12 current_stage: result
+INFO 2025-08-22 10:32:34,947 views 50100 38608 Found 0 chat messages for crew 12, round 3
+INFO 2025-08-22 10:32:34,947 views 50100 38608 RoundState ID: 55, Round Number: 3
+INFO 2025-08-22 10:32:34,949 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:32:48,726 views 50100 47732 Crew 12 advanced to round 4
+INFO 2025-08-22 10:32:48,791 views 50100 47732 Participant 36 (captain) can_communicate: True
+INFO 2025-08-22 10:32:48,791 views 50100 47732 Participant 36 (captain) can_receive_messages: True
+INFO 2025-08-22 10:32:48,791 views 50100 47732 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:32:48,795 views 50100 47732 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:32:48,796 views 50100 47732 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:32:48,799 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:32:48,799 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:32:48,800 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:32:49,040 views 50100 38608 Participant 38 (driller) can_communicate: True
+INFO 2025-08-22 10:32:49,040 views 50100 38608 Participant 38 (driller) can_receive_messages: True
+INFO 2025-08-22 10:32:49,041 views 50100 38608 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:32:49,043 views 50100 38608 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:32:49,044 views 50100 38608 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:32:49,048 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:32:55,439 views 50100 48968 Participant 37 (navigator) can_communicate: True
+INFO 2025-08-22 10:32:55,439 views 50100 48968 Participant 37 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:32:55,440 views 50100 48968 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:32:55,444 views 50100 48968 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:32:55,444 views 50100 48968 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:32:55,449 views 50100 48968 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:35:48,563 views 50100 38608 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:35:48,582 views 50100 47732 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:35:48,674 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:35:48,676 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:35:48,677 views 50100 47732 Crew 12 current_stage: action
+INFO 2025-08-22 10:35:48,682 views 50100 47732 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:35:48,684 views 50100 47732 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:35:48,689 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:35:48,690 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:35:48,691 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:35:48,734 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:35:48,735 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:35:48,736 views 50100 38608 Crew 12 current_stage: action
+INFO 2025-08-22 10:35:48,741 views 50100 38608 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:35:48,742 views 50100 38608 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:35:48,746 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:36:03,013 views 50100 47732 Crew 12 advanced from action to result stage after 14s
+INFO 2025-08-22 10:36:03,091 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:36:03,092 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:36:03,093 views 50100 47732 Crew 12 current_stage: result
+INFO 2025-08-22 10:36:03,097 views 50100 47732 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:36:03,097 views 50100 47732 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:36:03,100 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:36:03,101 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:36:03,101 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:36:03,492 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:36:03,493 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:36:03,493 views 50100 38608 Crew 12 current_stage: result
+INFO 2025-08-22 10:36:03,497 views 50100 38608 Found 0 chat messages for crew 12, round 4
+INFO 2025-08-22 10:36:03,498 views 50100 38608 RoundState ID: 56, Round Number: 4
+INFO 2025-08-22 10:36:03,501 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:36:17,097 views 50100 38608 Crew 12 advanced to round 5
+INFO 2025-08-22 10:36:17,185 views 50100 38608 Participant 38 (driller) can_communicate: True
+INFO 2025-08-22 10:36:17,187 views 50100 38608 Participant 38 (driller) can_receive_messages: True
+INFO 2025-08-22 10:36:17,187 views 50100 38608 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:36:17,190 views 50100 38608 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:36:17,191 views 50100 38608 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:36:17,193 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:36:17,537 views 50100 47732 Participant 36 (captain) can_communicate: True
+INFO 2025-08-22 10:36:17,539 views 50100 47732 Participant 36 (captain) can_receive_messages: True
+INFO 2025-08-22 10:36:17,539 views 50100 47732 Crew 12 current_stage: briefing
+INFO 2025-08-22 10:36:17,544 views 50100 47732 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:36:17,544 views 50100 47732 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:36:17,547 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:36:17,548 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:36:17,549 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:39:16,619 views 50100 47732 Crew 12 advanced from briefing to action stage after 179s
+INFO 2025-08-22 10:39:16,703 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:39:16,704 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:39:16,704 views 50100 47732 Crew 12 current_stage: action
+INFO 2025-08-22 10:39:16,707 views 50100 47732 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:16,708 views 50100 47732 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:16,711 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:39:16,712 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:39:16,712 views 50100 47732 Captain 36 - Formatted messages: 0
+WARNING 2025-08-22 10:39:16,865 log 50100 47732 Not Found: /favicon.ico
+INFO 2025-08-22 10:39:16,916 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:39:16,917 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:39:16,917 views 50100 38608 Crew 12 current_stage: action
+INFO 2025-08-22 10:39:16,922 views 50100 38608 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:16,923 views 50100 38608 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:16,927 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:39:27,547 views 50100 48968 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:39:27,549 views 50100 48968 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:39:27,551 views 50100 48968 Crew 12 current_stage: action
+INFO 2025-08-22 10:39:27,573 views 50100 48968 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:27,578 views 50100 48968 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:27,586 views 50100 48968 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:39:27,601 views 50100 55100 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:39:27,602 views 50100 55100 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:39:27,602 views 50100 55100 Crew 12 current_stage: action
+INFO 2025-08-22 10:39:27,605 views 50100 55100 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:27,606 views 50100 55100 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:27,610 views 50100 55100 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:39:31,035 views 50100 47732 Crew 12 advanced from action to result stage after 14s
+INFO 2025-08-22 10:39:31,108 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:39:31,109 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:39:31,109 views 50100 47732 Crew 12 current_stage: result
+INFO 2025-08-22 10:39:31,112 views 50100 47732 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:31,113 views 50100 47732 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:31,117 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:39:31,118 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:39:31,118 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:39:31,534 views 50100 55100 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:39:31,535 views 50100 55100 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:39:31,535 views 50100 55100 Crew 12 current_stage: result
+INFO 2025-08-22 10:39:31,544 views 50100 55100 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:31,545 views 50100 55100 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:31,550 views 50100 55100 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:39:31,603 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:39:31,604 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:39:31,605 views 50100 38608 Crew 12 current_stage: result
+INFO 2025-08-22 10:39:31,609 views 50100 38608 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:31,610 views 50100 38608 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:31,614 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:39:45,368 views 50100 38608 Crew 12 completed the game
+INFO 2025-08-22 10:39:45,438 views 50100 47732 Crew 12 stage synchronized: completed
+INFO 2025-08-22 10:39:45,502 views 50100 38608 Participant 38 (driller) can_communicate: False
+INFO 2025-08-22 10:39:45,503 views 50100 38608 Participant 38 (driller) can_receive_messages: False
+INFO 2025-08-22 10:39:45,504 views 50100 38608 Crew 12 current_stage: completed
+INFO 2025-08-22 10:39:45,508 views 50100 38608 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:45,509 views 50100 38608 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:45,512 views 50100 38608 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:39:45,555 views 50100 47732 Participant 36 (captain) can_communicate: False
+INFO 2025-08-22 10:39:45,557 views 50100 47732 Participant 36 (captain) can_receive_messages: False
+INFO 2025-08-22 10:39:45,557 views 50100 47732 Crew 12 current_stage: completed
+INFO 2025-08-22 10:39:45,563 views 50100 47732 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:45,564 views 50100 47732 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:45,567 views 50100 47732 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:39:45,568 views 50100 47732 Captain 36 - Total messages: 0
+INFO 2025-08-22 10:39:45,568 views 50100 47732 Captain 36 - Formatted messages: 0
+INFO 2025-08-22 10:39:52,468 views 50100 55100 Participant 37 (navigator) can_communicate: False
+INFO 2025-08-22 10:39:52,469 views 50100 55100 Participant 37 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:39:52,470 views 50100 55100 Crew 12 current_stage: completed
+INFO 2025-08-22 10:39:52,472 views 50100 55100 Found 0 chat messages for crew 12, round 5
+INFO 2025-08-22 10:39:52,472 views 50100 55100 RoundState ID: 57, Round Number: 5
+INFO 2025-08-22 10:39:52,477 views 50100 55100 Formatted 0 messages for participant navigator
+ERROR 2025-08-22 10:51:44,695 views 50100 25148 Crew status error: No Crew matches the given query.
+ERROR 2025-08-22 10:51:44,698 log 50100 25148 Internal Server Error: /spaceship/api/crew/12/status/
+ERROR 2025-08-22 10:51:45,487 views 50100 45048 Crew status error: No Crew matches the given query.
+ERROR 2025-08-22 10:51:45,488 log 50100 45048 Internal Server Error: /spaceship/api/crew/12/status/
+ERROR 2025-08-22 10:52:01,338 views 50100 16412 Crew status error: No Crew matches the given query.
+ERROR 2025-08-22 10:52:01,339 log 50100 16412 Internal Server Error: /spaceship/api/crew/12/status/
+INFO 2025-08-22 10:52:25,086 views 50100 25148 Participant 39 (captain) can_communicate: True
+INFO 2025-08-22 10:52:25,087 views 50100 25148 Participant 39 (captain) can_receive_messages: True
+INFO 2025-08-22 10:52:25,087 views 50100 25148 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:52:25,090 views 50100 25148 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:52:25,091 views 50100 25148 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:52:25,094 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:52:25,094 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:52:25,095 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:52:25,817 views 50100 41104 Participant 40 (navigator) can_communicate: True
+INFO 2025-08-22 10:52:25,818 views 50100 41104 Participant 40 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:52:25,819 views 50100 41104 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:52:25,822 views 50100 41104 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:52:25,822 views 50100 41104 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:52:25,826 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:52:26,292 views 50100 45048 Participant 41 (driller) can_communicate: True
+INFO 2025-08-22 10:52:26,293 views 50100 45048 Participant 41 (driller) can_receive_messages: True
+INFO 2025-08-22 10:52:26,294 views 50100 45048 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:52:26,297 views 50100 45048 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:52:26,298 views 50100 45048 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:52:26,303 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:53:54,226 views 50100 45048 Crew 13 advanced from briefing to action stage after 89s
+INFO 2025-08-22 10:53:54,309 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:53:54,310 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:53:54,311 views 50100 45048 Crew 13 current_stage: action
+INFO 2025-08-22 10:53:54,314 views 50100 45048 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:53:54,315 views 50100 45048 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:53:54,318 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:53:54,894 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:53:54,895 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:53:54,896 views 50100 25148 Crew 13 current_stage: action
+INFO 2025-08-22 10:53:54,914 views 50100 25148 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:53:54,915 views 50100 25148 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:53:54,919 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:53:54,919 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:53:54,920 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:53:54,970 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:53:54,972 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:53:54,972 views 50100 41104 Crew 13 current_stage: action
+INFO 2025-08-22 10:53:54,994 views 50100 41104 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:53:54,997 views 50100 41104 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:53:55,001 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:54:00,720 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:54:00,721 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:54:00,722 views 50100 41104 Crew 13 current_stage: action
+INFO 2025-08-22 10:54:00,725 views 50100 41104 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:54:00,726 views 50100 41104 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:54:00,729 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:54:03,248 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:54:03,249 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:54:03,249 views 50100 41104 Crew 13 current_stage: action
+INFO 2025-08-22 10:54:03,254 views 50100 41104 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:54:03,255 views 50100 41104 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:54:03,258 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:54:08,334 views 50100 41104 Crew 13 advanced from action to result stage after 14s
+INFO 2025-08-22 10:54:08,392 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:54:08,393 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:54:08,394 views 50100 41104 Crew 13 current_stage: result
+INFO 2025-08-22 10:54:08,397 views 50100 41104 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:54:08,398 views 50100 41104 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:54:08,401 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:54:08,739 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:54:08,740 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:54:08,740 views 50100 45048 Crew 13 current_stage: result
+INFO 2025-08-22 10:54:08,743 views 50100 45048 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:54:08,743 views 50100 45048 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:54:08,747 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:54:09,265 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:54:09,266 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:54:09,266 views 50100 25148 Crew 13 current_stage: result
+INFO 2025-08-22 10:54:09,269 views 50100 25148 Found 0 chat messages for crew 13, round 0
+INFO 2025-08-22 10:54:09,270 views 50100 25148 RoundState ID: 58, Round Number: 0
+INFO 2025-08-22 10:54:09,275 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:54:09,275 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:54:09,276 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:54:22,470 views 50100 41104 Crew 13 advanced to round 1
+INFO 2025-08-22 10:54:22,522 views 50100 41104 Participant 40 (navigator) can_communicate: True
+INFO 2025-08-22 10:54:22,523 views 50100 41104 Participant 40 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:54:22,523 views 50100 41104 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:54:22,528 views 50100 41104 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:54:22,528 views 50100 41104 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:54:22,530 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:54:22,681 views 50100 25148 Participant 39 (captain) can_communicate: True
+INFO 2025-08-22 10:54:22,681 views 50100 25148 Participant 39 (captain) can_receive_messages: True
+INFO 2025-08-22 10:54:22,682 views 50100 25148 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:54:22,685 views 50100 25148 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:54:22,686 views 50100 25148 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:54:22,689 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:54:22,689 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:54:22,690 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:54:23,154 views 50100 45048 Participant 41 (driller) can_communicate: True
+INFO 2025-08-22 10:54:23,155 views 50100 45048 Participant 41 (driller) can_receive_messages: True
+INFO 2025-08-22 10:54:23,156 views 50100 45048 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:54:23,159 views 50100 45048 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:54:23,160 views 50100 45048 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:54:23,165 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:55:51,594 views 50100 41104 Crew 13 advanced from briefing to action stage after 89s
+INFO 2025-08-22 10:55:51,653 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:55:51,653 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:55:51,654 views 50100 41104 Crew 13 current_stage: action
+INFO 2025-08-22 10:55:51,657 views 50100 41104 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:55:51,657 views 50100 41104 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:55:51,661 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:55:51,813 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:55:51,815 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:55:51,815 views 50100 25148 Crew 13 current_stage: action
+INFO 2025-08-22 10:55:51,818 views 50100 25148 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:55:51,820 views 50100 25148 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:55:51,828 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:55:51,829 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:55:51,830 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:55:52,147 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:55:52,148 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:55:52,149 views 50100 45048 Crew 13 current_stage: action
+INFO 2025-08-22 10:55:52,152 views 50100 45048 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:55:52,152 views 50100 45048 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:55:52,157 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:55:57,995 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:55:57,995 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:55:57,996 views 50100 41104 Crew 13 current_stage: action
+INFO 2025-08-22 10:55:57,998 views 50100 41104 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:55:57,999 views 50100 41104 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:55:58,005 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:56:02,605 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:56:02,606 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:56:02,607 views 50100 45048 Crew 13 current_stage: action
+INFO 2025-08-22 10:56:02,611 views 50100 45048 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:56:02,612 views 50100 45048 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:56:02,614 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:56:05,735 views 50100 45048 Crew 13 advanced from action to result stage after 14s
+INFO 2025-08-22 10:56:05,802 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:56:05,803 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:56:05,803 views 50100 45048 Crew 13 current_stage: result
+INFO 2025-08-22 10:56:05,806 views 50100 45048 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:56:05,808 views 50100 45048 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:56:05,810 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:56:06,130 views 50100 41104 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:56:06,131 views 50100 41104 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:56:06,131 views 50100 41104 Crew 13 current_stage: result
+INFO 2025-08-22 10:56:06,137 views 50100 41104 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:56:06,137 views 50100 41104 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:56:06,140 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:56:06,297 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:56:06,299 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:56:06,299 views 50100 25148 Crew 13 current_stage: result
+INFO 2025-08-22 10:56:06,302 views 50100 25148 Found 0 chat messages for crew 13, round 1
+INFO 2025-08-22 10:56:06,303 views 50100 25148 RoundState ID: 59, Round Number: 1
+INFO 2025-08-22 10:56:06,306 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:56:06,308 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:56:06,308 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:56:20,058 views 50100 45048 Crew 13 advanced to round 2
+INFO 2025-08-22 10:56:20,108 views 50100 45048 Participant 41 (driller) can_communicate: True
+INFO 2025-08-22 10:56:20,108 views 50100 45048 Participant 41 (driller) can_receive_messages: True
+INFO 2025-08-22 10:56:20,109 views 50100 45048 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:56:20,112 views 50100 45048 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:56:20,112 views 50100 45048 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:56:20,116 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:56:20,280 views 50100 41104 Participant 40 (navigator) can_communicate: True
+INFO 2025-08-22 10:56:20,280 views 50100 41104 Participant 40 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:56:20,280 views 50100 41104 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:56:20,284 views 50100 41104 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:56:20,284 views 50100 41104 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:56:20,289 views 50100 41104 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:56:20,801 views 50100 25148 Participant 39 (captain) can_communicate: True
+INFO 2025-08-22 10:56:20,802 views 50100 25148 Participant 39 (captain) can_receive_messages: True
+INFO 2025-08-22 10:56:20,802 views 50100 25148 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:56:20,805 views 50100 25148 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:56:20,806 views 50100 25148 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:56:20,809 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:56:20,810 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:56:20,811 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:57:49,400 views 50100 16412 Crew 13 advanced from briefing to action stage after 89s
+INFO 2025-08-22 10:57:49,482 views 50100 16412 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:57:49,484 views 50100 16412 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:57:49,484 views 50100 16412 Crew 13 current_stage: action
+INFO 2025-08-22 10:57:49,487 views 50100 16412 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:57:49,488 views 50100 16412 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:57:49,491 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:57:49,513 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:57:49,514 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:57:49,514 views 50100 25148 Crew 13 current_stage: action
+INFO 2025-08-22 10:57:49,519 views 50100 25148 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:57:49,520 views 50100 25148 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:57:49,524 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:57:49,525 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:57:49,525 views 50100 25148 Captain 39 - Formatted messages: 0
+WARNING 2025-08-22 10:57:49,648 log 50100 25148 Not Found: /favicon.ico
+INFO 2025-08-22 10:57:49,947 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:57:49,948 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:57:49,949 views 50100 45048 Crew 13 current_stage: action
+INFO 2025-08-22 10:57:49,953 views 50100 45048 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:57:49,953 views 50100 45048 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:57:49,956 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:57:52,455 views 50100 16412 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:57:52,455 views 50100 16412 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:57:52,456 views 50100 16412 Crew 13 current_stage: action
+INFO 2025-08-22 10:57:52,460 views 50100 16412 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:57:52,460 views 50100 16412 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:57:52,463 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:57:55,765 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:57:55,766 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:57:55,767 views 50100 45048 Crew 13 current_stage: action
+INFO 2025-08-22 10:57:55,770 views 50100 45048 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:57:55,771 views 50100 45048 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:57:55,775 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:58:03,524 views 50100 16412 Crew 13 advanced from action to result stage after 14s
+INFO 2025-08-22 10:58:03,600 views 50100 16412 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:58:03,601 views 50100 16412 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:58:03,601 views 50100 16412 Crew 13 current_stage: result
+INFO 2025-08-22 10:58:03,604 views 50100 16412 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:58:03,604 views 50100 16412 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:58:03,608 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:58:03,865 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:58:03,866 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:58:03,866 views 50100 45048 Crew 13 current_stage: result
+INFO 2025-08-22 10:58:03,868 views 50100 45048 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:58:03,868 views 50100 45048 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:58:03,873 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:58:04,040 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:58:04,047 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:58:04,058 views 50100 25148 Crew 13 current_stage: result
+INFO 2025-08-22 10:58:04,060 views 50100 25148 Found 0 chat messages for crew 13, round 2
+INFO 2025-08-22 10:58:04,063 views 50100 25148 RoundState ID: 60, Round Number: 2
+INFO 2025-08-22 10:58:04,076 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:58:04,086 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:58:04,090 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:58:17,705 views 50100 16412 Crew 13 advanced to round 3
+INFO 2025-08-22 10:58:17,782 views 50100 16412 Participant 40 (navigator) can_communicate: True
+INFO 2025-08-22 10:58:17,782 views 50100 16412 Participant 40 (navigator) can_receive_messages: True
+INFO 2025-08-22 10:58:17,782 views 50100 16412 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:58:17,784 views 50100 16412 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 10:58:17,785 views 50100 16412 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 10:58:17,786 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:58:17,802 views 50100 45048 Participant 41 (driller) can_communicate: True
+INFO 2025-08-22 10:58:17,803 views 50100 45048 Participant 41 (driller) can_receive_messages: True
+INFO 2025-08-22 10:58:17,803 views 50100 45048 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:58:17,805 views 50100 45048 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 10:58:17,805 views 50100 45048 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 10:58:17,806 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 10:58:18,396 views 50100 25148 Participant 39 (captain) can_communicate: True
+INFO 2025-08-22 10:58:18,396 views 50100 25148 Participant 39 (captain) can_receive_messages: True
+INFO 2025-08-22 10:58:18,397 views 50100 25148 Crew 13 current_stage: briefing
+INFO 2025-08-22 10:58:18,398 views 50100 25148 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 10:58:18,399 views 50100 25148 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 10:58:18,402 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:58:18,402 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:58:18,402 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:59:46,873 views 50100 16412 Crew 13 advanced from briefing to action stage after 89s
+INFO 2025-08-22 10:59:46,919 views 50100 16412 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 10:59:46,919 views 50100 16412 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 10:59:46,919 views 50100 16412 Crew 13 current_stage: action
+INFO 2025-08-22 10:59:46,921 views 50100 16412 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 10:59:46,922 views 50100 16412 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 10:59:46,923 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 10:59:47,032 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 10:59:47,033 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 10:59:47,033 views 50100 25148 Crew 13 current_stage: action
+INFO 2025-08-22 10:59:47,037 views 50100 25148 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 10:59:47,038 views 50100 25148 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 10:59:47,041 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 10:59:47,052 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 10:59:47,053 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 10:59:47,453 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 10:59:47,454 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 10:59:47,454 views 50100 45048 Crew 13 current_stage: action
+INFO 2025-08-22 10:59:47,456 views 50100 45048 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 10:59:47,456 views 50100 45048 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 10:59:47,457 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:00:00,961 views 50100 45048 Crew 13 advanced from action to result stage after 14s
+INFO 2025-08-22 11:00:01,010 views 50100 45048 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 11:00:01,010 views 50100 45048 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 11:00:01,010 views 50100 45048 Crew 13 current_stage: result
+INFO 2025-08-22 11:00:01,012 views 50100 45048 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 11:00:01,013 views 50100 45048 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 11:00:01,014 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:00:01,066 views 50100 16412 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:00:01,066 views 50100 16412 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:00:01,067 views 50100 16412 Crew 13 current_stage: result
+INFO 2025-08-22 11:00:01,068 views 50100 16412 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 11:00:01,069 views 50100 16412 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 11:00:01,071 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:00:01,372 views 50100 25148 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 11:00:01,372 views 50100 25148 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 11:00:01,372 views 50100 25148 Crew 13 current_stage: result
+INFO 2025-08-22 11:00:01,374 views 50100 25148 Found 0 chat messages for crew 13, round 3
+INFO 2025-08-22 11:00:01,374 views 50100 25148 RoundState ID: 61, Round Number: 3
+INFO 2025-08-22 11:00:01,374 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:00:01,375 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:00:01,375 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 11:00:15,165 views 50100 16412 Crew 13 advanced to round 4
+INFO 2025-08-22 11:00:15,231 views 50100 16412 Participant 40 (navigator) can_communicate: True
+INFO 2025-08-22 11:00:15,232 views 50100 16412 Participant 40 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:00:15,232 views 50100 16412 Crew 13 current_stage: briefing
+INFO 2025-08-22 11:00:15,234 views 50100 16412 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:00:15,235 views 50100 16412 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:00:15,237 views 50100 16412 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:00:15,762 views 50100 45048 Participant 41 (driller) can_communicate: True
+INFO 2025-08-22 11:00:15,762 views 50100 45048 Participant 41 (driller) can_receive_messages: True
+INFO 2025-08-22 11:00:15,763 views 50100 45048 Crew 13 current_stage: briefing
+INFO 2025-08-22 11:00:15,764 views 50100 45048 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:00:15,765 views 50100 45048 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:00:15,767 views 50100 45048 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:00:15,783 views 50100 25148 Participant 39 (captain) can_communicate: True
+INFO 2025-08-22 11:00:15,783 views 50100 25148 Participant 39 (captain) can_receive_messages: True
+INFO 2025-08-22 11:00:15,785 views 50100 25148 Crew 13 current_stage: briefing
+INFO 2025-08-22 11:00:15,788 views 50100 25148 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:00:15,789 views 50100 25148 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:00:15,792 views 50100 25148 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:00:15,792 views 50100 25148 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:00:15,792 views 50100 25148 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 11:00:34,452 autoreload 50100 26068 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 11:00:35,626 autoreload 15172 17604 Watching for file changes with StatReloader
+INFO 2025-08-22 11:01:36,274 autoreload 15172 17604 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 11:01:37,304 autoreload 3144 27436 Watching for file changes with StatReloader
+INFO 2025-08-22 11:01:40,039 autoreload 3144 27436 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 11:01:40,917 autoreload 12508 32504 Watching for file changes with StatReloader
+INFO 2025-08-22 11:01:58,622 autoreload 12508 32504 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\urls.py changed, reloading.
+INFO 2025-08-22 11:01:59,512 autoreload 54112 32408 Watching for file changes with StatReloader
+INFO 2025-08-22 11:01:59,663 views 54112 27784 Crew 13 advanced from briefing to action stage after 104s
+INFO 2025-08-22 11:01:59,763 views 54112 27784 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:01:59,763 views 54112 27784 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:01:59,763 views 54112 27784 Crew 13 current_stage: action
+INFO 2025-08-22 11:01:59,768 views 54112 27784 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:01:59,769 views 54112 27784 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:01:59,781 views 54112 33176 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 11:01:59,781 views 54112 33176 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 11:01:59,781 views 54112 33176 Crew 13 current_stage: action
+INFO 2025-08-22 11:01:59,783 views 54112 33176 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:01:59,784 views 54112 33176 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:01:59,786 views 54112 33176 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:01:59,788 views 54112 27784 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:01:59,833 views 54112 52412 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 11:01:59,836 views 54112 52412 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 11:01:59,838 views 54112 52412 Crew 13 current_stage: action
+INFO 2025-08-22 11:01:59,840 views 54112 52412 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:01:59,841 views 54112 52412 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:01:59,843 views 54112 52412 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:01:59,844 views 54112 52412 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:01:59,844 views 54112 52412 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 11:02:00,014 views 54112 48744 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:02:00,014 views 54112 48744 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:02:00,014 views 54112 48744 Crew 13 current_stage: action
+INFO 2025-08-22 11:02:00,017 views 54112 48744 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:02:00,018 views 54112 48744 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:02:00,020 views 54112 48744 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:02:14,095 views 54112 48744 Crew 13 advanced from action to result stage after 14s
+INFO 2025-08-22 11:02:14,137 views 54112 48744 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:02:14,137 views 54112 48744 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:02:14,139 views 54112 48744 Crew 13 current_stage: result
+INFO 2025-08-22 11:02:14,140 views 54112 48744 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:02:14,141 views 54112 48744 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:02:14,143 views 54112 48744 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:02:14,331 views 54112 52412 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 11:02:14,331 views 54112 52412 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 11:02:14,331 views 54112 52412 Crew 13 current_stage: result
+INFO 2025-08-22 11:02:14,332 views 54112 52412 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:02:14,333 views 54112 52412 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:02:14,335 views 54112 52412 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:02:14,335 views 54112 52412 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:02:14,336 views 54112 52412 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 11:02:15,605 views 54112 33176 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 11:02:15,606 views 54112 33176 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 11:02:15,606 views 54112 33176 Crew 13 current_stage: result
+INFO 2025-08-22 11:02:15,607 views 54112 33176 Found 0 chat messages for crew 13, round 4
+INFO 2025-08-22 11:02:15,607 views 54112 33176 RoundState ID: 62, Round Number: 4
+INFO 2025-08-22 11:02:15,609 views 54112 33176 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:02:28,234 views 54112 48744 Crew 13 advanced to round 5
+INFO 2025-08-22 11:02:28,281 views 54112 48744 Participant 40 (navigator) can_communicate: True
+INFO 2025-08-22 11:02:28,281 views 54112 48744 Participant 40 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:02:28,281 views 54112 48744 Crew 13 current_stage: briefing
+INFO 2025-08-22 11:02:28,283 views 54112 48744 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:02:28,283 views 54112 48744 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:02:28,284 views 54112 48744 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:02:28,741 views 54112 52412 Participant 39 (captain) can_communicate: True
+INFO 2025-08-22 11:02:28,742 views 54112 52412 Participant 39 (captain) can_receive_messages: True
+INFO 2025-08-22 11:02:28,742 views 54112 52412 Crew 13 current_stage: briefing
+INFO 2025-08-22 11:02:28,743 views 54112 52412 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:02:28,743 views 54112 52412 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:02:28,746 views 54112 52412 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:02:28,746 views 54112 52412 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:02:28,747 views 54112 52412 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 11:02:29,091 views 54112 33176 Participant 41 (driller) can_communicate: True
+INFO 2025-08-22 11:02:29,091 views 54112 33176 Participant 41 (driller) can_receive_messages: True
+INFO 2025-08-22 11:02:29,091 views 54112 33176 Crew 13 current_stage: briefing
+INFO 2025-08-22 11:02:29,093 views 54112 33176 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:02:29,093 views 54112 33176 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:02:29,095 views 54112 33176 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:03:15,214 autoreload 54112 32408 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\game_logic.py changed, reloading.
+INFO 2025-08-22 11:03:16,594 autoreload 24692 39668 Watching for file changes with StatReloader
+INFO 2025-08-22 11:03:24,911 autoreload 24692 39668 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\game_logic.py changed, reloading.
+INFO 2025-08-22 11:03:26,178 autoreload 22232 38940 Watching for file changes with StatReloader
+INFO 2025-08-22 11:03:44,131 autoreload 22232 38940 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\game_logic.py changed, reloading.
+INFO 2025-08-22 11:03:45,312 autoreload 13684 47100 Watching for file changes with StatReloader
+INFO 2025-08-22 11:03:57,394 views 13684 36016 Crew 13 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:03:57,469 views 13684 36016 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:03:57,469 views 13684 36016 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:03:57,471 views 13684 36016 Crew 13 current_stage: action
+INFO 2025-08-22 11:03:57,474 views 13684 36016 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:03:57,475 views 13684 36016 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:03:57,477 views 13684 36016 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:03:58,289 views 13684 12552 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 11:03:58,291 views 13684 12552 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 11:03:58,292 views 13684 12552 Crew 13 current_stage: action
+INFO 2025-08-22 11:03:58,298 views 13684 12552 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:03:58,303 views 13684 12552 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:03:58,311 views 13684 21576 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 11:03:58,311 views 13684 21576 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 11:03:58,312 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:03:58,312 views 13684 21576 Crew 13 current_stage: action
+INFO 2025-08-22 11:03:58,312 views 13684 12552 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:03:58,317 views 13684 12552 Captain 39 - Formatted messages: 0
+INFO 2025-08-22 11:03:58,317 views 13684 21576 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:03:58,321 views 13684 21576 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:03:58,324 views 13684 21576 Formatted 0 messages for participant driller
+WARNING 2025-08-22 11:03:58,406 log 13684 12552 Not Found: /favicon.ico
+INFO 2025-08-22 11:04:11,604 views 13684 36016 Crew 13 advanced from action to result stage after 14s
+INFO 2025-08-22 11:04:11,682 views 13684 36016 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:04:11,683 views 13684 36016 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:04:11,683 views 13684 36016 Crew 13 current_stage: result
+INFO 2025-08-22 11:04:11,686 views 13684 36016 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:04:11,686 views 13684 36016 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:04:11,688 views 13684 36016 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:04:11,851 views 13684 12552 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 11:04:11,854 views 13684 12552 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 11:04:11,854 views 13684 12552 Crew 13 current_stage: result
+INFO 2025-08-22 11:04:11,864 views 13684 12552 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:04:11,865 views 13684 12552 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:04:11,868 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:04:11,869 views 13684 12552 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:04:11,870 views 13684 12552 Captain 39 - Formatted messages: 0
+WARNING 2025-08-22 11:04:11,942 log 13684 12552 Not Found: /favicon.ico
+INFO 2025-08-22 11:04:12,369 views 13684 21576 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 11:04:12,369 views 13684 21576 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 11:04:12,370 views 13684 21576 Crew 13 current_stage: result
+INFO 2025-08-22 11:04:12,375 views 13684 21576 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:04:12,377 views 13684 21576 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:04:12,379 views 13684 21576 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:04:25,775 views 13684 36016 Crew 13 completed the game
+INFO 2025-08-22 11:04:25,843 views 13684 36016 Participant 40 (navigator) can_communicate: False
+INFO 2025-08-22 11:04:25,844 views 13684 36016 Participant 40 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:04:25,844 views 13684 36016 Crew 13 current_stage: completed
+INFO 2025-08-22 11:04:25,851 views 13684 36016 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:04:25,853 views 13684 36016 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:04:25,856 views 13684 36016 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:04:25,936 views 13684 21576 Participant 41 (driller) can_communicate: False
+INFO 2025-08-22 11:04:25,937 views 13684 21576 Participant 41 (driller) can_receive_messages: False
+INFO 2025-08-22 11:04:25,937 views 13684 21576 Crew 13 current_stage: completed
+INFO 2025-08-22 11:04:25,939 views 13684 21576 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:04:25,940 views 13684 21576 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:04:25,943 views 13684 21576 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:04:26,318 views 13684 12552 Participant 39 (captain) can_communicate: False
+INFO 2025-08-22 11:04:26,319 views 13684 12552 Participant 39 (captain) can_receive_messages: False
+INFO 2025-08-22 11:04:26,319 views 13684 12552 Crew 13 current_stage: completed
+INFO 2025-08-22 11:04:26,321 views 13684 12552 Found 0 chat messages for crew 13, round 5
+INFO 2025-08-22 11:04:26,322 views 13684 12552 RoundState ID: 63, Round Number: 5
+INFO 2025-08-22 11:04:26,326 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:04:26,327 views 13684 12552 Captain 39 - Total messages: 0
+INFO 2025-08-22 11:04:26,328 views 13684 12552 Captain 39 - Formatted messages: 0
+ERROR 2025-08-22 11:05:54,265 views 13684 21576 Crew status error: No Crew matches the given query.
+ERROR 2025-08-22 11:05:54,266 log 13684 21576 Internal Server Error: /spaceship/api/crew/13/status/
+ERROR 2025-08-22 11:05:56,388 views 13684 36016 Crew status error: No Crew matches the given query.
+ERROR 2025-08-22 11:05:56,389 log 13684 36016 Internal Server Error: /spaceship/api/crew/13/status/
+ERROR 2025-08-22 11:05:57,167 views 13684 12552 Crew status error: No Crew matches the given query.
+ERROR 2025-08-22 11:05:57,168 log 13684 12552 Internal Server Error: /spaceship/api/crew/13/status/
+WARNING 2025-08-22 11:05:57,322 log 13684 12552 Not Found: /favicon.ico
+INFO 2025-08-22 11:06:29,401 views 13684 12552 Participant 42 (captain) can_communicate: True
+INFO 2025-08-22 11:06:29,402 views 13684 12552 Participant 42 (captain) can_receive_messages: True
+INFO 2025-08-22 11:06:29,403 views 13684 12552 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:06:29,407 views 13684 12552 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:06:29,408 views 13684 12552 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:06:29,411 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:06:29,412 views 13684 12552 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:06:29,412 views 13684 12552 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:06:29,926 views 13684 21576 Participant 44 (driller) can_communicate: True
+INFO 2025-08-22 11:06:29,927 views 13684 21576 Participant 44 (driller) can_receive_messages: True
+INFO 2025-08-22 11:06:29,928 views 13684 21576 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:06:29,934 views 13684 21576 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:06:29,938 views 13684 21576 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:06:29,941 views 13684 21576 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:06:29,992 views 13684 36016 Participant 43 (navigator) can_communicate: True
+INFO 2025-08-22 11:06:29,993 views 13684 36016 Participant 43 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:06:29,993 views 13684 36016 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:06:29,997 views 13684 36016 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:06:29,999 views 13684 36016 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:06:30,003 views 13684 36016 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:07:58,721 views 13684 21576 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:07:58,807 views 13684 21576 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:07:58,808 views 13684 21576 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:07:58,809 views 13684 21576 Crew 14 current_stage: action
+INFO 2025-08-22 11:07:58,813 views 13684 21576 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:07:58,813 views 13684 21576 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:07:58,817 views 13684 21576 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:07:59,122 views 13684 17848 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:07:59,124 views 13684 17848 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:07:59,124 views 13684 17848 Crew 14 current_stage: action
+INFO 2025-08-22 11:07:59,127 views 13684 17848 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:07:59,128 views 13684 17848 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:07:59,131 views 13684 17848 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:07:59,343 views 13684 12552 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:07:59,343 views 13684 12552 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:07:59,344 views 13684 12552 Crew 14 current_stage: action
+INFO 2025-08-22 11:07:59,346 views 13684 12552 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:07:59,346 views 13684 12552 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:07:59,347 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:07:59,352 views 13684 12552 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:07:59,359 views 13684 12552 Captain 42 - Formatted messages: 0
+WARNING 2025-08-22 11:07:59,446 log 13684 12552 Not Found: /favicon.ico
+INFO 2025-08-22 11:08:12,844 views 13684 12552 Crew 14 advanced from action to result stage after 14s
+INFO 2025-08-22 11:08:12,909 views 13684 12552 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:08:12,910 views 13684 12552 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:08:12,911 views 13684 12552 Crew 14 current_stage: result
+INFO 2025-08-22 11:08:12,915 views 13684 12552 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:08:12,916 views 13684 12552 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:08:12,918 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:08:12,919 views 13684 12552 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:08:12,920 views 13684 12552 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:08:13,259 views 13684 17848 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:08:13,260 views 13684 17848 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:08:13,262 views 13684 17848 Crew 14 current_stage: result
+INFO 2025-08-22 11:08:13,267 views 13684 17848 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:08:13,267 views 13684 17848 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:08:13,270 views 13684 17848 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:08:13,386 views 13684 21576 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:08:13,387 views 13684 21576 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:08:13,387 views 13684 21576 Crew 14 current_stage: result
+INFO 2025-08-22 11:08:13,391 views 13684 21576 Found 0 chat messages for crew 14, round 0
+INFO 2025-08-22 11:08:13,392 views 13684 21576 RoundState ID: 64, Round Number: 0
+INFO 2025-08-22 11:08:13,395 views 13684 21576 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:08:27,200 views 13684 12552 Crew 14 advanced to round 1
+INFO 2025-08-22 11:08:27,230 views 13684 12552 Participant 42 (captain) can_communicate: True
+INFO 2025-08-22 11:08:27,231 views 13684 12552 Participant 42 (captain) can_receive_messages: True
+INFO 2025-08-22 11:08:27,231 views 13684 12552 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:08:27,232 views 13684 12552 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:08:27,233 views 13684 12552 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:08:27,235 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:08:27,235 views 13684 12552 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:08:27,236 views 13684 12552 Captain 42 - Formatted messages: 0
+WARNING 2025-08-22 11:08:27,282 log 13684 12552 Not Found: /favicon.ico
+INFO 2025-08-22 11:08:27,371 views 13684 17848 Participant 43 (navigator) can_communicate: True
+INFO 2025-08-22 11:08:27,372 views 13684 17848 Participant 43 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:08:27,372 views 13684 17848 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:08:27,374 views 13684 17848 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:08:27,374 views 13684 17848 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:08:27,375 views 13684 17848 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:08:27,572 views 13684 21576 Participant 44 (driller) can_communicate: True
+INFO 2025-08-22 11:08:27,573 views 13684 21576 Participant 44 (driller) can_receive_messages: True
+INFO 2025-08-22 11:08:27,573 views 13684 21576 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:08:27,575 views 13684 21576 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:08:27,575 views 13684 21576 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:08:27,576 views 13684 21576 Formatted 0 messages for participant driller
+WARNING 2025-08-22 11:08:27,760 log 13684 21576 Not Found: /favicon.ico
+INFO 2025-08-22 11:09:56,455 views 13684 17848 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:09:56,523 views 13684 17848 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:09:56,529 views 13684 17848 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:09:56,539 views 13684 17848 Crew 14 current_stage: action
+INFO 2025-08-22 11:09:56,545 views 13684 17848 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:09:56,548 views 13684 17848 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:09:56,554 views 13684 17848 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:09:56,984 views 13684 12552 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:09:56,987 views 13684 12552 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:09:56,988 views 13684 12552 Crew 14 current_stage: action
+INFO 2025-08-22 11:09:56,996 views 13684 12552 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:09:57,014 views 13684 12552 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:09:57,024 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:09:57,029 views 13684 12552 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:09:57,056 views 13684 12552 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:09:57,384 views 13684 42600 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:09:57,384 views 13684 42600 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:09:57,384 views 13684 42600 Crew 14 current_stage: action
+INFO 2025-08-22 11:09:57,386 views 13684 42600 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:09:57,387 views 13684 42600 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:09:57,388 views 13684 42600 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:10:10,628 views 13684 17848 Crew 14 advanced from action to result stage after 14s
+INFO 2025-08-22 11:10:10,669 views 13684 17848 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:10:10,670 views 13684 17848 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:10:10,671 views 13684 17848 Crew 14 current_stage: result
+INFO 2025-08-22 11:10:10,672 views 13684 17848 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:10:10,673 views 13684 17848 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:10:10,673 views 13684 17848 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:10:10,960 views 13684 42600 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:10:10,960 views 13684 42600 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:10:10,960 views 13684 42600 Crew 14 current_stage: result
+INFO 2025-08-22 11:10:10,961 views 13684 42600 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:10:10,962 views 13684 42600 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:10:10,963 views 13684 42600 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:10:11,471 views 13684 12552 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:10:11,471 views 13684 12552 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:10:11,471 views 13684 12552 Crew 14 current_stage: result
+INFO 2025-08-22 11:10:11,473 views 13684 12552 Found 0 chat messages for crew 14, round 1
+INFO 2025-08-22 11:10:11,473 views 13684 12552 RoundState ID: 65, Round Number: 1
+INFO 2025-08-22 11:10:11,474 views 13684 12552 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:10:11,475 views 13684 12552 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:10:11,475 views 13684 12552 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:10:11,523 autoreload 13684 47100 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 11:10:12,683 autoreload 27404 9896 Watching for file changes with StatReloader
+INFO 2025-08-22 11:10:15,457 autoreload 27404 9896 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 11:10:16,588 autoreload 31740 4844 Watching for file changes with StatReloader
+INFO 2025-08-22 11:10:24,749 views 31740 35280 Crew 14 advanced to round 2
+INFO 2025-08-22 11:10:24,809 views 31740 35280 Participant 43 (navigator) can_communicate: True
+INFO 2025-08-22 11:10:24,811 views 31740 35280 Participant 43 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:10:24,812 views 31740 35280 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:10:24,815 views 31740 35280 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:10:24,816 views 31740 35280 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:10:24,820 views 31740 35280 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:10:25,043 views 31740 19000 Participant 42 (captain) can_communicate: True
+INFO 2025-08-22 11:10:25,044 views 31740 19000 Participant 42 (captain) can_receive_messages: True
+INFO 2025-08-22 11:10:25,044 views 31740 19000 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:10:25,046 views 31740 19000 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:10:25,047 views 31740 19000 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:10:25,049 views 31740 19000 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:10:25,050 views 31740 19000 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:10:25,050 views 31740 19000 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:10:25,703 views 31740 47952 Participant 44 (driller) can_communicate: True
+INFO 2025-08-22 11:10:25,704 views 31740 47952 Participant 44 (driller) can_receive_messages: True
+INFO 2025-08-22 11:10:25,704 views 31740 47952 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:10:25,707 views 31740 47952 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:10:25,709 views 31740 47952 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:10:25,712 views 31740 47952 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:11:53,894 views 31740 19000 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:11:53,964 views 31740 19000 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:11:53,967 views 31740 19000 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:11:53,969 views 31740 19000 Crew 14 current_stage: action
+INFO 2025-08-22 11:11:53,975 views 31740 19000 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:11:53,975 views 31740 19000 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:11:53,996 views 31740 39496 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:11:53,997 views 31740 19000 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:11:53,997 views 31740 39496 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:11:53,998 views 31740 19000 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:11:54,000 views 31740 39496 Crew 14 current_stage: action
+INFO 2025-08-22 11:11:54,000 views 31740 19000 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:11:54,008 views 31740 39496 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:11:54,010 views 31740 39496 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:11:54,014 views 31740 39496 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:11:54,336 views 31740 47952 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:11:54,337 views 31740 47952 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:11:54,337 views 31740 47952 Crew 14 current_stage: action
+INFO 2025-08-22 11:11:54,340 views 31740 47952 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:11:54,341 views 31740 47952 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:11:54,344 views 31740 47952 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:12:07,904 views 31740 47952 Crew 14 advanced from action to result stage after 14s
+INFO 2025-08-22 11:12:07,984 views 31740 47952 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:12:07,984 views 31740 47952 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:12:07,985 views 31740 47952 Crew 14 current_stage: result
+INFO 2025-08-22 11:12:07,989 views 31740 47952 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:12:07,990 views 31740 47952 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:12:07,993 views 31740 47952 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:12:08,123 views 31740 39496 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:12:08,123 views 31740 39496 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:12:08,125 views 31740 39496 Crew 14 current_stage: result
+INFO 2025-08-22 11:12:08,128 views 31740 39496 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:12:08,129 views 31740 39496 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:12:08,132 views 31740 39496 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:12:08,494 views 31740 19000 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:12:08,494 views 31740 19000 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:12:08,495 views 31740 19000 Crew 14 current_stage: result
+INFO 2025-08-22 11:12:08,499 views 31740 19000 Found 0 chat messages for crew 14, round 2
+INFO 2025-08-22 11:12:08,499 views 31740 19000 RoundState ID: 66, Round Number: 2
+INFO 2025-08-22 11:12:08,503 views 31740 19000 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:12:08,503 views 31740 19000 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:12:08,504 views 31740 19000 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:12:22,202 views 31740 39496 Crew 14 advanced to round 3
+INFO 2025-08-22 11:12:22,251 views 31740 39496 Participant 43 (navigator) can_communicate: True
+INFO 2025-08-22 11:12:22,253 views 31740 39496 Participant 43 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:12:22,254 views 31740 39496 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:12:22,256 views 31740 39496 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:12:22,256 views 31740 39496 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:12:22,257 views 31740 39496 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:12:22,723 views 31740 47952 Participant 44 (driller) can_communicate: True
+INFO 2025-08-22 11:12:22,724 views 31740 47952 Participant 44 (driller) can_receive_messages: True
+INFO 2025-08-22 11:12:22,725 views 31740 47952 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:12:22,728 views 31740 47952 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:12:22,728 views 31740 47952 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:12:22,732 views 31740 47952 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:12:22,886 views 31740 19000 Participant 42 (captain) can_communicate: True
+INFO 2025-08-22 11:12:22,886 views 31740 19000 Participant 42 (captain) can_receive_messages: True
+INFO 2025-08-22 11:12:22,888 views 31740 19000 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:12:22,891 views 31740 19000 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:12:22,891 views 31740 19000 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:12:22,898 views 31740 19000 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:12:22,899 views 31740 19000 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:12:22,900 views 31740 19000 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:12:43,892 autoreload 31740 4844 C:\Users\jsdew\Documents\GitHub\AI-Coordination-Wireframe\spaceship_coordination\views.py changed, reloading.
+INFO 2025-08-22 11:12:44,856 autoreload 9160 8384 Watching for file changes with StatReloader
+INFO 2025-08-22 11:13:51,339 views 9160 47480 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:13:51,417 views 9160 47480 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:13:51,419 views 9160 47480 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:13:51,420 views 9160 47480 Crew 14 current_stage: action
+INFO 2025-08-22 11:13:51,425 views 9160 47480 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:13:51,426 views 9160 47480 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:13:51,429 views 9160 47480 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:13:51,603 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:13:51,605 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:13:51,608 views 9160 34236 Crew 14 current_stage: action
+INFO 2025-08-22 11:13:51,610 views 9160 34236 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:13:51,611 views 9160 34236 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:13:51,622 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:13:51,624 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:13:51,624 views 9160 34236 Captain 42 - Formatted messages: 0
+WARNING 2025-08-22 11:13:51,746 log 9160 34236 Not Found: /favicon.ico
+INFO 2025-08-22 11:13:51,792 views 9160 29896 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:13:51,793 views 9160 29896 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:13:51,794 views 9160 29896 Crew 14 current_stage: action
+INFO 2025-08-22 11:13:51,798 views 9160 29896 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:13:51,799 views 9160 29896 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:13:51,804 views 9160 29896 Formatted 0 messages for participant driller
+WARNING 2025-08-22 11:13:52,052 log 9160 29896 Not Found: /favicon.ico
+INFO 2025-08-22 11:14:05,564 views 9160 47480 Crew 14 advanced from action to result stage after 14s
+INFO 2025-08-22 11:14:05,636 views 9160 47480 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:14:05,637 views 9160 47480 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:14:05,637 views 9160 47480 Crew 14 current_stage: result
+INFO 2025-08-22 11:14:05,640 views 9160 47480 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:14:05,641 views 9160 47480 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:14:05,644 views 9160 47480 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:14:06,158 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:14:06,159 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:14:06,159 views 9160 34236 Crew 14 current_stage: result
+INFO 2025-08-22 11:14:06,163 views 9160 34236 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:14:06,163 views 9160 34236 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:14:06,168 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:14:06,169 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:14:06,170 views 9160 34236 Captain 42 - Formatted messages: 0
+WARNING 2025-08-22 11:14:06,270 log 9160 34236 Not Found: /favicon.ico
+INFO 2025-08-22 11:14:06,331 views 9160 27508 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:14:06,333 views 9160 27508 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:14:06,333 views 9160 27508 Crew 14 current_stage: result
+INFO 2025-08-22 11:14:06,335 views 9160 27508 Found 0 chat messages for crew 14, round 3
+INFO 2025-08-22 11:14:06,336 views 9160 27508 RoundState ID: 67, Round Number: 3
+INFO 2025-08-22 11:14:06,338 views 9160 27508 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:14:19,715 views 9160 27508 Crew 14 advanced to round 4
+INFO 2025-08-22 11:14:19,780 views 9160 27508 Participant 44 (driller) can_communicate: True
+INFO 2025-08-22 11:14:19,781 views 9160 27508 Participant 44 (driller) can_receive_messages: True
+INFO 2025-08-22 11:14:19,781 views 9160 27508 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:14:19,796 views 9160 27508 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:14:19,801 views 9160 27508 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:14:19,819 views 9160 47480 Participant 43 (navigator) can_communicate: True
+INFO 2025-08-22 11:14:19,819 views 9160 47480 Participant 43 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:14:19,820 views 9160 47480 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:14:19,823 views 9160 47480 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:14:19,824 views 9160 47480 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:14:19,824 views 9160 27508 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:14:19,833 views 9160 47480 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:14:20,524 views 9160 34236 Participant 42 (captain) can_communicate: True
+INFO 2025-08-22 11:14:20,524 views 9160 34236 Participant 42 (captain) can_receive_messages: True
+INFO 2025-08-22 11:14:20,525 views 9160 34236 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:14:20,528 views 9160 34236 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:14:20,529 views 9160 34236 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:14:20,533 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:14:20,534 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:14:20,534 views 9160 34236 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:15:48,932 views 9160 27508 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:15:48,950 views 9160 30992 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:15:49,005 views 9160 27508 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:15:49,006 views 9160 27508 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:15:49,007 views 9160 27508 Crew 14 current_stage: action
+INFO 2025-08-22 11:15:49,019 views 9160 27508 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:15:49,020 views 9160 30992 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:15:49,020 views 9160 27508 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:15:49,021 views 9160 30992 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:15:49,024 views 9160 30992 Crew 14 current_stage: action
+INFO 2025-08-22 11:15:49,028 views 9160 27508 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:15:49,035 views 9160 30992 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:15:49,036 views 9160 30992 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:15:49,039 views 9160 30992 Formatted 0 messages for participant navigator
+WARNING 2025-08-22 11:15:49,245 log 9160 27508 Not Found: /favicon.ico
+INFO 2025-08-22 11:15:49,561 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:15:49,562 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:15:49,563 views 9160 34236 Crew 14 current_stage: action
+INFO 2025-08-22 11:15:49,567 views 9160 34236 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:15:49,568 views 9160 34236 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:15:49,572 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:15:49,572 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:15:49,574 views 9160 34236 Captain 42 - Formatted messages: 0
+WARNING 2025-08-22 11:15:49,640 log 9160 34236 Not Found: /favicon.ico
+INFO 2025-08-22 11:16:02,972 views 9160 34236 Crew 14 advanced from action to result stage after 14s
+INFO 2025-08-22 11:16:03,030 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:16:03,032 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:16:03,032 views 9160 34236 Crew 14 current_stage: result
+INFO 2025-08-22 11:16:03,035 views 9160 34236 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:16:03,035 views 9160 34236 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:16:03,037 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:16:03,038 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:16:03,039 views 9160 34236 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:16:03,189 views 9160 30992 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:16:03,189 views 9160 30992 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:16:03,190 views 9160 30992 Crew 14 current_stage: result
+INFO 2025-08-22 11:16:03,193 views 9160 30992 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:16:03,194 views 9160 30992 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:16:03,197 views 9160 30992 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:16:03,517 views 9160 42684 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:16:03,521 views 9160 42684 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:16:03,522 views 9160 42684 Crew 14 current_stage: result
+INFO 2025-08-22 11:16:03,526 views 9160 42684 Found 0 chat messages for crew 14, round 4
+INFO 2025-08-22 11:16:03,527 views 9160 42684 RoundState ID: 68, Round Number: 4
+INFO 2025-08-22 11:16:03,531 views 9160 42684 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:16:17,304 views 9160 30992 Crew 14 advanced to round 5
+INFO 2025-08-22 11:16:17,384 views 9160 30992 Participant 43 (navigator) can_communicate: True
+INFO 2025-08-22 11:16:17,386 views 9160 30992 Participant 43 (navigator) can_receive_messages: True
+INFO 2025-08-22 11:16:17,386 views 9160 30992 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:16:17,390 views 9160 30992 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:16:17,391 views 9160 30992 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:16:17,395 views 9160 30992 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:16:17,545 views 9160 34236 Participant 42 (captain) can_communicate: True
+INFO 2025-08-22 11:16:17,546 views 9160 34236 Participant 42 (captain) can_receive_messages: True
+INFO 2025-08-22 11:16:17,547 views 9160 34236 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:16:17,553 views 9160 34236 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:16:17,553 views 9160 34236 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:16:17,563 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:16:17,565 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:16:17,566 views 9160 34236 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:16:17,996 views 9160 42684 Participant 44 (driller) can_communicate: True
+INFO 2025-08-22 11:16:17,996 views 9160 42684 Participant 44 (driller) can_receive_messages: True
+INFO 2025-08-22 11:16:17,997 views 9160 42684 Crew 14 current_stage: briefing
+INFO 2025-08-22 11:16:18,002 views 9160 42684 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:16:18,002 views 9160 42684 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:16:18,005 views 9160 42684 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:17:46,385 views 9160 34236 Crew 14 advanced from briefing to action stage after 89s
+INFO 2025-08-22 11:17:46,448 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:17:46,449 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:17:46,449 views 9160 34236 Crew 14 current_stage: action
+INFO 2025-08-22 11:17:46,453 views 9160 34236 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:17:46,454 views 9160 34236 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:17:46,457 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:17:46,458 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:17:46,459 views 9160 34236 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:17:46,583 views 9160 30992 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:17:46,584 views 9160 30992 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:17:46,584 views 9160 30992 Crew 14 current_stage: action
+INFO 2025-08-22 11:17:46,588 views 9160 30992 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:17:46,588 views 9160 30992 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:17:46,592 views 9160 30992 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:17:47,081 views 9160 42684 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:17:47,082 views 9160 42684 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:17:47,082 views 9160 42684 Crew 14 current_stage: action
+INFO 2025-08-22 11:17:47,089 views 9160 42684 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:17:47,090 views 9160 42684 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:17:47,096 views 9160 42684 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:18:00,526 views 9160 42684 Crew 14 advanced from action to result stage after 14s
+INFO 2025-08-22 11:18:00,611 views 9160 42684 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:18:00,612 views 9160 42684 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:18:00,613 views 9160 42684 Crew 14 current_stage: result
+INFO 2025-08-22 11:18:00,617 views 9160 42684 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:18:00,618 views 9160 42684 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:18:00,622 views 9160 42684 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:18:00,764 views 9160 30992 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:18:00,766 views 9160 30992 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:18:00,766 views 9160 30992 Crew 14 current_stage: result
+INFO 2025-08-22 11:18:00,771 views 9160 30992 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:18:00,772 views 9160 30992 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:18:00,777 views 9160 30992 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:18:00,995 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:18:00,996 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:18:00,996 views 9160 34236 Crew 14 current_stage: result
+INFO 2025-08-22 11:18:01,001 views 9160 34236 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:18:01,002 views 9160 34236 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:18:01,006 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:18:01,009 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:18:01,010 views 9160 34236 Captain 42 - Formatted messages: 0
+INFO 2025-08-22 11:18:14,876 views 9160 30992 Crew 14 completed the game
+INFO 2025-08-22 11:18:14,960 views 9160 30992 Participant 43 (navigator) can_communicate: False
+INFO 2025-08-22 11:18:14,961 views 9160 30992 Participant 43 (navigator) can_receive_messages: False
+INFO 2025-08-22 11:18:14,961 views 9160 30992 Crew 14 current_stage: completed
+INFO 2025-08-22 11:18:14,964 views 9160 30992 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:18:14,966 views 9160 30992 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:18:14,969 views 9160 30992 Formatted 0 messages for participant navigator
+INFO 2025-08-22 11:18:15,262 views 9160 42684 Participant 44 (driller) can_communicate: False
+INFO 2025-08-22 11:18:15,264 views 9160 42684 Participant 44 (driller) can_receive_messages: False
+INFO 2025-08-22 11:18:15,267 views 9160 42684 Crew 14 current_stage: completed
+INFO 2025-08-22 11:18:15,272 views 9160 42684 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:18:15,272 views 9160 42684 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:18:15,276 views 9160 42684 Formatted 0 messages for participant driller
+INFO 2025-08-22 11:18:15,543 views 9160 34236 Participant 42 (captain) can_communicate: False
+INFO 2025-08-22 11:18:15,544 views 9160 34236 Participant 42 (captain) can_receive_messages: False
+INFO 2025-08-22 11:18:15,545 views 9160 34236 Crew 14 current_stage: completed
+INFO 2025-08-22 11:18:15,551 views 9160 34236 Found 0 chat messages for crew 14, round 5
+INFO 2025-08-22 11:18:15,552 views 9160 34236 RoundState ID: 69, Round Number: 5
+INFO 2025-08-22 11:18:15,555 views 9160 34236 Formatted 0 messages for participant captain
+INFO 2025-08-22 11:18:15,555 views 9160 34236 Captain 42 - Total messages: 0
+INFO 2025-08-22 11:18:15,556 views 9160 34236 Captain 42 - Formatted messages: 0

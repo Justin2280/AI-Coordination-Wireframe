@@ -21,7 +21,6 @@ urlpatterns = [
     path('api/crew/<int:crew_id>/actions/', views.ActionSubmitView.as_view(), name='action_submit'),
     path('api/crew/<int:crew_id>/chat/', views.ChatMessageView.as_view(), name='chat_message'),
     path('api/crew/<int:crew_id>/round/<int:round_number>/', views.RoundStatusView.as_view(), name='round_status'),
-    path('api/crew/<int:crew_id>/navigator-status/', views.NavigatorStatusView.as_view(), name='navigator_status'),
     path('api/crew/<int:crew_id>/timer-sync/', views.TimerSyncView.as_view(), name='timer_sync'),
     
     # Admin endpoints

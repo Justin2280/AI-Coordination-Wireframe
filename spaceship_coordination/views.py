@@ -15,6 +15,7 @@ from django.contrib import messages
 from django.db import transaction
 from .models import *
 from .ai_captain import AICaptain
+from .game_logic import GameEngine
 from django.utils import timezone
 
 logger = logging.getLogger(__name__)
@@ -243,32 +244,21 @@ class GameView(View):
                             {'type': 'deploy_robot', 'label': 'Deploy Robot', 'pu_cost': 1}
                         ]
                 
-                # Get asteroid information
+                # Get asteroid information based on complexity and participant's intel
                 asteroids = []
-                for asteroid_name in ['Alpha', 'Beta', 'Gamma', 'Omega']:
-                    try:
-                        asteroid = Asteroid.objects.get(
-                            name=asteroid_name,
-                            session=crew.session
-                        )
-                        asteroid_info = {
-                            'name': asteroid.name,
-                            'travel_cost': asteroid.travel_cost,
-                            'max_minerals': asteroid.max_minerals,
-                            'shallow_cost': asteroid.shallow_cost,
-                            'deep_cost': asteroid.deep_cost,
-                            'mined': asteroid.mined
-                        }
-                        asteroids.append(asteroid_info)
-                    except Asteroid.DoesNotExist:
-                        pass
+                game_engine = GameEngine(crew)
                 
-                # Communication status - Captain can send to anyone, Navigator/Driller can send to Captain
+                for asteroid_name in ['Alpha', 'Beta', 'Gamma', 'Omega']:
+                    asteroid_info = game_engine.get_asteroid_info(asteroid_name, participant)
+                    if asteroid_info:
+                        asteroids.append(asteroid_info)
+                
+                # Communication status - Follow formal rules
                 if crew.current_stage == 'briefing':
                     if participant.role == 'captain':
                         can_communicate = True  # Captain can send to anyone
                     else:
-                        can_communicate = True  # Navigator/Driller can send to Captain
+                        can_communicate = True  # Navigator/Driller can send to Captain only
                 else:
                     can_communicate = False  # No communication outside briefing
                 
@@ -339,6 +329,8 @@ class GameView(View):
                 available_actions = []
                 asteroids = []
                 can_communicate = False
+                can_receive_messages = False
+                formatted_messages = []
             
             context = {
                 'participant': participant,
@@ -509,13 +501,30 @@ class ParticipantStatusView(View):
             participant = Participant.objects.get(participant_id=participant_id)
             crew = participant.crew
             
+            # Check if participant has already submitted an action in current round
+            participant_has_acted = False
+            if crew.current_stage == 'action':
+                try:
+                    round_state = RoundState.objects.get(
+                        crew=crew,
+                        round_number=crew.current_round
+                    )
+                    # Check if participant has any action in this round
+                    participant_has_acted = Action.objects.filter(
+                        round_state=round_state,
+                        participant=participant
+                    ).exists()
+                except RoundState.DoesNotExist:
+                    participant_has_acted = False
+            
             status = {
                 'participant_id': participant.participant_id,
                 'role': participant.role,
                 'crew_id': crew.id,
                 'current_stage': crew.current_stage,
                 'current_round': crew.current_round,
-                'game_started': crew.current_stage != 'waiting'
+                'game_started': crew.current_stage != 'waiting',
+                'participant_has_acted': participant_has_acted
             }
             
             return JsonResponse(status)
@@ -532,7 +541,7 @@ class ActionSubmitView(View):
     """API endpoint for submitting game actions"""
     
     def post(self, request, crew_id):
-        """Process action submission"""
+        """Process action submission using formal game mechanics"""
         try:
             # Get participant from session
             participant_id = request.session.get('participant_id')
@@ -562,10 +571,16 @@ class ActionSubmitView(View):
             if round_state.stage != 'action':
                 return JsonResponse({'success': False, 'error': 'No active action stage'})
             
+            # Use the game engine to submit and validate the action
+            game_engine = GameEngine(crew)
+            
             # Calculate PU cost for the action
             pu_spent = 0
             if action_type == 'travel':
-                pu_spent = 1
+                # Get travel costs from settings
+                from django.conf import settings
+                travel_costs = settings.EXPERIMENT_CONFIG.get('TRAVEL_COSTS', {})
+                pu_spent = travel_costs.get(target_asteroid, 1)
             elif action_type == 'send_probe':
                 pu_spent = 1
             elif action_type == 'mine_shallow':
@@ -579,112 +594,20 @@ class ActionSubmitView(View):
             else:
                 return JsonResponse({'success': False, 'error': 'Invalid action type'})
             
-            # Check if participant has enough PU
-            if round_state.pu_remaining < pu_spent:
-                return JsonResponse({'success': False, 'error': f'Not enough PU. Required: {pu_spent}, Available: {round_state.pu_remaining}'})
-            
-            # Check sequential action order: Navigator first, then Driller
-            if participant.role == 'driller':
-                # Check if navigator has acted first
-                navigator_action = Action.objects.filter(
-                    round_state=round_state,
-                    participant__role='navigator'
-                ).first()
-                
-                if not navigator_action:
-                    return JsonResponse({'success': False, 'error': 'Navigator must act first before Driller can act'})
-            
-            # Create the action
-            action = Action.objects.create(
-                participant=participant,
-                round_state=round_state,
-                action_type=action_type,
-                target_asteroid=target_asteroid,
-                pu_spent=pu_spent
+            # Submit action through game engine
+            success, message = game_engine.submit_action(
+                participant, action_type, target_asteroid, pu_spent
             )
             
-            # Update PU remaining
-            round_state.pu_remaining -= pu_spent
-            round_state.save()
+            if not success:
+                return JsonResponse({'success': False, 'error': message})
             
-            # Process specific actions
-            if action_type == 'travel' and target_asteroid:
-                crew.current_system = target_asteroid
-                crew.save()
-                round_state.current_system = target_asteroid
-                round_state.save()
-                logger.info(f"Navigator {participant.id} traveled to {target_asteroid}")
-            elif action_type == 'send_probe' and target_asteroid:
-                logger.info(f"Navigator {participant.id} sent probe to {target_asteroid}")
-            elif action_type == 'deploy_robot' and target_asteroid:
-                logger.info(f"Driller {participant.id} deployed robot to {target_asteroid}")
-            elif action_type == 'mine_shallow' and target_asteroid:
-                try:
-                    asteroid = Asteroid.objects.get(
-                        name=target_asteroid,
-                        session=crew.session
-                    )
-                    if not asteroid.mined:
-                        # Mark asteroid as mined
-                        asteroid.mined = True
-                        asteroid.mined_round = crew.current_round
-                        asteroid.save()
-                        
-                        # Create outcome (simplified for now)
-                        Outcome.objects.create(
-                            round_state=round_state,
-                            asteroid=asteroid,
-                            participant=participant,
-                            action=action,
-                            minerals_gained=asteroid.max_minerals // 2,  # Simplified
-                            full_extraction=False,
-                            partial_fraction=0.5,
-                            probability_basis={},
-                            depth='shallow',
-                            intel_combo='none'
-                        )
-                        logger.info(f"Driller {participant.id} mined {target_asteroid} (shallow)")
-                except Asteroid.DoesNotExist:
-                    pass
-            elif action_type == 'mine_deep' and target_asteroid:
-                try:
-                    asteroid = Asteroid.objects.get(
-                        name=target_asteroid,
-                        session=crew.session
-                    )
-                    if not asteroid.mined:
-                        # Mark asteroid as mined
-                        asteroid.mined = True
-                        asteroid.mined_round = crew.current_round
-                        asteroid.save()
-                        
-                        # Create outcome (simplified for now)
-                        Outcome.objects.create(
-                            round_state=round_state,
-                            asteroid=asteroid,
-                            action=action,
-                            minerals_gained=asteroid.max_minerals,  # Full extraction for deep mining
-                            full_extraction=True,
-                            partial_fraction=1.0,
-                            probability_basis={},
-                            depth='deep',
-                            intel_combo='none'
-                        )
-                        logger.info(f"Driller {participant.id} mined {target_asteroid} (deep)")
-                except Asteroid.DoesNotExist:
-                    pass
-            elif action_type == 'do_nothing':
-                logger.info(f"{participant.role.title()} {participant.id} chose to do nothing")
+            # Get updated round state
+            round_state.refresh_from_db()
             
-            # If this was the navigator's action, enable driller actions
-            if participant.role == 'navigator':
-                logger.info(f"Navigator {participant.id} completed action, driller can now act")
-            elif participant.role == 'driller':
-                logger.info(f"Driller {participant.id} completed action, round actions complete")
-            
+            # Return success response
             return JsonResponse({
                 'success': True,
-                'action_id': action.id,
                 'pu_remaining': round_state.pu_remaining,
                 'message': f'{participant.role.title()} action completed successfully'
             })
@@ -764,7 +687,9 @@ class ChatMessageView(View):
                 else:
                     return JsonResponse({'error': 'Captain not found'}, status=400)
             elif to_role == 'navigator':
-                # Direct message to Navigator
+                # Direct message to Navigator (only Captain can do this)
+                if from_participant.role != 'captain':
+                    return JsonResponse({'error': 'Only Captain can send direct messages to Navigator'}, status=403)
                 navigator = crew.participant_set.filter(role='navigator').first()
                 if navigator:
                     chat_message = ChatMessage.objects.create(
@@ -777,7 +702,9 @@ class ChatMessageView(View):
                 else:
                     return JsonResponse({'error': 'Navigator not found'}, status=400)
             elif to_role == 'driller':
-                # Direct message to Driller
+                # Direct message to Driller (only Captain can do this)
+                if from_participant.role != 'captain':
+                    return JsonResponse({'error': 'Only Captain can send direct messages to Driller'}, status=403)
                 driller = crew.participant_set.filter(role='driller').first()
                 if driller:
                     chat_message = ChatMessage.objects.create(
@@ -907,41 +834,6 @@ class RoundStatusView(View):
             return JsonResponse({'error': 'Round not found'}, status=404)
         except Exception as e:
             logger.error(f"Round status error: {str(e)}")
-            return JsonResponse({'error': 'Internal server error'}, status=500)
-
-
-class NavigatorStatusView(View):
-    """API endpoint to check if navigator has acted"""
-    
-    def get(self, request, crew_id):
-        """Check if navigator has submitted an action in current round"""
-        try:
-            crew = get_object_or_404(Crew, id=crew_id)
-            
-            # Get current round state
-            try:
-                round_state = RoundState.objects.get(
-                    crew=crew,
-                    round_number=crew.current_round
-                )
-            except RoundState.DoesNotExist:
-                return JsonResponse({'navigator_acted': False})
-            
-            # Check if navigator has submitted any action
-            navigator_action = Action.objects.filter(
-                round_state=round_state,
-                participant__role='navigator'
-            ).first()
-            
-            return JsonResponse({
-                'navigator_acted': navigator_action is not None,
-                'navigator_action': navigator_action.action_type if navigator_action else None
-            })
-            
-        except Crew.DoesNotExist:
-            return JsonResponse({'error': 'Crew not found'}, status=404)
-        except Exception as e:
-            logger.error(f"Navigator status error: {str(e)}")
             return JsonResponse({'error': 'Internal server error'}, status=500)
 
 

@@ -24,6 +24,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
         "label": "ExperimentSession",
         "importPath": "spaceship_coordination.models",
         "description": "spaceship_coordination.models",
@@ -80,6 +88,14 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "spaceship_coordination.models",
+        "description": "spaceship_coordination.models",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.models",
+        "documentation": {}
+    },
+    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -113,6 +129,14 @@
         "documentation": {}
     },
     {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -182,6 +206,14 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "GameEngine",
+        "importPath": "spaceship_coordination.game_logic",
+        "description": "spaceship_coordination.game_logic",
+        "isExtraImport": true,
+        "detail": "spaceship_coordination.game_logic",
         "documentation": {}
     },
     {
@@ -780,6 +812,15 @@
         "documentation": {}
     },
     {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "spaceship_coordination.management.commands.test_game_mechanics",
+        "description": "spaceship_coordination.management.commands.test_game_mechanics",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Test the enhanced game mechanics implementation'\n    def add_arguments(self, parser):\n        parser.add_argument(\n            '--session-id',\n            type=str,\n            default='test_mechanics',\n            help='Session ID for testing'\n        )\n        parser.add_argument(",
+        "detail": "spaceship_coordination.management.commands.test_game_mechanics",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "spaceship_coordination.migrations.0001_initial",
@@ -1018,7 +1059,7 @@
         "kind": 6,
         "importPath": "spaceship_coordination.game_logic",
         "description": "spaceship_coordination.game_logic",
-        "peekOfCode": "class GameEngine:\n    \"\"\"Main game engine for managing rounds, actions, and outcomes\"\"\"\n    def __init__(self, crew):\n        self.crew = crew\n        self.session = crew.session\n        self.config = settings.EXPERIMENT_CONFIG\n        # Set random seed for this session\n        random.seed(self.session.seed)\n    def start_round(self, round_number):\n        \"\"\"Start a new round\"\"\"",
+        "peekOfCode": "class GameEngine:\n    \"\"\"Main game engine for managing rounds, actions, and outcomes\"\"\"\n    def __init__(self, crew):\n        self.crew = crew\n        self.session = crew.session\n        self.config = settings.EXPERIMENT_CONFIG\n        # Set random seed for this session\n        random.seed(self.session.seed)\n    def start_round(self, round_number):\n        \"\"\"Start a new round following formal mechanics\"\"\"",
         "detail": "spaceship_coordination.game_logic",
         "documentation": {}
     },
@@ -1351,7 +1392,7 @@
         "kind": 6,
         "importPath": "spaceship_coordination.views",
         "description": "spaceship_coordination.views",
-        "peekOfCode": "class ActionSubmitView(View):\n    \"\"\"API endpoint for submitting game actions\"\"\"\n    def post(self, request, crew_id):\n        \"\"\"Process action submission\"\"\"\n        try:\n            # Get participant from session\n            participant_id = request.session.get('participant_id')\n            if not participant_id:\n                return JsonResponse({'success': False, 'error': 'No participant found'})\n            participant = Participant.objects.get(participant_id=participant_id)",
+        "peekOfCode": "class ActionSubmitView(View):\n    \"\"\"API endpoint for submitting game actions\"\"\"\n    def post(self, request, crew_id):\n        \"\"\"Process action submission using formal game mechanics\"\"\"\n        try:\n            # Get participant from session\n            participant_id = request.session.get('participant_id')\n            if not participant_id:\n                return JsonResponse({'success': False, 'error': 'No participant found'})\n            participant = Participant.objects.get(participant_id=participant_id)",
         "detail": "spaceship_coordination.views",
         "documentation": {}
     },
@@ -1370,15 +1411,6 @@
         "importPath": "spaceship_coordination.views",
         "description": "spaceship_coordination.views",
         "peekOfCode": "class RoundStatusView(View):\n    \"\"\"API endpoint for round status\"\"\"\n    def get(self, request, crew_id, round_number):\n        \"\"\"Get status of a specific round\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            round_state = RoundState.objects.get(\n                crew=crew,\n                round_number=round_number\n            )",
-        "detail": "spaceship_coordination.views",
-        "documentation": {}
-    },
-    {
-        "label": "NavigatorStatusView",
-        "kind": 6,
-        "importPath": "spaceship_coordination.views",
-        "description": "spaceship_coordination.views",
-        "peekOfCode": "class NavigatorStatusView(View):\n    \"\"\"API endpoint to check if navigator has acted\"\"\"\n    def get(self, request, crew_id):\n        \"\"\"Check if navigator has submitted an action in current round\"\"\"\n        try:\n            crew = get_object_or_404(Crew, id=crew_id)\n            # Get current round state\n            try:\n                round_state = RoundState.objects.get(\n                    crew=crew,",
         "detail": "spaceship_coordination.views",
         "documentation": {}
     },

@@ -178,11 +178,11 @@
                  {% if game_summary.current_stage == 'briefing' %}
                      🎯 Briefing Stage - Captain coordinates team discussion
                  {% elif game_summary.current_stage == 'action' %}
-                     ⚡ Action Stage - Navigator acts first, then Driller
+                     ⚡ Action Stage - Both Navigator and Driller act simultaneously
                      {% if participant.role == 'navigator' %}
                          <br><span style="color: #4CAF50;">✅ Your turn to act!</span>
                      {% elif participant.role == 'driller' %}
-                         <br><span style="color: #FF9800;">⏳ Waiting for Navigator to act first...</span>
+                         <br><span style="color: #FF9800;">✅ Your turn to act!</span>
                      {% endif %}
                  {% elif game_summary.current_stage == 'result' %}
                      📊 Result Stage - Processing actions...
@@ -202,13 +202,16 @@
                  <button class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 30px;" onclick="submitAction('do_nothing')">
                      😴 Do Nothing (Pass Turn)
                  </button>
-                 <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #888;">After you act, the Driller will be able to take their turn</p>
+                 <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #888;">You can act at the same time as the Driller</p>
              </div>
              {% elif participant.role == 'driller' and game_summary.current_stage == 'action' %}
              <div style="text-align: center; margin: 20px 0; padding: 20px; background: rgba(255, 152, 0, 0.2); border-radius: 10px; border: 2px solid #FF9800;">
-                 <h3 style="margin: 0 0 15px 0; color: #FF9800;">⏳ Waiting for Navigator</h3>
-                 <p style="margin: 0 0 15px 0;">The Navigator must act first before you can take your turn</p>
-                 <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #888;">Your action buttons will be enabled once the Navigator completes their turn</p>
+                 <h3 style="margin: 0 0 15px 0; color: #FF9800;">🎯 Your Turn to Act!</h3>
+                 <p style="margin: 0 0 15px 0;">Choose your actions or click "Do Nothing" to pass your turn</p>
+                 <button class="btn btn-primary" style="font-size: 1.2rem; padding: 15px 30px;" onclick="submitAction('do_nothing')">
+                     😴 Do Nothing (Pass Turn)
+                 </button>
+                 <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #888;">You can act at the same time as the Driller</p>
              </div>
              {% endif %}
             
@@ -250,15 +253,15 @@
                         {% elif participant.role == 'driller' and game_summary.current_stage == 'action' %}
                             {% if not asteroid.mined %}
                                 <button class="btn btn-primary" onclick="submitAction('mine_shallow', '{{ asteroid.name }}')" 
-                                        id="driller-mine-shallow-{{ asteroid.name }}" disabled>
+                                        id="driller-mine-shallow-{{ asteroid.name }}">
                                     ⛏️ Mine Shallow
                                 </button>
                                 <button class="btn btn-primary" onclick="submitAction('mine_deep', '{{ asteroid.name }}')" 
-                                        id="driller-mine-deep-{{ asteroid.name }}" disabled>
+                                        id="driller-mine-deep-{{ asteroid.name }}">
                                     ⛏️ Mine Deep
                                 </button>
                                 <button class="btn btn-secondary" onclick="submitAction('deploy_robot', '{{ asteroid.name }}')" 
-                                        id="driller-robot-{{ asteroid.name }}" disabled>
+                                        id="driller-robot-{{ asteroid.name }}">
                                     🤖 Deploy Robot
                                 </button>
                             {% endif %}
@@ -397,8 +400,40 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Refresh page to show updated state
-                    location.reload();
+                    if (actionType === 'do_nothing') {
+                        // Hide Do Nothing button and disable all other action buttons
+                        const doNothingButton = document.querySelector('button[onclick="submitAction(\'do_nothing\')"]');
+                        if (doNothingButton) {
+                            doNothingButton.style.display = 'none';
+                        }
+                        
+                        // Disable all action buttons for this participant
+                        const actionButtons = document.querySelectorAll('.action-buttons button');
+                        actionButtons.forEach(button => {
+                            button.disabled = true;
+                            button.style.opacity = '0.6';
+                            button.style.cursor = 'not-allowed';
+                        });
+                        
+                        // Show confirmation message
+                        const actionArea = document.querySelector('.game-area');
+                        const confirmationDiv = document.createElement('div');
+                        confirmationDiv.style.cssText = 'text-align: center; margin: 20px 0; padding: 20px; background: rgba(76, 175, 80, 0.2); border-radius: 10px; border: 2px solid #4CAF50;';
+                        confirmationDiv.innerHTML = '<h3 style="margin: 0 0 15px 0; color: #4CAF50;">✅ Action Submitted</h3><p style="margin: 0;">You chose to do nothing. Waiting for other team members...</p>';
+                        
+                        // Insert confirmation after the stage indicator
+                        const stageIndicator = document.querySelector('.stage-indicator');
+                        stageIndicator.parentNode.insertBefore(confirmationDiv, stageIndicator.nextSibling);
+                        
+                        // Remove the old action section
+                        const oldActionSection = document.querySelector('div[style*="background: rgba(76, 175, 80, 0.2)"]:not(.stage-indicator), div[style*="background: rgba(255, 152, 0, 0.2)"]:not(.stage-indicator)');
+                        if (oldActionSection) {
+                            oldActionSection.remove();
+                        }
+                    } else {
+                        // For other actions, refresh the page to show updated state
+                        location.reload();
+                    }
                 } else {
                     alert('Action failed: ' + data.error);
                 }
@@ -544,33 +579,7 @@
             return cookieValue;
         }
         
-        // Check if navigator has acted and enable driller buttons
-        function checkNavigatorAction() {
-            if ('{{ participant.role }}' === 'driller' && '{{ game_summary.current_stage }}' === 'action') {
-                const crewId = {{ crew.id }};
-                fetch(`/spaceship/api/crew/${crewId}/navigator-status/`)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.navigator_acted) {
-                            // Enable all driller buttons
-                            document.querySelectorAll('[id^="driller-"]').forEach(button => {
-                                button.disabled = false;
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        console.log('Checking navigator status...');
-                    });
-            }
-        }
-        
-        // Check navigator status every 2 seconds during action stage
-        if ('{{ participant.role }}' === 'driller' && '{{ game_summary.current_stage }}' === 'action') {
-            setInterval(checkNavigatorAction, 2000);
-            checkNavigatorAction(); // Check immediately
-        }
-        
-                 // Synchronized timer updates every second
+        // Synchronized timer updates every second
          let timerInterval;
          let currentTimeRemaining = parseInt('{{ game_summary.time_remaining }}') || 0;
          
@@ -632,6 +641,59 @@
          if ('{{ game_summary.current_stage }}' !== 'completed') {
              timerInterval = setInterval(syncTimer, 1000);
              syncTimer(); // Sync immediately
+         }
+         
+         // Check if participant has already submitted an action
+         function checkActionStatus() {
+             const crewId = {{ crew.id }};
+             fetch(`/spaceship/api/crew/${crewId}/status/`)
+                 .then(response => response.json())
+                 .then(data => {
+                     if (data.success && data.participant_has_acted) {
+                         // Participant has already acted, update UI
+                         updateUIForSubmittedAction();
+                     }
+                 })
+                 .catch(error => {
+                     console.log('Checking action status...');
+                 });
+         }
+         
+         function updateUIForSubmittedAction() {
+             // Hide Do Nothing button
+             const doNothingButton = document.querySelector('button[onclick="submitAction(\'do_nothing\')"]');
+             if (doNothingButton) {
+                 doNothingButton.style.display = 'none';
+             }
+             
+             // Disable all action buttons
+             const actionButtons = document.querySelectorAll('.action-buttons button');
+             actionButtons.forEach(button => {
+                 button.disabled = true;
+                 button.style.opacity = '0.6';
+                 button.style.cursor = 'not-allowed';
+             });
+             
+             // Remove old action section and show confirmation
+             const oldActionSection = document.querySelector('div[style*="background: rgba(76, 175, 80, 0.2)"]:not(.stage-indicator), div[style*="background: rgba(255, 152, 0, 0.2)"]:not(.stage-indicator)');
+             if (oldActionSection) {
+                 oldActionSection.remove();
+             }
+             
+             // Show confirmation message
+             const stageIndicator = document.querySelector('.stage-indicator');
+             if (stageIndicator && !document.querySelector('.action-confirmation')) {
+                 const confirmationDiv = document.createElement('div');
+                 confirmationDiv.className = 'action-confirmation';
+                 confirmationDiv.style.cssText = 'text-align: center; margin: 20px 0; padding: 20px; background: rgba(76, 175, 80, 0.2); border-radius: 10px; border: 2px solid #4CAF50;';
+                 confirmationDiv.innerHTML = '<h3 style="margin: 0 0 15px 0; color: #4CAF50;">✅ Action Submitted</h3><p style="margin: 0;">You have already submitted your action. Waiting for other team members...</p>';
+                 stageIndicator.parentNode.insertBefore(confirmationDiv, stageIndicator.nextSibling);
+             }
+         }
+         
+         // Check action status when page loads
+         if ('{{ game_summary.current_stage }}' === 'action') {
+             setTimeout(checkActionStatus, 1000); // Check after 1 second to ensure page is loaded
          }
         
                  // Update game state every 10 seconds (much less frequent)

@@ -27,7 +27,7 @@ class ExperimentSessionAdmin(admin.ModelAdmin):
         }),
     )
     
-    actions = ['create_default_setup', 'reset_to_default', 'start_new_round', 'pause_crews']
+    actions = ['create_default_setup', 'reset_to_default', 'start_new_round', 'pause_crews', 'show_intel_summary']
     
     def get_crew_count(self, obj):
         """Display number of crews"""
@@ -82,6 +82,37 @@ class ExperimentSessionAdmin(admin.ModelAdmin):
             pass
         self.message_user(request, f"Paused {queryset.count()} crews")
     pause_crews.short_description = "Pause selected crews"
+
+    def show_intel_summary(self, request, queryset):
+        """Show intel summary for selected sessions"""
+        from .game_logic import GameEngine
+        
+        for session in queryset:
+            crews = session.crew_set.all()
+            for crew in crews:
+                game_engine = GameEngine(crew)
+                intel_summary = game_engine.get_crew_intel_summary()
+                
+                # Log the intel summary
+                print(f"\n=== Intel Summary for Crew {crew.id} (Session {session.session_id}) ===")
+                print(f"Complexity: {session.complexity}")
+                print(f"Pressure: {session.pressure}")
+                print(f"Captain Type: {session.captain_type}")
+                print(f"Current Round: {crew.current_round}")
+                print(f"Current Stage: {crew.current_stage}")
+                
+                for asteroid_name, intel in intel_summary.items():
+                    print(f"\n{asteroid_name}:")
+                    print(f"  Max Minerals: {intel['max_minerals']['value']} (Discovered: {intel['max_minerals']['discovered']})")
+                    print(f"  Mining Costs: Shallow={intel['mining_costs']['shallow_cost']}, Deep={intel['mining_costs']['deep_cost']}")
+                    print(f"  Robot Deployed: {intel['mining_costs']['robot_deployed']}")
+                    print(f"  Mined: {intel['mined']['status']} (Round: {intel['mined']['round']})")
+                    if intel['mined']['minerals_gained']:
+                        print(f"  Minerals Gained: {intel['mined']['minerals_gained']}")
+        
+        self.message_user(request, f"Intel summary displayed for {queryset.count()} session(s)")
+    
+    show_intel_summary.short_description = "Show intel summary for selected sessions"
 
 
 @admin.register(Crew)

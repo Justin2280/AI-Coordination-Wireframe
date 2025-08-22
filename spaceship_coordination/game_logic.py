@@ -1,5 +1,6 @@
 """
 Game logic engine for Spaceship Coordination Experiment
+Implements the formal game mechanics as specified in the game rules document
 """
 
 import random
@@ -22,7 +23,7 @@ class GameEngine:
         random.seed(self.session.seed)
     
     def start_round(self, round_number):
-        """Start a new round"""
+        """Start a new round following formal mechanics"""
         with transaction.atomic():
             # Create round state
             round_state = RoundState.objects.create(
@@ -50,7 +51,7 @@ class GameEngine:
             return round_state
     
     def start_briefing_stage(self, round_state):
-        """Start the briefing stage"""
+        """Start the briefing stage - communication enabled"""
         round_state.stage = 'briefing'
         round_state.stage_start_time = datetime.now()
         round_state.save()
@@ -63,7 +64,7 @@ class GameEngine:
             self._trigger_ai_captain_messages(round_state)
     
     def start_action_stage(self, round_state):
-        """Start the action stage"""
+        """Start the action stage - communication disabled"""
         round_state.stage = 'action'
         round_state.stage_start_time = datetime.now()
         round_state.action_time_remaining = self.config['ACTION_STAGE_TIME']
@@ -73,7 +74,7 @@ class GameEngine:
         self.crew.save()
     
     def start_result_stage(self, round_state):
-        """Start the result stage"""
+        """Start the result stage - process actions and show outcomes"""
         round_state.stage = 'result'
         round_state.stage_start_time = datetime.now()
         round_state.result_time_remaining = self.config['RESULT_STAGE_TIME']
@@ -82,11 +83,11 @@ class GameEngine:
         self.crew.current_stage = 'result'
         self.crew.save()
         
-        # Process actions and generate outcomes
+        # Process actions and generate outcomes following formal mechanics
         self._process_round_actions(round_state)
     
     def submit_action(self, participant, action_type, target_asteroid=None, pu_spent=0):
-        """Submit an action for a participant"""
+        """Submit an action for a participant with formal validation"""
         try:
             round_state = RoundState.objects.get(
                 crew=self.crew,
@@ -94,7 +95,7 @@ class GameEngine:
                 stage='action'
             )
             
-            # Validate action
+            # Validate action according to formal rules
             if not self._validate_action(participant, action_type, target_asteroid, pu_spent, round_state):
                 return False, "Invalid action"
             
@@ -117,7 +118,7 @@ class GameEngine:
             return False, "No active action stage"
     
     def _validate_action(self, participant, action_type, target_asteroid, pu_spent, round_state):
-        """Validate if an action is legal"""
+        """Validate if an action is legal according to formal rules"""
         # Check if participant has enough PU
         if pu_spent > round_state.pu_remaining:
             return False
@@ -132,12 +133,12 @@ class GameEngine:
         elif participant.role == 'driller':
             return self._validate_driller_action(action_type, target_asteroid, pu_spent, round_state)
         elif participant.role == 'captain':
-            return False  # Captain cannot take actions
+            return False  # Captain cannot take actions per formal rules
         
         return False
     
     def _validate_navigator_action(self, action_type, target_asteroid, pu_spent, round_state):
-        """Validate navigator actions"""
+        """Validate navigator actions according to formal rules"""
         if action_type == 'do_nothing':
             return pu_spent == 0
         elif action_type == 'travel':
@@ -148,7 +149,7 @@ class GameEngine:
         elif action_type == 'send_probe':
             if not target_asteroid:
                 return False
-            # Check max probes per round
+            # Check max probes per round (formal rule: max 2)
             probe_count = Action.objects.filter(
                 round_state=round_state,
                 participant__role='navigator',
@@ -161,13 +162,13 @@ class GameEngine:
         return False
     
     def _validate_driller_action(self, action_type, target_asteroid, pu_spent, round_state):
-        """Validate driller actions"""
+        """Validate driller actions according to formal rules"""
         if action_type == 'do_nothing':
             return pu_spent == 0
         elif action_type in ['mine_shallow', 'mine_deep']:
             if not target_asteroid:
                 return False
-            # Check if asteroid is already mined
+            # Check if asteroid is already mined (formal rule: each asteroid can only be mined once)
             asteroid = Asteroid.objects.get(name=target_asteroid, session=self.session)
             if asteroid.mined:
                 return False
@@ -181,7 +182,7 @@ class GameEngine:
         elif action_type == 'deploy_robot':
             if not target_asteroid:
                 return False
-            # Check max robots per round
+            # Check max robots per round (formal rule: max 1)
             robot_count = Action.objects.filter(
                 round_state=round_state,
                 participant__role='driller',
@@ -194,28 +195,28 @@ class GameEngine:
         return False
     
     def _process_round_actions(self, round_state):
-        """Process all actions for the round and generate outcomes"""
+        """Process all actions for the round following formal execution order"""
         # Get all actions for this round
         actions = Action.objects.filter(round_state=round_state).order_by('participant__role')
         
-        # Process navigator actions first
+        # Process navigator actions FIRST (formal rule: Navigator effects precede Driller effects during result stage)
         navigator_actions = [a for a in actions if a.participant.role == 'navigator']
         for action in navigator_actions:
             self._process_navigator_action(action, round_state)
         
-        # Process driller actions
+        # Process driller actions SECOND (effects processed after Navigator effects)
         driller_actions = [a for a in actions if a.participant.role == 'driller']
         for action in driller_actions:
             self._process_driller_action(action, round_state)
         
-        # Update intel visibility based on complexity
+        # Update intel visibility based on complexity condition
         self._update_intel_visibility(round_state)
         
         # Create analytics snapshot
         self._create_analytics_snapshot(round_state)
     
     def _process_navigator_action(self, action, round_state):
-        """Process navigator action"""
+        """Process navigator action following formal mechanics"""
         if action.action_type == 'travel':
             # Update crew location
             self.crew.current_system = action.target_asteroid
@@ -226,15 +227,21 @@ class GameEngine:
             round_state.save()
         
         elif action.action_type == 'send_probe':
-            # Mark asteroid as discovered
+            # Mark asteroid as discovered and reveal max minerals
             asteroid = Asteroid.objects.get(name=action.target_asteroid, session=self.session)
             if not asteroid.discovered_by:
                 asteroid.discovered_by = action.participant
                 asteroid.discovered_round = round_state.round_number
                 asteroid.save()
+            
+            # Log intel visibility for this probe
+            self._log_intel_visibility(
+                round_state, asteroid, 'max_minerals', 
+                action.participant, round_state.round_number
+            )
     
     def _process_driller_action(self, action, round_state):
-        """Process driller action"""
+        """Process driller action following formal mechanics"""
         if action.action_type in ['mine_shallow', 'mine_deep']:
             # Get asteroid
             asteroid = Asteroid.objects.get(name=action.target_asteroid, session=self.session)
@@ -242,7 +249,7 @@ class GameEngine:
             # Determine intel combo for probability calculation
             intel_combo = self._determine_intel_combo(asteroid, round_state)
             
-            # Calculate mining outcome
+            # Calculate mining outcome using formal probability matrix
             outcome = self._calculate_mining_outcome(
                 asteroid, action.action_type, intel_combo
             )
@@ -261,7 +268,7 @@ class GameEngine:
                 intel_combo=intel_combo
             )
             
-            # Mark asteroid as mined
+            # Mark asteroid as mined (formal rule: each asteroid can only be mined once)
             asteroid.mined = True
             asteroid.mined_round = round_state.round_number
             asteroid.save()
@@ -269,11 +276,20 @@ class GameEngine:
         elif action.action_type == 'deploy_robot':
             # Robot deployment reveals mining costs
             asteroid = Asteroid.objects.get(name=action.target_asteroid, session=self.session)
-            # Costs are already known from asteroid creation, just log the action
+            
+            # Log intel visibility for this robot deployment
+            self._log_intel_visibility(
+                round_state, asteroid, 'shallow_cost', 
+                action.participant, round_state.round_number
+            )
+            self._log_intel_visibility(
+                round_state, asteroid, 'deep_cost', 
+                action.participant, round_state.round_number
+            )
     
     def _determine_intel_combo(self, asteroid, round_state):
         """Determine what intel is available for probability calculation"""
-        # Check if asteroid was probed
+        # Check if asteroid was probed (reveals max minerals)
         probed = Action.objects.filter(
             round_state__crew=self.crew,
             round_state__round_number__lte=round_state.round_number,
@@ -281,7 +297,7 @@ class GameEngine:
             target_asteroid=asteroid.name
         ).exists()
         
-        # Check if robot was deployed
+        # Check if robot was deployed (reveals mining costs)
         robot_deployed = Action.objects.filter(
             round_state__crew=self.crew,
             round_state__round_number__lte=round_state.round_number,
@@ -289,6 +305,7 @@ class GameEngine:
             target_asteroid=asteroid.name
         ).exists()
         
+        # Return intel combo according to formal rules
         if probed and robot_deployed:
             return 'probe_plus_robot'
         elif probed:
@@ -299,20 +316,20 @@ class GameEngine:
             return 'none'
     
     def _calculate_mining_outcome(self, asteroid, mining_type, intel_combo):
-        """Calculate mining outcome based on probability matrix"""
+        """Calculate mining outcome based on formal probability matrix"""
         depth = mining_type.replace('mine_', '')
         probability_matrix = self.config['DEFAULT_PROBABILITY_MATRIX']
         
-        # Get success probability
+        # Get success probability from formal matrix
         success_prob = probability_matrix[depth][intel_combo]
         
-        # Determine if full extraction
+        # Determine if full extraction based on probability
         if random.random() < success_prob:
             minerals_gained = asteroid.max_minerals
             full_extraction = True
-            partial_fraction = None
+            partial_fraction = 1.0
         else:
-            # Partial extraction
+            # Partial extraction (formal rule: always yields some positive amount)
             partial_range = self.config['PARTIAL_YIELD_RANGE']
             partial_fraction = random.uniform(partial_range[0], partial_range[1])
             minerals_gained = int(asteroid.max_minerals * partial_fraction)
@@ -325,44 +342,89 @@ class GameEngine:
             'probability_basis': {
                 'depth': depth,
                 'intel_combo': intel_combo,
-                'success_probability': success_prob
+                'success_probability': success_prob,
+                'asteroid_max': asteroid.max_minerals
             }
         }
+    
+    def _log_intel_visibility(self, round_state, asteroid, intel_type, participant, round_number):
+        """Log intel visibility for audit purposes"""
+        IntelVisibility.objects.get_or_create(
+            round_state=round_state,
+            asteroid=asteroid,
+            intel_type=intel_type,
+            visible_to_participant=participant,
+            discovered_round=round_number,
+            visibility_footprint={
+                'complexity': self.session.complexity,
+                'shared': self.session.complexity == 'low',
+                'discovery_method': 'probe' if intel_type == 'max_minerals' else 'robot'
+            }
+        )
     
     def _update_intel_visibility(self, round_state):
         """Update intel visibility based on complexity condition"""
         if self.session.complexity == 'low':
-            # Low complexity: all intel is shared
+            # Low complexity: all intel is shared (visible to all crew)
             self._share_all_intel(round_state)
         else:
-            # High complexity: intel remains private
+            # High complexity: intel remains private to discoverer
             self._maintain_private_intel(round_state)
     
     def _share_all_intel(self, round_state):
-        """Share all discovered intel with all crew members"""
-        # This is handled in the UI layer for low complexity
-        # Here we just log the visibility for audit purposes
-        asteroids = Asteroid.objects.filter(session=self.session)
+        """Share all discovered intel with all crew members (low complexity)"""
+        # Get all crew members
         crew_members = [self.crew.captain, self.crew.navigator, self.crew.driller]
+        
+        # Get all asteroids with discovered intel
+        asteroids = Asteroid.objects.filter(session=self.session)
         
         for asteroid in asteroids:
             for member in crew_members:
                 if member:
-                    IntelVisibility.objects.get_or_create(
-                        round_state=round_state,
-                        asteroid=asteroid,
-                        intel_type='max_minerals',
-                        visible_to_participant=member,
-                        discovered_round=asteroid.discovered_round or 0,
-                        visibility_footprint={'shared': True, 'complexity': 'low'}
+                    # Share max minerals if discovered
+                    if asteroid.discovered_by:
+                        IntelVisibility.objects.get_or_create(
+                            round_state=round_state,
+                            asteroid=asteroid,
+                            intel_type='max_minerals',
+                            visible_to_participant=member,
+                            discovered_round=asteroid.discovered_round or 0,
+                            visibility_footprint={'shared': True, 'complexity': 'low'}
+                        )
+                    
+                    # Share mining costs if robot was deployed
+                    robot_actions = Action.objects.filter(
+                        round_state__crew=self.crew,
+                        round_state__round_number__lte=round_state.round_number,
+                        action_type='deploy_robot',
+                        target_asteroid=asteroid.name
                     )
+                    if robot_actions.exists():
+                        IntelVisibility.objects.get_or_create(
+                            round_state=round_state,
+                            asteroid=asteroid,
+                            intel_type='shallow_cost',
+                            visible_to_participant=member,
+                            discovered_round=round_state.round_number,
+                            visibility_footprint={'shared': True, 'complexity': 'low'}
+                        )
+                        IntelVisibility.objects.get_or_create(
+                            round_state=round_state,
+                            asteroid=asteroid,
+                            intel_type='deep_cost',
+                            visible_to_participant=member,
+                            discovered_round=round_state.round_number,
+                            visibility_footprint={'shared': True, 'complexity': 'low'}
+                        )
     
     def _maintain_private_intel(self, round_state):
         """Maintain private intel visibility for high complexity"""
-        # Log visibility for audit purposes
+        # Intel remains private to discoverer - just log for audit
         asteroids = Asteroid.objects.filter(session=self.session)
         
         for asteroid in asteroids:
+            # Log max minerals visibility
             if asteroid.discovered_by:
                 IntelVisibility.objects.get_or_create(
                     round_state=round_state,
@@ -370,6 +432,31 @@ class GameEngine:
                     intel_type='max_minerals',
                     visible_to_participant=asteroid.discovered_by,
                     discovered_round=asteroid.discovered_round,
+                    visibility_footprint={'shared': False, 'complexity': 'high'}
+                )
+            
+            # Log mining costs visibility
+            robot_actions = Action.objects.filter(
+                round_state__crew=self.crew,
+                round_state__round_number__lte=round_state.round_number,
+                action_type='deploy_robot',
+                target_asteroid=asteroid.name
+            )
+            for robot_action in robot_actions:
+                IntelVisibility.objects.get_or_create(
+                    round_state=round_state,
+                    asteroid=asteroid,
+                    intel_type='shallow_cost',
+                    visible_to_participant=robot_action.participant,
+                    discovered_round=round_state.round_number,
+                    visibility_footprint={'shared': False, 'complexity': 'high'}
+                )
+                IntelVisibility.objects.get_or_create(
+                    round_state=round_state,
+                    asteroid=asteroid,
+                    intel_type='deep_cost',
+                    visible_to_participant=robot_action.participant,
+                    discovered_round=round_state.round_number,
                     visibility_footprint={'shared': False, 'complexity': 'high'}
                 )
     
@@ -435,7 +522,7 @@ class GameEngine:
             
             for member in crew_members:
                 if member and member.id not in participants_with_actions:
-                    # Create auto "do nothing" action
+                    # Create auto "do nothing" action (formal rule: default to DoNothing)
                     Action.objects.create(
                         participant=member,
                         round_state=round_state,
@@ -475,7 +562,8 @@ class GameEngine:
                         'asteroid': outcome.asteroid.name,
                         'minerals_gained': outcome.minerals_gained,
                         'full_extraction': outcome.full_extraction,
-                        'depth': outcome.depth
+                        'depth': outcome.depth,
+                        'intel_combo': outcome.intel_combo
                     }
                     for outcome in outcomes
                 ]
@@ -503,9 +591,22 @@ class GameEngine:
             'last_updated': crew.stage_start_time
         }
     
+    def _calculate_total_minerals(self):
+        """Calculate total minerals gained across all rounds"""
+        outcomes = Outcome.objects.filter(round_state__crew=self.crew)
+        return sum(outcome.minerals_gained for outcome in outcomes)
+    
     def get_available_actions(self, participant):
         """Get available actions for a participant based on their role and current stage"""
-        if self.current_round_state.stage != 'action':
+        try:
+            current_round_state = RoundState.objects.get(
+                crew=self.crew,
+                round_number=self.crew.current_round
+            )
+        except RoundState.DoesNotExist:
+            return []
+        
+        if current_round_state.stage != 'action':
             return []
         
         if participant.role == 'navigator':
@@ -527,11 +628,19 @@ class GameEngine:
     def can_communicate(self, participant):
         """Check if participant can communicate based on current stage and role"""
         # Check both the round state stage and the crew's current stage
-        if (self.current_round_state.stage != 'briefing' and 
+        try:
+            current_round_state = RoundState.objects.get(
+                crew=self.crew,
+                round_number=self.crew.current_round
+            )
+        except RoundState.DoesNotExist:
+            return False
+        
+        if (current_round_state.stage != 'briefing' and 
             self.crew.current_stage != 'briefing'):
             return False
         
-        # Only captain can communicate during briefing
+        # Only captain can communicate during briefing (formal rule)
         return participant.role == 'captain'
     
     def get_asteroid_info(self, asteroid_name, participant):
@@ -545,23 +654,20 @@ class GameEngine:
             info = {
                 'name': asteroid.name,
                 'travel_cost': asteroid.travel_cost,
-                'discovered': asteroid.discovered_by is not None
+                'discovered': asteroid.discovered_by is not None,
+                'mined': asteroid.mined
             }
             
-            # Check complexity level
+            # Check complexity level for intel visibility
             if self.crew.session.complexity == 'low':
-                # Low complexity: share all info
+                # Low complexity: share all info with all crew
                 info.update({
                     'max_minerals': asteroid.max_minerals,
                     'shallow_cost': asteroid.shallow_cost,
-                    'deep_cost': asteroid.deep_cost,
-                    'mined': asteroid.mined
+                    'deep_cost': asteroid.deep_cost
                 })
             else:
                 # High complexity: only show info if participant has intel
-                if asteroid.discovered_by == participant:
-                    info['max_minerals'] = asteroid.max_minerals
-                
                 # Check if participant has probed this asteroid
                 probe_action = Action.objects.filter(
                     participant=participant,
@@ -584,13 +690,55 @@ class GameEngine:
                         'shallow_cost': asteroid.shallow_cost,
                         'deep_cost': asteroid.deep_cost
                     })
-                
-                info['mined'] = asteroid.mined
             
             return info
             
         except Asteroid.DoesNotExist:
             return None
+    
+    def get_crew_intel_summary(self):
+        """Get summary of crew's intel for debugging/admin purposes"""
+        crew = self.crew
+        
+        # Get all asteroids
+        asteroids = Asteroid.objects.filter(session=crew.session)
+        
+        intel_summary = {}
+        for asteroid in asteroids:
+            intel_summary[asteroid.name] = {
+                'max_minerals': {
+                    'discovered': asteroid.discovered_by is not None,
+                    'discovered_by': asteroid.discovered_by.role if asteroid.discovered_by else None,
+                    'discovered_round': asteroid.discovered_round,
+                    'value': asteroid.max_minerals if asteroid.discovered_by else 'Unknown'
+                },
+                'mining_costs': {
+                    'shallow_cost': asteroid.shallow_cost,
+                    'deep_cost': asteroid.deep_cost,
+                    'robot_deployed': Action.objects.filter(
+                        round_state__crew=crew,
+                        action_type='deploy_robot',
+                        target_asteroid=asteroid.name
+                    ).exists()
+                },
+                'mined': {
+                    'status': asteroid.mined,
+                    'round': asteroid.mined_round,
+                    'minerals_gained': None
+                }
+            }
+            
+            # Get minerals gained if mined
+            if asteroid.mined:
+                outcome = Outcome.objects.filter(
+                    round_state__crew=crew,
+                    asteroid=asteroid
+                ).first()
+                if outcome:
+                    intel_summary[asteroid.name]['mined']['minerals_gained'] = outcome.minerals_gained
+        
+        return intel_summary
+
 
 
 
